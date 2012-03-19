@@ -1,0 +1,5325 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>SpiderGL.Math.Vec2 | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/SpiderGL.html">SpiderGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core<span class='break'> </span>.<span class='break'> </span>ObjectBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.DOM.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>DOM</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.AggregateRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>AggregateRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.BinaryRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>BinaryRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.ImageRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>ImageRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.JSONRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>JSONRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.Request.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>Request</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.TextRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>TextRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequestBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequestBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Quat.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Quat</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec2.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec2</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.ModelRenderer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>ModelRenderer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Technique.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Technique</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>DepthRangeStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>MatrixStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.TransformationStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>TransformationStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>ViewportStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Type.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Type</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface<span class='break'> </span>.<span class='break'> </span>CanvasHandler</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Utility.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Utility</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Version.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Version</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Buffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Buffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Context.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Context</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.FragmentShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>FragmentShader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Framebuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Framebuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.IndexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>IndexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>ObjectGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Program.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Program</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Renderbuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Shader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Shader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture2D</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>TextureCubeMap</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexShader</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-19 17:11
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Namespace <span>SpiderGL.Math.Vec2</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				The SpiderGL.Math.Vec2 namespace defines operations on 2-dimensional vectors.
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_math.js.html">math.js</a></li>
+					
+						
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SpiderGL.Math.Vec2.">
+					<caption class="sectionTitle">Namespace Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/SpiderGL.Math.Vec2.html#constructor">SpiderGL.Math.Vec2</a></b>
+								</div>
+								<div class="description">The SpiderGL.Math.Vec2 namespace.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class SpiderGL.Math.Vec2.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.abs">abs</a></b>(v)
+										</div>
+										<div class="description">Component-wise absolute value of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.acos">acos</a></b>(v)
+										</div>
+										<div class="description">Component-wise arccosine of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.add">add</a></b>(u, v)
+										</div>
+										<div class="description">Component-wise addition of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.add$">add$</a></b>(u, v)
+										</div>
+										<div class="description">In-place component-wise addition of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.adds">adds</a></b>(v, s)
+										</div>
+										<div class="description">Component-wise addition of a 2-dimensional vector and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item5'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.adds$">adds$</a></b>(v, s)
+										</div>
+										<div class="description">In-place component-wise addition of a 2-dimensional vector and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item6'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.asin">asin</a></b>(v)
+										</div>
+										<div class="description">Component-wise arcsine of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item7'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.atan">atan</a></b>(v)
+										</div>
+										<div class="description">Component-wise arctangent of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item8'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.atan2">atan2</a></b>(y, x)
+										</div>
+										<div class="description">Component-wise arctangent of the quotient of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item9'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.ceil">ceil</a></b>(v)
+										</div>
+										<div class="description">Component-wise ceil of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item10'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.clamp">clamp</a></b>(v, min, max)
+										</div>
+										<div class="description">Component-wise clamp of a 2-dimensional vector with vector bounds.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item11'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.copy$">copy$</a></b>(u, v)
+										</div>
+										<div class="description">In-place component-wise copy of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item12'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.cos">cos</a></b>(v)
+										</div>
+										<div class="description">Component-wise cosine of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item13'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.cross">cross</a></b>(u, v)
+										</div>
+										<div class="description">Cross product of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item14'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.degToRad">degToRad</a></b>(v)
+										</div>
+										<div class="description">Component-wise conversion of a 2-dimensional vector from degrees to radians.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item15'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.div">div</a></b>(u, v)
+										</div>
+										<div class="description">Component-wise division of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item16'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.div$">div$</a></b>(u, v)
+										</div>
+										<div class="description">In-place component-wise division of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item17'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.divs">divs</a></b>(v, s)
+										</div>
+										<div class="description">Component-wise division of a 2-dimensional vector by a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item18'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.divs$">divs$</a></b>(v, s)
+										</div>
+										<div class="description">In-place component-wise division of a 2-dimensional vector by a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item19'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.dot">dot</a></b>(u, v)
+										</div>
+										<div class="description">Dot product of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item20'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.dup">dup</a></b>(v)
+										</div>
+										<div class="description">Duplicates the input 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item21'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.exp">exp</a></b>(v)
+										</div>
+										<div class="description">Component-wise exponential of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item22'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.floor">floor</a></b>(v)
+										</div>
+										<div class="description">Component-wise floor of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item23'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.length">length</a></b>(v)
+										</div>
+										<div class="description">Length of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item24'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.lerp">lerp</a></b>(u, v, t)
+										</div>
+										<div class="description">Linear interpolation between two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item25'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.ln">ln</a></b>(v)
+										</div>
+										<div class="description">Component-wise natural (base E) logarithm of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item26'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.log">log</a></b>(v)
+										</div>
+										<div class="description">Component-wise natural (base E) logarithm of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item27'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.log10">log10</a></b>(v)
+										</div>
+										<div class="description">Component-wise base 10 logarithm of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item28'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.log2">log2</a></b>(v)
+										</div>
+										<div class="description">Component-wise base 2 logarithm of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item29'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.max">max</a></b>(u, v)
+										</div>
+										<div class="description">Component-wise maximum of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item30'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.maxNumber">maxNumber</a></b>()
+										</div>
+										<div class="description">Creates a 2-dimensional vector initialized with SpiderGL.Math.MAX_NUMBER.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item31'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.min">min</a></b>(u, v)
+										</div>
+										<div class="description">Component-wise minimum of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item32'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.minNumber">minNumber</a></b>()
+										</div>
+										<div class="description">Creates a 2-dimensional vector initialized with SpiderGL.Math.MIN_NUMBER.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item33'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.mul">mul</a></b>(u, v)
+										</div>
+										<div class="description">Component-wise multiplication of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item34'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.mul$">mul$</a></b>(u, v)
+										</div>
+										<div class="description">In-place component-wise multiplication of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item35'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.muls">muls</a></b>(v, s)
+										</div>
+										<div class="description">Component-wise multiplication of a 2-dimensional vector and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item36'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.muls$">muls$</a></b>(v, s)
+										</div>
+										<div class="description">In-place component-wise multiplication of a 2-dimensional vector and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item37'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.neg">neg</a></b>(v)
+										</div>
+										<div class="description">Component-wise negation of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item38'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.neg$">neg$</a></b>(v)
+										</div>
+										<div class="description">In-place component-wise negation of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item39'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.normalize">normalize</a></b>(v)
+										</div>
+										<div class="description">Creates a normalized 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item40'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.normalize$">normalize$</a></b>(v)
+										</div>
+										<div class="description">In-place 2-dimensional vector normalization.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item41'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.one">one</a></b>()
+										</div>
+										<div class="description">Creates a 2-dimensional vector initialized with one.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item42'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.perp">perp</a></b>(v)
+										</div>
+										<div class="description">Perp operation.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item43'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.perp$">perp$</a></b>(v)
+										</div>
+										<div class="description">In-place perp operation.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item44'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.pow">pow</a></b>(u, v)
+										</div>
+										<div class="description">Component-wise power of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item45'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.radToDeg">radToDeg</a></b>(v)
+										</div>
+										<div class="description">Component-wise conversion of a 2-dimensional vector from radians to degrees.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item46'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.random">random</a></b>()
+										</div>
+										<div class="description">Creates a random 2-dimensional vector between 0 and 1.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item47'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.random01">random01</a></b>()
+										</div>
+										<div class="description">Creates a random 2-dimensional vector between 0 and 1.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item48'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.random11">random11</a></b>()
+										</div>
+										<div class="description">Creates a random 2-dimensional vector between -1 and 1.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item49'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.randomRange">randomRange</a></b>(min, max)
+										</div>
+										<div class="description">Creates a random 2-dimensional vector inside a range.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item50'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.rcp">rcp</a></b>(v)
+										</div>
+										<div class="description">Component-wise reciprocal of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item51'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.round">round</a></b>(v)
+										</div>
+										<div class="description">Component-wise round of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item52'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.scalar">scalar</a></b>(s)
+										</div>
+										<div class="description">Creates a 2-dimensional vector initialized with a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item53'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.sdiv">sdiv</a></b>(s, v)
+										</div>
+										<div class="description">Component-wise division of a scalar by a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item54'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.sdiv$">sdiv$</a></b>(s, v)
+										</div>
+										<div class="description">In-place component-wise division of a scalar by a 2-dimensional.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item55'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.sin">sin</a></b>(v)
+										</div>
+										<div class="description">Component-wise sine of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item56'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.sqLength">sqLength</a></b>(v)
+										</div>
+										<div class="description">Squared length of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item57'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.sqrt">sqrt</a></b>(v)
+										</div>
+										<div class="description">Component-wise square root of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item58'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.ssub">ssub</a></b>(s, v)
+										</div>
+										<div class="description">Component-wise subtraction of a scalar and a 2-dimensional.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item59'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.ssub$">ssub$</a></b>(s, v)
+										</div>
+										<div class="description">In-place component-wise subtraction of a scalar and a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item60'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.sub">sub</a></b>(u, v)
+										</div>
+										<div class="description">Component-wise subtraction of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item61'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.sub$">sub$</a></b>(u, v)
+										</div>
+										<div class="description">In-place component-wise subtraction of two 2-dimensional vectors.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item62'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.subs">subs</a></b>(v, s)
+										</div>
+										<div class="description">Component-wise subtraction of a 2-dimensional vector and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item63'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.subs$">subs$</a></b>(v, s)
+										</div>
+										<div class="description">In-place component-wise subtraction of a 2-dimensional vector and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item64'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.tan">tan</a></b>(v)
+										</div>
+										<div class="description">Component-wise tangent root of a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item65'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.to3">to3</a></b>(v, z)
+										</div>
+										<div class="description">Creates a 3-dimensional vector from a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item66'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.to4">to4</a></b>(v, z, w)
+										</div>
+										<div class="description">Creates a 4-dimensional vector from a 2-dimensional vector.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item67'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Vec2.<b><a href="../symbols/SpiderGL.Math.Vec2.html#.zero">zero</a></b>()
+										</div>
+										<div class="description">Creates a 2-dimensional vector initialized with zero.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Namespace Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>SpiderGL.Math.Vec2</b>
+					</div>
+					
+					<div class="description">
+						The SpiderGL.Math.Vec2 namespace.The provided functions operate on 2-dimensional vectors, represented as standard JavaScript arrays of length 2.In general, vectors are considered as column vectors.
+						
+					</div>
+					
+					
+				
+					
+					
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id=".abs">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>abs</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise absolute value of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.abs">SpiderGL.Math.abs</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id=".acos">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>acos</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise arccosine of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.acos">SpiderGL.Math.acos</a>(v[i]), in radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id=".add">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>add</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Component-wise addition of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first addition operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second addition operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = u[i] + v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id=".add$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>add$</b>(u, v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise addition of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first addition operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second addition operand</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector u, where u[i] = u[i] + v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id=".adds">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>adds</b>(v, s)
+								</div>
+								
+								<div class="description">
+									Component-wise addition of a 2-dimensional vector and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The vector addition operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar addition operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = v[i] + s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item5'
+							>
+								<div class="fixedFont heading" id=".adds$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>adds$</b>(v, s)
+								</div>
+								
+								<div class="description">
+									In-place component-wise addition of a 2-dimensional vector and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The vector addition operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar addition operand</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = v[i] + s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item6'
+							>
+								<div class="fixedFont heading" id=".asin">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>asin</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise arcsine of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.asin">SpiderGL.Math.asin</a>(v[i]), in radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item7'
+							>
+								<div class="fixedFont heading" id=".atan">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>atan</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise arctangent of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.atan">SpiderGL.Math.atan</a>(v[i]), between -PI/2 and PI/2 radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item8'
+							>
+								<div class="fixedFont heading" id=".atan2">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>atan2</b>(y, x)
+								</div>
+								
+								<div class="description">
+									Component-wise arctangent of the quotient of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>y</b>
+												
+											</dt>
+											<dd>The numerator vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>x</b>
+												
+											</dt>
+											<dd>The denominator vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.atan2">SpiderGL.Math.atan2</a>(y[i], x[i]), between PI and -PI radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item9'
+							>
+								<div class="fixedFont heading" id=".ceil">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>ceil</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise ceil of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.ceil">SpiderGL.Math.ceil</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item10'
+							>
+								<div class="fixedFont heading" id=".clamp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>clamp</b>(v, min, max)
+								</div>
+								
+								<div class="description">
+									Component-wise clamp of a 2-dimensional vector with vector bounds.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>min</b>
+												
+											</dt>
+											<dd>The lower 2-dimensional bound.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>max</b>
+												
+											</dt>
+											<dd>The upper 2-dimensional bound.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.clamp">SpiderGL.Math.clamp</a>(v[i], min[i], max[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item11'
+							>
+								<div class="fixedFont heading" id=".copy$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>copy$</b>(u, v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise copy of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The destination vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The source vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The destination vector u, where u[i] = v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item12'
+							>
+								<div class="fixedFont heading" id=".cos">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>cos</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise cosine of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.cos">SpiderGL.Math.cos</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item13'
+							>
+								<div class="fixedFont heading" id=".cross">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>cross</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Cross product of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first vector operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second vector operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector equal to the cross product of u and v.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item14'
+							>
+								<div class="fixedFont heading" id=".degToRad">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>degToRad</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise conversion of a 2-dimensional vector from degrees to radians.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.degToRad">SpiderGL.Math.degToRad</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item15'
+							>
+								<div class="fixedFont heading" id=".div">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>div</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Component-wise division of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The numerator vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The denominator vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = u[i] / v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item16'
+							>
+								<div class="fixedFont heading" id=".div$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>div$</b>(u, v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise division of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The numerator vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The denominator vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector u, where u[i] = u[i] / v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item17'
+							>
+								<div class="fixedFont heading" id=".divs">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>divs</b>(v, s)
+								</div>
+								
+								<div class="description">
+									Component-wise division of a 2-dimensional vector by a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The numerator vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar denominator.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = v[i] / s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item18'
+							>
+								<div class="fixedFont heading" id=".divs$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>divs$</b>(v, s)
+								</div>
+								
+								<div class="description">
+									In-place component-wise division of a 2-dimensional vector by a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The numerator vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar denominator.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = v[i] / s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item19'
+							>
+								<div class="fixedFont heading" id=".dot">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>dot</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Dot product of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first vector operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second vector operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The dot product of u and v.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item20'
+							>
+								<div class="fixedFont heading" id=".dup">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>dup</b>(v)
+								</div>
+								
+								<div class="description">
+									Duplicates the input 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = v[i] (same as v.slice(0, 2)).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item21'
+							>
+								<div class="fixedFont heading" id=".exp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>exp</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise exponential of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.exp">SpiderGL.Math.exp</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item22'
+							>
+								<div class="fixedFont heading" id=".floor">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>floor</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise floor of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.floor">SpiderGL.Math.floor</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item23'
+							>
+								<div class="fixedFont heading" id=".length">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>length</b>(v)
+								</div>
+								
+								<div class="description">
+									Length of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The length of v.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item24'
+							>
+								<div class="fixedFont heading" id=".lerp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>lerp</b>(u, v, t)
+								</div>
+								
+								<div class="description">
+									Linear interpolation between two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The start interpolation bound.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The stop interpolation bound.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>t</b>
+												
+											</dt>
+											<dd>The interpolation factor, between 0 and 1.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The interpolated vector r, where r[i] = (1-t)*u[i] + t*v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item25'
+							>
+								<div class="fixedFont heading" id=".ln">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>ln</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise natural (base E) logarithm of a 2-dimensional vector.Same as <a href="../symbols/SpiderGL.Math.Vec2.html#.log">SpiderGL.Math.Vec2.log</a>.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.ln">SpiderGL.Math.ln</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item26'
+							>
+								<div class="fixedFont heading" id=".log">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>log</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise natural (base E) logarithm of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.log">SpiderGL.Math.log</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item27'
+							>
+								<div class="fixedFont heading" id=".log10">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>log10</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise base 10 logarithm of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.log10">SpiderGL.Math.log10</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item28'
+							>
+								<div class="fixedFont heading" id=".log2">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>log2</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise base 2 logarithm of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.log2">SpiderGL.Math.log2</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item29'
+							>
+								<div class="fixedFont heading" id=".max">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>max</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Component-wise maximum of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.max">SpiderGL.Math.max</a>(u[i], v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item30'
+							>
+								<div class="fixedFont heading" id=".maxNumber">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>maxNumber</b>()
+								</div>
+								
+								<div class="description">
+									Creates a 2-dimensional vector initialized with SpiderGL.Math.MAX_NUMBER.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = SpiderGL.Math.MAX_NUMBER.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item31'
+							>
+								<div class="fixedFont heading" id=".min">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>min</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Component-wise minimum of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.min">SpiderGL.Math.min</a>(u[i], v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item32'
+							>
+								<div class="fixedFont heading" id=".minNumber">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>minNumber</b>()
+								</div>
+								
+								<div class="description">
+									Creates a 2-dimensional vector initialized with SpiderGL.Math.MIN_NUMBER.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = SpiderGL.Math.MIN_NUMBER.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item33'
+							>
+								<div class="fixedFont heading" id=".mul">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>mul</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Component-wise multiplication of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first multiplication operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second multiplication operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = u[i] * v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item34'
+							>
+								<div class="fixedFont heading" id=".mul$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>mul$</b>(u, v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise multiplication of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first multiplication operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second multiplication operand</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector u, where u[i] = u[i] * v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item35'
+							>
+								<div class="fixedFont heading" id=".muls">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>muls</b>(v, s)
+								</div>
+								
+								<div class="description">
+									Component-wise multiplication of a 2-dimensional vector and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The vector multiplication operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar multiplication operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = v[i] * s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item36'
+							>
+								<div class="fixedFont heading" id=".muls$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>muls$</b>(v, s)
+								</div>
+								
+								<div class="description">
+									In-place component-wise multiplication of a 2-dimensional vector and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The first multiplication operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The second multiplication operand</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = v[i] * s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item37'
+							>
+								<div class="fixedFont heading" id=".neg">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>neg</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise negation of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = -v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item38'
+							>
+								<div class="fixedFont heading" id=".neg$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>neg$</b>(v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise negation of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = -v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item39'
+							>
+								<div class="fixedFont heading" id=".normalize">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>normalize</b>(v)
+								</div>
+								
+								<div class="description">
+									Creates a normalized 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r representing the normalized v, where r[i] = v[i] / <a href="../symbols/SpiderGL.Math.Vec2.html#.length">SpiderGL.Math.Vec2.length</a>(v).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item40'
+							>
+								<div class="fixedFont heading" id=".normalize$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>normalize$</b>(v)
+								</div>
+								
+								<div class="description">
+									In-place 2-dimensional vector normalization.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = v[i] / <a href="../symbols/SpiderGL.Math.Vec2.html#.length">SpiderGL.Math.Vec2.length</a>(v).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item41'
+							>
+								<div class="fixedFont heading" id=".one">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>one</b>()
+								</div>
+								
+								<div class="description">
+									Creates a 2-dimensional vector initialized with one.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = 1.0.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item42'
+							>
+								<div class="fixedFont heading" id=".perp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>perp</b>(v)
+								</div>
+								
+								<div class="description">
+									Perp operation.Returns a 2-dimensional vector which is orthogonal to the input vector and lies in the right halfspace.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r = [v[1], -v[0]].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item43'
+							>
+								<div class="fixedFont heading" id=".perp$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>perp$</b>(v)
+								</div>
+								
+								<div class="description">
+									In-place perp operation.Returns a 2-dimensional vector which is orthogonal to the input vector and lies in the right halfspace.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v = [v[1], -v[0]].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item44'
+							>
+								<div class="fixedFont heading" id=".pow">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>pow</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Component-wise power of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The base vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The exponent vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.pow">SpiderGL.Math.pow</a>(u[i], v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item45'
+							>
+								<div class="fixedFont heading" id=".radToDeg">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>radToDeg</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise conversion of a 2-dimensional vector from radians to degrees.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector, in degrees.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.pow">SpiderGL.Math.pow</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item46'
+							>
+								<div class="fixedFont heading" id=".random">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>random</b>()
+								</div>
+								
+								<div class="description">
+									Creates a random 2-dimensional vector between 0 and 1.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.random">SpiderGL.Math.random</a>().</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item47'
+							>
+								<div class="fixedFont heading" id=".random01">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>random01</b>()
+								</div>
+								
+								<div class="description">
+									Creates a random 2-dimensional vector between 0 and 1.Same as <a href="../symbols/SpiderGL.Math.Vec2.html#.random">SpiderGL.Math.Vec2.random</a>.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.random01">SpiderGL.Math.random01</a>().</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item48'
+							>
+								<div class="fixedFont heading" id=".random11">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>random11</b>()
+								</div>
+								
+								<div class="description">
+									Creates a random 2-dimensional vector between -1 and 1.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.random11">SpiderGL.Math.random11</a>().</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item49'
+							>
+								<div class="fixedFont heading" id=".randomRange">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>randomRange</b>(min, max)
+								</div>
+								
+								<div class="description">
+									Creates a random 2-dimensional vector inside a range.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>min</b>
+												
+											</dt>
+											<dd>The range vector lower bound.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>max</b>
+												
+											</dt>
+											<dd>The range vector upper bound.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.randomRange">SpiderGL.Math.randomRange</a>(min[i], max[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item50'
+							>
+								<div class="fixedFont heading" id=".rcp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>rcp</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise reciprocal of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input (denominator) vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = 1.0 / v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item51'
+							>
+								<div class="fixedFont heading" id=".round">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>round</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise round of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.round">SpiderGL.Math.round</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item52'
+							>
+								<div class="fixedFont heading" id=".scalar">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>scalar</b>(s)
+								</div>
+								
+								<div class="description">
+									Creates a 2-dimensional vector initialized with a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The input scalar.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item53'
+							>
+								<div class="fixedFont heading" id=".sdiv">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>sdiv</b>(s, v)
+								</div>
+								
+								<div class="description">
+									Component-wise division of a scalar by a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The denominator scalar.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The numerator vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = s / v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item54'
+							>
+								<div class="fixedFont heading" id=".sdiv$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>sdiv$</b>(s, v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise division of a scalar by a 2-dimensional.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar numerator.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The denominator vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = s / v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item55'
+							>
+								<div class="fixedFont heading" id=".sin">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>sin</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise sine of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.sin">SpiderGL.Math.sin</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item56'
+							>
+								<div class="fixedFont heading" id=".sqLength">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>sqLength</b>(v)
+								</div>
+								
+								<div class="description">
+									Squared length of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The squared length of v, same as the dot product of v with itself.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item57'
+							>
+								<div class="fixedFont heading" id=".sqrt">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>sqrt</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise square root of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.sqrt">SpiderGL.Math.sqrt</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item58'
+							>
+								<div class="fixedFont heading" id=".ssub">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>ssub</b>(s, v)
+								</div>
+								
+								<div class="description">
+									Component-wise subtraction of a scalar and a 2-dimensional.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar subtraction operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The vector subtraction operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = s - v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item59'
+							>
+								<div class="fixedFont heading" id=".ssub$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>ssub$</b>(s, v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise subtraction of a scalar and a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar subtraction operand</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The vector subtraction operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = s - v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item60'
+							>
+								<div class="fixedFont heading" id=".sub">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>sub</b>(u, v)
+								</div>
+								
+								<div class="description">
+									Component-wise subtraction of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first subtraction operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second subtraction operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = u[i] - v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item61'
+							>
+								<div class="fixedFont heading" id=".sub$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>sub$</b>(u, v)
+								</div>
+								
+								<div class="description">
+									In-place component-wise subtraction of two 2-dimensional vectors.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>u</b>
+												
+											</dt>
+											<dd>The first addition operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The second addition operand</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector u, where u[i] = u[i] - v[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item62'
+							>
+								<div class="fixedFont heading" id=".subs">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>subs</b>(v, s)
+								</div>
+								
+								<div class="description">
+									Component-wise subtraction of a 2-dimensional vector and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The vector subtraction operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar subtraction operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensionals vector r, where r[i] = v[i] - s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item63'
+							>
+								<div class="fixedFont heading" id=".subs$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>subs$</b>(v, s)
+								</div>
+								
+								<div class="description">
+									In-place component-wise subtraction of a 2-dimensional vector and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The vector subtraction operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar subtraction operand</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input vector v, where v[i] = v[i] - s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item64'
+							>
+								<div class="fixedFont heading" id=".tan">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>tan</b>(v)
+								</div>
+								
+								<div class="description">
+									Component-wise tangent root of a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = <a href="../symbols/SpiderGL.Math.html#.tan">SpiderGL.Math.tan</a>(v[i]).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item65'
+							>
+								<div class="fixedFont heading" id=".to3">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>to3</b>(v, z)
+								</div>
+								
+								<div class="description">
+									Creates a 3-dimensional vector from a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>z</b>
+												<i>Optional, Default: 0.0</i>
+											</dt>
+											<dd>The 3th component.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4-dimensional vector r equal to v extended with z as 3rd component.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item66'
+							>
+								<div class="fixedFont heading" id=".to4">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>to4</b>(v, z, w)
+								</div>
+								
+								<div class="description">
+									Creates a 4-dimensional vector from a 2-dimensional vector.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>z</b>
+												<i>Optional, Default: 0.0</i>
+											</dt>
+											<dd>The 3th component.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>w</b>
+												<i>Optional, Default: 1.0</i>
+											</dt>
+											<dd>The 4th component.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4-dimensional vector r equal to v extended with z as 3rd component and w as 4th component.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item67'
+							>
+								<div class="fixedFont heading" id=".zero">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Vec2.</span><b>zero</b>()
+								</div>
+								
+								<div class="description">
+									Creates a 2-dimensional vector initialized with zero.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 2-dimensional vector r, where r[i] = 0.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>SpiderGL.WebGL.Context | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/SpiderGL.html">SpiderGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core<span class='break'> </span>.<span class='break'> </span>ObjectBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.DOM.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>DOM</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.AggregateRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>AggregateRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.BinaryRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>BinaryRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.ImageRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>ImageRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.JSONRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>JSONRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.Request.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>Request</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.TextRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>TextRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequestBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequestBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Quat.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Quat</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec2.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec2</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.ModelRenderer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>ModelRenderer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Technique.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Technique</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>DepthRangeStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>MatrixStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.TransformationStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>TransformationStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>ViewportStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Type.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Type</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface<span class='break'> </span>.<span class='break'> </span>CanvasHandler</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Utility.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Utility</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Version.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Version</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Buffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Buffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Context.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Context</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.FragmentShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>FragmentShader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Framebuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Framebuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.IndexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>IndexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>ObjectGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Program.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Program</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Renderbuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Shader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Shader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture2D</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>TextureCubeMap</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexShader</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-19 17:11
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Namespace <span>SpiderGL.WebGL.Context</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				The SpiderGL.WebGL.Context namespace.
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_webgl.js.html">webgl.js</a></li>
+					
+						
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SpiderGL.WebGL.Context.">
+					<caption class="sectionTitle">Namespace Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/SpiderGL.WebGL.Context.html#constructor">SpiderGL.WebGL.Context</a></b>
+								</div>
+								<div class="description">The SpiderGL.WebGL.Context namespace.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class SpiderGL.WebGL.Context.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_COLORSPACE_CONVERSION">DEFAULT_UNPACK_COLORSPACE_CONVERSION</a></b>
+										</div>
+										<div class="description">Default value for pixel unpack parameter WebGLRenderingContext.UNPACK_COLORSPACE_CONVERSION_WEBGL.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_FLIP_Y">DEFAULT_UNPACK_FLIP_Y</a></b>
+										</div>
+										<div class="description">Default value for pixel unpack parameter WebGLRenderingContext.UNPACK_FLIP_Y_WEBGL.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_PREMULTIPLY_ALPHA">DEFAULT_UNPACK_PREMULTIPLY_ALPHA</a></b>
+										</div>
+										<div class="description">Default value for pixel unpack parameter WebGLRenderingContext.UNPACK_PREMULTIPLY_ALPHA_WEBGL.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.WEBGL_STRING">WEBGL_STRING</a></b>
+										</div>
+										<div class="description">The string for obtaining a WebGLRenderingContext from a canvas.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class SpiderGL.WebGL.Context.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.get">get</a></b>(canvas, args)
+										</div>
+										<div class="description">Retrieves the WebGLRenderingContext from a canvas.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.getHijacked">getHijacked</a></b>(canvas, args)
+										</div>
+										<div class="description">Creates a WebGLRenderingContext and hijacks it.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.hijack">hijack</a></b>(gl)
+										</div>
+										<div class="description">Hijacks a WebGLRenderingContext for SpiderGL.WebGL.ObjectGL wrappers.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.isHijacked">isHijacked</a></b>(gl)
+										</div>
+										<div class="description">Tests whether a WebGLRenderingContext is hijacked.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.WebGL.Context.<b><a href="../symbols/SpiderGL.WebGL.Context.html#.setStandardGLUnpack">setStandardGLUnpack</a></b>(gl)
+										</div>
+										<div class="description">Sets pixel store unpack parameters to standard OpenGL SpiderGL values.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Namespace Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>SpiderGL.WebGL.Context</b>
+					</div>
+					
+					<div class="description">
+						The SpiderGL.WebGL.Context namespace.
+						
+					</div>
+					
+					
+				
+					
+					
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id=".DEFAULT_UNPACK_COLORSPACE_CONVERSION">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">SpiderGL.WebGL.Context.</span><b>DEFAULT_UNPACK_COLORSPACE_CONVERSION</b>							
+						</div>
+						
+						<div class="description">
+							Default value for pixel unpack parameter WebGLRenderingContext.UNPACK_COLORSPACE_CONVERSION_WEBGL.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_FLIP_Y">SpiderGL.WebGL.Context.DEFAULT_UNPACK_FLIP_Y</a></dd>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_PREMULTIPLY_ALPHA">SpiderGL.WebGL.Context.DEFAULT_UNPACK_PREMULTIPLY_ALPHA</a></dd>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.setStandardGLUnpack">SpiderGL.WebGL.Context.setStandardGLUnpack</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										WebGLRenderingContext.NONE
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_UNPACK_FLIP_Y">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">SpiderGL.WebGL.Context.</span><b>DEFAULT_UNPACK_FLIP_Y</b>							
+						</div>
+						
+						<div class="description">
+							Default value for pixel unpack parameter WebGLRenderingContext.UNPACK_FLIP_Y_WEBGL.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_PREMULTIPLY_ALPHA">SpiderGL.WebGL.Context.DEFAULT_UNPACK_PREMULTIPLY_ALPHA</a></dd>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_COLORSPACE_CONVERSION">SpiderGL.WebGL.Context.DEFAULT_UNPACK_COLORSPACE_CONVERSION</a></dd>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.setStandardGLUnpack">SpiderGL.WebGL.Context.setStandardGLUnpack</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										true
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_UNPACK_PREMULTIPLY_ALPHA">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">SpiderGL.WebGL.Context.</span><b>DEFAULT_UNPACK_PREMULTIPLY_ALPHA</b>							
+						</div>
+						
+						<div class="description">
+							Default value for pixel unpack parameter WebGLRenderingContext.UNPACK_PREMULTIPLY_ALPHA_WEBGL.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_FLIP_Y">SpiderGL.WebGL.Context.DEFAULT_UNPACK_FLIP_Y</a></dd>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.DEFAULT_UNPACK_COLORSPACE_CONVERSION">SpiderGL.WebGL.Context.DEFAULT_UNPACK_COLORSPACE_CONVERSION</a></dd>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.setStandardGLUnpack">SpiderGL.WebGL.Context.setStandardGLUnpack</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										true
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".WEBGL_STRING">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							
+							
+							<span class="light">SpiderGL.WebGL.Context.</span><b>WEBGL_STRING</b>							
+						</div>
+						
+						<div class="description">
+							The string for obtaining a WebGLRenderingContext from a canvas.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.get">SpiderGL.WebGL.Context.get</a></dd>
+									
+								
+								
+							</dl>
+						
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id=".get">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{WebGLRenderingContext}</span>
+									
+									<span class="light">SpiderGL.WebGL.Context.</span><b>get</b>(canvas, args)
+								</div>
+								
+								<div class="description">
+									Retrieves the WebGLRenderingContext from a canvas.The WebGLRenderingContext is obtained by calling the getContext() method of the canvas object.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{HTMLCanvasElement}</span> <b>canvas</b>
+												
+											</dt>
+											<dd>The HTMLCanvasElement from which retrieve the WebGL context.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{object}</span> <b>args</b>
+												
+											</dt>
+											<dd>The optional WebGL context arguments.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{WebGLRenderingContext}</span> The canvas WebGL rendering context.</dd>
+											
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.hijack">SpiderGL.WebGL.Context.hijack</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.getHijacked">SpiderGL.WebGL.Context.getHijacked</a></dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id=".getHijacked">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{WebGLRenderingContext}</span>
+									
+									<span class="light">SpiderGL.WebGL.Context.</span><b>getHijacked</b>(canvas, args)
+								</div>
+								
+								<div class="description">
+									Creates a WebGLRenderingContext and hijacks it.The WebGLRenderingContext obtained from the canvas parameter with optional arguments is hijacked.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{HTMLCanvasElement}</span> <b>canvas</b>
+												
+											</dt>
+											<dd>The HTMLCanvasElement from which retrieve the WebGL context.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{object}</span> <b>args</b>
+												
+											</dt>
+											<dd>The optional WebGL context arguments.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{WebGLRenderingContext}</span> The hijacked canvas WebGL rendering context.</dd>
+											
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.get">SpiderGL.WebGL.Context.get</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.getHijacked">SpiderGL.WebGL.Context.getHijacked</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.isHijacked">SpiderGL.WebGL.Context.isHijacked</a></dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id=".hijack">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<span class="light">SpiderGL.WebGL.Context.</span><b>hijack</b>(gl)
+								</div>
+								
+								<div class="description">
+									Hijacks a WebGLRenderingContext for SpiderGL.WebGL.ObjectGL wrappers.The WebGLRenderingContext is modified to allow SpiderGL.WebGL.ObjectGL wrappers to be edited without explicit bind and without affecting the WebGL object bindings.Most WebGL objects follow the "bind to edit" / "bind to use" paradigm.This means that the object must be bound to the WebGL context to modify some parameter or its resource data.As a side effect, binding the object just to modify it has the same result of binding it to be used during rendering.To prevent this side effect, all the WebGLRenderingContext functions that bind and modify object parameters or data, as long as the rendering functions, are wrapped.This allows SpiderGL wrappers (derived from <a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL.WebGL.ObjectGL</a>) to be edited without affecting the binding state of the WebGLRenderingContext.The following example clarifies how bindings are handled.
+									
+									
+									
+									
+								</div>
+								
+								
+									
+										<pre class="code">var textureA = gl.createTexture();gl.bindTexture(gl.TEXTURE_2D, textureA);gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);// other texture callsvar textureB = new SpiderGL.WebGL.Texture2D(gl, parameters);textureB.minFilter = gl.LINEAR; // textureB is hiddenly bound to modify the minification filtergl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR); // textureA is automatically re-bound to keep WebGL semantictextureB.magFilter = gl.LINEAR; // textureB is hiddenly bound to modify another parametergl.drawArrays(gl.TRIANGLES, 0, 3); // textureA is automatically re-bound to keep WebGL semantictextureB.bind(); // bind textureB to WebGL, breaking the binding with textureAgl.drawArrays(gl.TRIANGLES, 0, 3); // textureA is used</pre>
+									
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{WebGLRenderingContext}</span> <b>gl</b>
+												
+											</dt>
+											<dd>The WebGLRenderingContext to modify.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> True on success, false if the gl argument is not valid or has already been modified.</dd>
+											
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.isHijacked">SpiderGL.WebGL.Context.isHijacked</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.getHijacked">SpiderGL.WebGL.Context.getHijacked</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.get">SpiderGL.WebGL.Context.get</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL.WebGL.ObjectGL</a></dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id=".isHijacked">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<span class="light">SpiderGL.WebGL.Context.</span><b>isHijacked</b>(gl)
+								</div>
+								
+								<div class="description">
+									Tests whether a WebGLRenderingContext is hijacked.The WebGLRenderingContext is hijacked after a successful call to <a href="../symbols/SpiderGL.WebGL.Context.html#.hijack">SpiderGL.WebGL.Context.hijack</a>.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{WebGLRenderingContext}</span> <b>gl</b>
+												
+											</dt>
+											<dd>The WebGLRenderingContext to test.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> True on success, false if the gl argument is not valid or has already been modified.</dd>
+											
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.hijack">SpiderGL.WebGL.Context.hijack</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.getHijacked">SpiderGL.WebGL.Context.getHijacked</a></dd>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.Context.html#.get">SpiderGL.WebGL.Context.get</a></dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id=".setStandardGLUnpack">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">SpiderGL.WebGL.Context.</span><b>setStandardGLUnpack</b>(gl)
+								</div>
+								
+								<div class="description">
+									Sets pixel store unpack parameters to standard OpenGL SpiderGL values.The parameters to be set are UNPACK_FLIP_Y_WEBGL (true), UNPACK_PREMULTIPLY_ALPHA_WEBGL (false) and UNPACK_COLORSPACE_CONVERSION_WEBGL (WebGLRenderingContext.NONE).
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{WebGLRenderingContext}</span> <b>gl</b>
+												
+											</dt>
+											<dd>The target WebGLRenderingContext.</dd>
+										
+									</dl>
+								
+								
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

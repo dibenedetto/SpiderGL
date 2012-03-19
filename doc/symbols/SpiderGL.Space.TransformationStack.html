@@ -1,0 +1,3545 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>SpiderGL.Space.TransformationStack | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/SpiderGL.html">SpiderGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core<span class='break'> </span>.<span class='break'> </span>ObjectBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.DOM.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>DOM</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.AggregateRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>AggregateRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.BinaryRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>BinaryRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.ImageRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>ImageRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.JSONRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>JSONRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.Request.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>Request</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.TextRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>TextRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequestBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequestBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Quat.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Quat</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec2.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec2</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.ModelRenderer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>ModelRenderer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Technique.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Technique</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>DepthRangeStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>MatrixStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.TransformationStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>TransformationStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>ViewportStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Type.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Type</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface<span class='break'> </span>.<span class='break'> </span>CanvasHandler</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Utility.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Utility</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Version.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Version</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Buffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Buffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Context.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Context</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.FragmentShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>FragmentShader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Framebuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Framebuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.IndexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>IndexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>ObjectGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Program.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Program</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Renderbuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Shader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Shader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture2D</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>TextureCubeMap</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexShader</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-19 17:11
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Class <span>SpiderGL.Space.TransformationStack</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				The SpiderGL.Space.TransformationStack holds the model, view and projection matrix stacks and calculates their matrix compositions.
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_space.js.html">space.js</a></li>
+					
+						<li>Extends <span class="fixedFont">
+						<a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL.Core.ObjectBase</a></span></li>
+					
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SpiderGL.Space.TransformationStack.">
+					<caption class="sectionTitle">Class Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#constructor">SpiderGL.Space.TransformationStack</a></b>()
+								</div>
+								<div class="description">Creates a SpiderGL.Space.TransformationStack.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class SpiderGL.Space.TransformationStack.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#depth">depth</a></b>
+										</div>
+										<div class="description">Gets the depth range stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#model">model</a></b>
+										</div>
+										<div class="description">Gets the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrix">modelMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrix$">modelMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrixInverse">modelMatrixInverse</a></b>
+										</div>
+										<div class="description">Gets a copy of the inverse of the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrixInverse$">modelMatrixInverse$</a></b>
+										</div>
+										<div class="description">Gets a reference to the inverse of the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrixInverseTranspose">modelMatrixInverseTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrixInverseTranspose$">modelMatrixInverseTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrixTranspose">modelMatrixTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelMatrixTranspose$">modelMatrixTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the top matrix of the model stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelSpaceViewDirection">modelSpaceViewDirection</a></b>
+										</div>
+										<div class="description">Gets a copy of the 3-dimensional vector representing the negated 3rd row of the inverse of the model-view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelSpaceViewDirection$">modelSpaceViewDirection$</a></b>
+										</div>
+										<div class="description">Gets a reference to the 3-dimensional vector representing the negated 3rd row of the inverse of the model-view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelSpaceViewerPosition">modelSpaceViewerPosition</a></b>
+										</div>
+										<div class="description">Gets a copy of the 3-dimensional vector representing the 4th column of the inverse of the model-view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelSpaceViewerPosition$">modelSpaceViewerPosition$</a></b>
+										</div>
+										<div class="description">Gets a reference to the 3-dimensional vector representing the 4th column of the inverse of the model-view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrix">modelViewMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrix$">modelViewMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrixInverse">modelViewMatrixInverse</a></b>
+										</div>
+										<div class="description">Gets a copy of the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrixInverse$">modelViewMatrixInverse$</a></b>
+										</div>
+										<div class="description">Gets a reference to the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrixInverseTranspose">modelViewMatrixInverseTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrixInverseTranspose$">modelViewMatrixInverseTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrixTranspose">modelViewMatrixTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewMatrixTranspose$">modelViewMatrixTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the matrix T = V * M, where V is the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrix">modelViewProjectionMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrix$">modelViewProjectionMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrixInverse">modelViewProjectionMatrixInverse</a></b>
+										</div>
+										<div class="description">Gets a copy of the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrixInverse$">modelViewProjectionMatrixInverse$</a></b>
+										</div>
+										<div class="description">Gets a reference to the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrixInverseTranspose">modelViewProjectionMatrixInverseTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrixInverseTranspose$">modelViewProjectionMatrixInverseTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrixTranspose">modelViewProjectionMatrixTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#modelViewProjectionMatrixTranspose$">modelViewProjectionMatrixTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projection">projection</a></b>
+										</div>
+										<div class="description">Gets the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrix">projectionMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrix$">projectionMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrixInverse">projectionMatrixInverse</a></b>
+										</div>
+										<div class="description">Gets a copy of the inverse of the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrixInverse$">projectionMatrixInverse$</a></b>
+										</div>
+										<div class="description">Gets a reference to the inverse of the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrixInverseTranspose">projectionMatrixInverseTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrixInverseTranspose$">projectionMatrixInverseTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrixTranspose">projectionMatrixTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#projectionMatrixTranspose$">projectionMatrixTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the top matrix of the projection stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#view">view</a></b>
+										</div>
+										<div class="description">Gets the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrix">viewMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrix$">viewMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrixInverse">viewMatrixInverse</a></b>
+										</div>
+										<div class="description">Gets a copy of the inverse of the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrixInverse$">viewMatrixInverse$</a></b>
+										</div>
+										<div class="description">Gets a reference to the inverse of the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrixInverseTranspose">viewMatrixInverseTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrixInverseTranspose$">viewMatrixInverseTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrixTranspose">viewMatrixTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewMatrixTranspose$">viewMatrixTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the top matrix of the view stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewport">viewport</a></b>
+										</div>
+										<div class="description">Gets the viewport stack.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrix">viewProjectionMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrix$">viewProjectionMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrixInverse">viewProjectionMatrixInverse</a></b>
+										</div>
+										<div class="description">Gets a copy of the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrixInverse$">viewProjectionMatrixInverse$</a></b>
+										</div>
+										<div class="description">Gets a reference to the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrixInverseTranspose">viewProjectionMatrixInverseTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrixInverseTranspose$">viewProjectionMatrixInverseTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrixTranspose">viewProjectionMatrixTranspose</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewProjectionMatrixTranspose$">viewProjectionMatrixTranspose$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the matrix T = P * V, where P is the projection matrix and V the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewSpaceNormalMatrix">viewSpaceNormalMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the upper-left 3x3 matrix of the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#viewSpaceNormalMatrix$">viewSpaceNormalMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the upper-left 3x3 matrix of the model-view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#worldSpaceNormalMatrix">worldSpaceNormalMatrix</a></b>
+										</div>
+										<div class="description">Gets a copy of the transpose of the inverse of the upper-left 3x3 matrix of the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#worldSpaceNormalMatrix$">worldSpaceNormalMatrix$</a></b>
+										</div>
+										<div class="description">Gets a reference to the transpose of the inverse of the upper-left 3x3 matrix of the model matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#worldSpaceViewDirection">worldSpaceViewDirection</a></b>
+										</div>
+										<div class="description">Gets a reference to the 3-dimensional vector representing the negated 3rd row of the inverse of the model-view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#worldSpaceViewDirection$">worldSpaceViewDirection$</a></b>
+										</div>
+										<div class="description">Gets a reference to the 3-dimensional vector representing the negated 3rd row of the inverse of the view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#worldSpaceViewerPosition">worldSpaceViewerPosition</a></b>
+										</div>
+										<div class="description">Gets a copy of the 3-dimensional vector representing the 4th column of the inverse of the model-view matrix.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.Space.TransformationStack.html#worldSpaceViewerPosition$">worldSpaceViewerPosition$</a></b>
+										</div>
+										<div class="description">Gets a reference to the 3-dimensional vector representing the 4th column of the inverse of the view matrix.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+				<dl class="inheritsList">
+				<dt>Fields borrowed from class <a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL.Core.ObjectBase</a>: </dt><dd><a href="../symbols/SpiderGL.Core.ObjectBase.html#uid">uid</a></dd>
+				</dl>
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class SpiderGL.Space.TransformationStack.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Space.TransformationStack.html#project">project</a></b>(xyzw)
+										</div>
+										<div class="description"></div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Space.TransformationStack.html#reset">reset</a></b>()
+										</div>
+										<div class="description">Resets the three stacks.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Space.TransformationStack.html#unproject">unproject</a></b>(xyz)
+										</div>
+										<div class="description"></div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+					<dl class="inheritsList" id="MethodsListInherited">
+					
+					</dl>
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Class Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>SpiderGL.Space.TransformationStack</b>()
+					</div>
+					
+					<div class="description">
+						Creates a SpiderGL.Space.TransformationStack.The purpose of SpiderGL.Space.TransformationStack is to provide transformation stack similar to the one in the fixed-pipeline versions of OpenGL.Differently from OpenGL, which has two stacks, namely MODELVIEW and PRIJECTION, the SpiderGL.Space.TransformationStack is composed of three SpiderGL.Space.MatrixStack stacks: model, view and projection.All three stacks can be directly accessed, as well as utility getters to obtain compositions of matrices, e.g. model-view-projection, model-view-inverse etc.To avoid recalculation of several sub-products, matrix compositions and variations are cached and updated when stack operations occur.
+						
+					</div>
+					
+					
+						
+							<pre class="code">var xform = new SpiderGL.Space.TransformationStack();var uniforms = {	uModelViewprojection : null,	uNormalMatrix        : null,	uColor               : null};program.bind();xform.projection.loadIdentity();xform.projection.perspective(SpiderGL.Math.degToRad(60.0), width/height, 0.1, 100.0);xform.view.loadIdentity();xform.view.lookAt([0, 0, 10], [0, 0, 0], [0, 1, 0]);xform.model.loadIdentity();xform.model.scale([0.1, 0.1, 0.1]);for (var i=0; i<n; ++i) {	s.push();		s.translate(models[i].positions);		uniforms.uModelViewProjection = xform.modelViewProjectionMatrix;		uniforms.uNormalMatrix        = xform.modelSpaceNormalMatrix;		uniforms.uColor               = models[i].color;		program.setUniforms(uniforms);		drawModel(models[i]);	s.pop();}</pre>
+						
+					
+				
+					
+					
+					
+						<dl class="detailList nomargin">
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+								<dt class="heading">See:</dt>
+								
+									<dd>reset</dd>
+								
+									<dd><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL.Space.MatrixStack</a></dd>
+								
+							
+						</dl>
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id="depth">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL.Space.DepthRangeStack</a>}</span>
+							
+							<b>depth</b>							
+						</div>
+						
+						<div class="description">
+							Gets the depth range stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewport</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="model">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL.Space.MatrixStack</a>}</span>
+							
+							<b>model</b>							
+						</div>
+						
+						<div class="description">
+							Gets the model stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>view</dd>
+									
+										<dd>projection</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the top matrix of the model stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrix$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.matrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>modelMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the top matrix of the model stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrix</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.matrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrixInverse">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelMatrixInverse</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the inverse of the top matrix of the model stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrixInverse$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverse</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrixInverse$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelMatrixInverse$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the inverse of the top matrix of the model stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrixInverse</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverse$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrixInverseTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelMatrixInverseTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the top matrix of the model stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrixInverseTranspose$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverseTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrixInverseTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelMatrixInverseTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the top matrix of the model stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrixInverseTranspose</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverseTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrixTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelMatrixTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the top matrix of the model stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrixTranspose$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.transpose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelMatrixTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelMatrixTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the top matrix of the model stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelMatrixTranspose</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.transpose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelSpaceViewDirection">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelSpaceViewDirection</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the 3-dimensional vector representing the negated 3rd row of the inverse of the model-view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelSpaceViewDirection$</dd>
+									
+										<dd>modelSpaceViewerPosition</dd>
+									
+										<dd>worldSpaceViewDirection</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelSpaceViewDirection$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelSpaceViewDirection$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the 3-dimensional vector representing the negated 3rd row of the inverse of the model-view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelSpaceViewDirection</dd>
+									
+										<dd>modelSpaceViewerPosition$</dd>
+									
+										<dd>worldSpaceViewDirection$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelSpaceViewerPosition">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelSpaceViewerPosition</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the 3-dimensional vector representing the 4th column of the inverse of the model-view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelSpaceViewerPosition$</dd>
+									
+										<dd>modelSpaceViewDirection$</dd>
+									
+										<dd>worldSpaceViewerPosition</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelSpaceViewerPosition$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelSpaceViewerPosition$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the 3-dimensional vector representing the 4th column of the inverse of the model-view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelSpaceViewerPosition</dd>
+									
+										<dd>modelSpaceViewDirection$</dd>
+									
+										<dd>worldSpaceViewerPosition$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the matrix T = V * M, where V is the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the matrix T = V * M, where V is the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrixInverse">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrixInverse</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrixInverse$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrixInverse$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrixInverse$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrixInverse</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrixInverseTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrixInverseTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrixInverseTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrixInverseTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrixInverseTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the matrix T = V * M, where V is the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrixInverseTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrixTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrixTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the matrix T = V * M, where V is the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrixTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewMatrixTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewMatrixTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the matrix T = V * M, where V is the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewMatrixTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrixInverse">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrixInverse</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrixInverse$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrixInverse$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrixInverseTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrixInverseTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrixInverseTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrixInverseTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrixInverseTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrixInverseTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrixTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrixTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrixTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="modelViewProjectionMatrixTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>modelViewProjectionMatrixTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the matrix T = P * V * M, where P is the projection matrix, V the view matrix and M the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>modelViewProjectionMatrixTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projection">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL.Space.MatrixStack</a>}</span>
+							
+							<b>projection</b>							
+						</div>
+						
+						<div class="description">
+							Gets the projection stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>model</dd>
+									
+										<dd>view</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the top matrix of the projection stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrix$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.matrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the top matrix of the projection stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrix</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.matrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrixInverse">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrixInverse</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the inverse of the top matrix of the projection stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrixInverse$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverse</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrixInverse$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrixInverse$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the inverse of the top matrix of the projection stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrixInverse</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverse$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrixInverseTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrixInverseTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the top matrix of the projection stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrixInverseTranspose$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverseTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrixInverseTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrixInverseTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the top matrix of the projection stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrixInverseTranspose</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverseTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrixTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrixTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the top matrix of the projection stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrixTranspose$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.transpose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="projectionMatrixTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>projectionMatrixTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the top matrix of the projection stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>projectionMatrixTranspose</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.transpose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="view">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL.Space.MatrixStack</a>}</span>
+							
+							<b>view</b>							
+						</div>
+						
+						<div class="description">
+							Gets the view stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>model</dd>
+									
+										<dd>projection</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the top matrix of the view stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrix$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.matrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the top matrix of the view stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrix</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.matrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrixInverse">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrixInverse</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the inverse of the top matrix of the view stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrixInverse$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverse</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrixInverse$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrixInverse$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the inverse of the top matrix of the view stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrixInverse</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverse$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrixInverseTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrixInverseTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the top matrix of the view stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrixInverseTranspose$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverseTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrixInverseTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrixInverseTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the top matrix of the view stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrixInverseTranspose</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.inverseTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrixTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrixTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the top matrix of the view stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrixTranspose$</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.transpose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewMatrixTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewMatrixTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the top matrix of the view stack.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewMatrixTranspose</dd>
+									
+										<dd>SpiderGL.Space.MatrixStack.transpose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewport">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL.Space.ViewportStack</a>}</span>
+							
+							<b>viewport</b>							
+						</div>
+						
+						<div class="description">
+							Gets the viewport stack.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>depthRange</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the matrix T = P * V, where P is the projection matrix and V the view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the matrix T = P * V, where P is the projection matrix and V the view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrixInverse">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrixInverse</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrixInverse$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrixInverse$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrixInverse$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrixInverse</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrixInverseTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrixInverseTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrixInverseTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrixInverseTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrixInverseTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the matrix T = P * V, where P is the projection matrix and V the view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrixInverseTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrixTranspose">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrixTranspose</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the matrix T = P * V, where P is the projection matrix and V the view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrixTranspose$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewProjectionMatrixTranspose$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewProjectionMatrixTranspose$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the matrix T = P * V, where P is the projection matrix and V the view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewProjectionMatrixTranspose</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewSpaceNormalMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewSpaceNormalMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the upper-left 3x3 matrix of the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewSpaceNormalMatrix$</dd>
+									
+										<dd>worldSpaceNormalMatrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewSpaceNormalMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewSpaceNormalMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the upper-left 3x3 matrix of the model-view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>viewSpaceNormalMatrix</dd>
+									
+										<dd>worldSpaceNormalMatrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="worldSpaceNormalMatrix">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>worldSpaceNormalMatrix</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the transpose of the inverse of the upper-left 3x3 matrix of the model matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>worldSpaceNormalMatrix$</dd>
+									
+										<dd>viewSpaceNormalMatrix</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="worldSpaceNormalMatrix$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>worldSpaceNormalMatrix$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the transpose of the inverse of the upper-left 3x3 matrix of the model matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>worldSpaceNormalMatrix</dd>
+									
+										<dd>viewSpaceNormalMatrix$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="worldSpaceViewDirection">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>worldSpaceViewDirection</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the 3-dimensional vector representing the negated 3rd row of the inverse of the model-view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>worldSpaceViewDirection$</dd>
+									
+										<dd>worldSpaceViewerPosition</dd>
+									
+										<dd>modelSpaceViewDirection</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="worldSpaceViewDirection$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>worldSpaceViewDirection$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the 3-dimensional vector representing the negated 3rd row of the inverse of the view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>worldSpaceViewDirection</dd>
+									
+										<dd>worldSpaceViewerPosition$</dd>
+									
+										<dd>modelSpaceViewDirection$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="worldSpaceViewerPosition">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>worldSpaceViewerPosition</b>							
+						</div>
+						
+						<div class="description">
+							Gets a copy of the 3-dimensional vector representing the 4th column of the inverse of the model-view matrix.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>worldSpaceViewerPosition$</dd>
+									
+										<dd>worldSpaceViewDirection</dd>
+									
+										<dd>modelSpaceViewerPosition</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="worldSpaceViewerPosition$">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>worldSpaceViewerPosition$</b>							
+						</div>
+						
+						<div class="description">
+							Gets a reference to the 3-dimensional vector representing the 4th column of the inverse of the view matrix.The returned array MUST NOT be changed.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>worldSpaceViewerPosition</dd>
+									
+										<dd>worldSpaceViewDirection$</dd>
+									
+										<dd>modelSpaceViewerPosition$</dd>
+									
+								
+								
+							</dl>
+						
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id="project">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>project</b>(xyzw)
+								</div>
+								
+								<div class="description">
+									
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<b>xyzw</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id="reset">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>reset</b>()
+								</div>
+								
+								<div class="description">
+									Resets the three stacks.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd>SpiderGL.Space.MatrixStack.reset</dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id="unproject">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>unproject</b>(xyz)
+								</div>
+								
+								<div class="description">
+									
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<b>xyz</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

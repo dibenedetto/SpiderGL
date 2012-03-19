@@ -1,0 +1,2145 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>SpiderGL.WebGL.Framebuffer | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/SpiderGL.html">SpiderGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core<span class='break'> </span>.<span class='break'> </span>ObjectBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.DOM.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>DOM</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.AggregateRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>AggregateRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.BinaryRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>BinaryRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.ImageRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>ImageRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.JSONRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>JSONRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.Request.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>Request</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.TextRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>TextRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequestBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequestBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Quat.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Quat</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec2.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec2</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.ModelRenderer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>ModelRenderer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Technique.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Technique</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>DepthRangeStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>MatrixStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.TransformationStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>TransformationStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>ViewportStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Type.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Type</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface<span class='break'> </span>.<span class='break'> </span>CanvasHandler</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Utility.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Utility</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Version.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Version</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Buffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Buffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Context.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Context</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.FragmentShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>FragmentShader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Framebuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Framebuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.IndexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>IndexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>ObjectGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Program.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Program</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Renderbuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Shader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Shader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture2D</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>TextureCubeMap</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexShader</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-19 17:11
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Class <span>SpiderGL.WebGL.Framebuffer</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				The SpiderGL.WebGL.Framebuffer is a wrapper for WebGLFramebuffer.
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_webgl.js.html">webgl.js</a></li>
+					
+						<li>Extends <span class="fixedFont">
+						<a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL.WebGL.ObjectGL</a></span></li>
+					
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SpiderGL.WebGL.Framebuffer.">
+					<caption class="sectionTitle">Class Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#constructor">SpiderGL.WebGL.Framebuffer</a></b>(gl, options)
+								</div>
+								<div class="description">Creates a SpiderGL.WebGL.Framebuffer.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class SpiderGL.WebGL.Framebuffer.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#autoViewport">autoViewport</a></b>
+										</div>
+										<div class="description">Automatic viewport settings in a call to bind.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#colorTarget">colorTarget</a></b>
+										</div>
+										<div class="description">Gets/Sets the resource attached to the color attachment.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_ATTACHMENT_CUBE_MAP_FACE">DEFAULT_ATTACHMENT_CUBE_MAP_FACE</a></b>
+										</div>
+										<div class="description">Default texture cube map face to attach when using SpiderGL.WebGL.Framebuffer#setAttachments.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_ATTACHMENT_TEXTURE_LEVEL">DEFAULT_ATTACHMENT_TEXTURE_LEVEL</a></b>
+										</div>
+										<div class="description">Default texture level to attach when using SpiderGL.WebGL.Framebuffer#setAttachments.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_AUTO_VIEWPORT">DEFAULT_AUTO_VIEWPORT</a></b>
+										</div>
+										<div class="description">Default value for SpiderGL.WebGL.Framebuffer#autoViewport.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_CLEAR_MASK">DEFAULT_CLEAR_MASK</a></b>
+										</div>
+										<div class="description">The WebGL birfield mask used for clearing the framebuffer.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_READ_PIXELS_FORMAT">DEFAULT_READ_PIXELS_FORMAT</a></b>
+										</div>
+										<div class="description">The WebGL pixel format for reading framebuffer pixels.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_READ_PIXELS_HEIGHT">DEFAULT_READ_PIXELS_HEIGHT</a></b>
+										</div>
+										<div class="description">Default read rectangle height (in pixels).</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_READ_PIXELS_TYPE">DEFAULT_READ_PIXELS_TYPE</a></b>
+										</div>
+										<div class="description">The WebGL pixel type for reading framebuffer pixels.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_READ_PIXELS_WIDTH">DEFAULT_READ_PIXELS_WIDTH</a></b>
+										</div>
+										<div class="description">Default read rectangle width (in pixels).</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_READ_PIXELS_X">DEFAULT_READ_PIXELS_X</a></b>
+										</div>
+										<div class="description">Default read rectangle left coordinate (in pixels).</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.DEFAULT_READ_PIXELS_Y">DEFAULT_READ_PIXELS_Y</a></b>
+										</div>
+										<div class="description">Default read rectangle bottom coordinate (in pixels).</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#depthStencilTarget">depthStencilTarget</a></b>
+										</div>
+										<div class="description">Gets/Sets the resource attached to the depthStencil attachment.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#depthTarget">depthTarget</a></b>
+										</div>
+										<div class="description">Gets/Sets the resource attached to the depth attachment.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#height">height</a></b>
+										</div>
+										<div class="description">Gets the height of the attached resources.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#isComplete">isComplete</a></b>
+										</div>
+										<div class="description">Indicates if the the status of the framebuffer is WebGLRenderingContext.FRAMEBUFFER_COMPLETE.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#isReady">isReady</a></b>
+										</div>
+										<div class="description">Tests if the framebuffer is ready to use.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#status">status</a></b>
+										</div>
+										<div class="description">The WebGL status of the framebuffer.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#stencilTarget">stencilTarget</a></b>
+										</div>
+										<div class="description">Gets/Sets the resource attached to the stencil attachment.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.TARGET">TARGET</a></b>
+										</div>
+										<div class="description">WebGL target for framebuffers.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#viewport">viewport</a></b>
+										</div>
+										<div class="description">Gets a 4-component array with the viewport parameters.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#width">width</a></b>
+										</div>
+										<div class="description">Gets the width of the attached resources.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+				<dl class="inheritsList">
+				<dt>Fields borrowed from class <a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL.WebGL.ObjectGL</a>: </dt><dd><a href="../symbols/SpiderGL.WebGL.ObjectGL.html#gl">gl</a>, <a href="../symbols/SpiderGL.WebGL.ObjectGL.html#handle">handle</a>, <a href="../symbols/SpiderGL.WebGL.ObjectGL.html#isValid">isValid</a>, <a href="../symbols/SpiderGL.WebGL.ObjectGL.html#target">target</a></dd><dt>Fields borrowed from class <a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL.Core.ObjectBase</a>: </dt><dd><a href="../symbols/SpiderGL.Core.ObjectBase.html#uid">uid</a></dd>
+				</dl>
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class SpiderGL.WebGL.Framebuffer.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#applyViewport">applyViewport</a></b>()
+										</div>
+										<div class="description">Sets the WebGL viewport to the framebuffer viewport rectangle.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#bind">bind</a></b>(setViewport)
+										</div>
+										<div class="description">Binds the wrapped WebGLFramebuffer to the WebGLRenderingContex.FRAMEBUFFER target.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#clear">clear</a></b>(mask)
+										</div>
+										<div class="description">Clears the framebuffer using current clear values.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#destroy">destroy</a></b>()
+										</div>
+										<div class="description">Destroys the WebGLFramebuffer.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#detachAll">detachAll</a></b>()
+										</div>
+										<div class="description">Detaches all attached resources.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item5'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#getAttachments">getAttachments</a></b>()
+										</div>
+										<div class="description">Retrieves the attached resources.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item6'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#readPixels">readPixels</a></b>(buffer, options)
+										</div>
+										<div class="description">Reads the pixels from a rectangular region of the framebuffer.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item7'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#setAttachments">setAttachments</a></b>(attachments)
+										</div>
+										<div class="description">Sets the framebuffer attachments.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item8'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#unbind">unbind</a></b>()
+										</div>
+										<div class="description">Binds "null" to the WebGLRenderingContex.FRAMEBUFFER target.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item9'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.WebGL.Framebuffer.<b><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#.unbind">unbind</a></b>(gl)
+										</div>
+										<div class="description">WebGLFramebuffer unbinding.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+					<dl class="inheritsList" id="MethodsListInherited">
+					
+					</dl>
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Class Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>SpiderGL.WebGL.Framebuffer</b>(gl, options)
+					</div>
+					
+					<div class="description">
+						Creates a SpiderGL.WebGL.Framebuffer.SpiderGL.WebGL.Framebuffer wraps a WebGLFramebuffer object.
+						
+					</div>
+					
+					
+				
+					
+						<dl class="detailList params">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{WebGLRenderingContext}</span>  <b>gl</b>
+									
+								</dt>
+								<dd>A WebGLRenderingContext hijacked with <a href="../symbols/SpiderGL.WebGL.Context.html#.hijack">SpiderGL.WebGL.Context.hijack</a>.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span>  <b>options</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Optional parameters.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{WebGLFramebuffer}</span>  <b>options.handle</b>
+									<i>Optional</i>
+								</dt>
+								<dd>A WebGLFramebuffer. If present, this object will be used as the wrapped WebGLFramebuffer. Otherwise a new one will be created.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{bool}</span>  <b>options.autoViewport</b>
+									<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_AUTO_VIEWPORT</i>
+								</dt>
+								<dd>The value of the autoViewport property.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span>  <b>options.color</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Color attachment target (see setAttachments).</dd>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span>  <b>options.depth</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Depth attachment target (see setAttachments).</dd>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span>  <b>options.stencil</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Stencil attachment target (see setAttachments).</dd>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span>  <b>options.depthStencil</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Depth-Stencil attachment target (see setAttachments).</dd>
+							
+						</dl>
+					
+					
+					
+						<dl class="detailList nomargin">
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+								<dt class="heading">See:</dt>
+								
+									<dd>setAttachments</dd>
+								
+									<dd><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL.WebGL.Texture2D</a></dd>
+								
+									<dd><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL.WebGL.TextureCubeMap</a></dd>
+								
+									<dd><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a></dd>
+								
+									<dd><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL.WebGL.ObjectGL</a></dd>
+								
+							
+						</dl>
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id="autoViewport">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{bool}</span>
+							
+							<b>autoViewport</b>							
+						</div>
+						
+						<div class="description">
+							Automatic viewport settings in a call to bind.If true, when calling bind the viewport will be set with a call to WebGLRenderingContext.viewport().
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="colorTarget">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL.WebGL.Texture</a>|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span>
+							
+							<b>colorTarget</b>							
+						</div>
+						
+						<div class="description">
+							Gets/Sets the resource attached to the color attachment.If no resource is attached the result is null.When setting, default attaching parameters are used.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>depthTarget</dd>
+									
+										<dd>stencilTarget</dd>
+									
+										<dd>depthStencilTarget</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_ATTACHMENT_CUBE_MAP_FACE">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_ATTACHMENT_CUBE_MAP_FACE</b>							
+						</div>
+						
+						<div class="description">
+							Default texture cube map face to attach when using SpiderGL.WebGL.Framebuffer#setAttachments.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										WebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_ATTACHMENT_TEXTURE_LEVEL">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_ATTACHMENT_TEXTURE_LEVEL</b>							
+						</div>
+						
+						<div class="description">
+							Default texture level to attach when using SpiderGL.WebGL.Framebuffer#setAttachments.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										0
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_AUTO_VIEWPORT">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{bool}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_AUTO_VIEWPORT</b>							
+						</div>
+						
+						<div class="description">
+							Default value for SpiderGL.WebGL.Framebuffer#autoViewport.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										true
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_CLEAR_MASK">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_CLEAR_MASK</b>							
+						</div>
+						
+						<div class="description">
+							The WebGL birfield mask used for clearing the framebuffer.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#clear">SpiderGL.WebGL.Framebuffer#clear</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										(WebGLRenderingContext.COLOR_BUFFER_BIT | WebGLRenderingContext.DEPTH_BUFFER_BIT | WebGLRenderingContext.STENCIL_BUFFER_BIT)
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_READ_PIXELS_FORMAT">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_READ_PIXELS_FORMAT</b>							
+						</div>
+						
+						<div class="description">
+							The WebGL pixel format for reading framebuffer pixels.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#readPixels">SpiderGL.WebGL.Framebuffer#readPixels</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										WebGLRenderingContext.RGBA
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_READ_PIXELS_HEIGHT">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_READ_PIXELS_HEIGHT</b>							
+						</div>
+						
+						<div class="description">
+							Default read rectangle height (in pixels).If less than zero, the height will be set to span the whole render target (starting from read rectangle y coordinate).
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#readPixels">SpiderGL.WebGL.Framebuffer#readPixels</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										-1
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_READ_PIXELS_TYPE">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_READ_PIXELS_TYPE</b>							
+						</div>
+						
+						<div class="description">
+							The WebGL pixel type for reading framebuffer pixels.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#readPixels">SpiderGL.WebGL.Framebuffer#readPixels</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										WebGLRenderingContext.UNSIGNED_BYTE
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_READ_PIXELS_WIDTH">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_READ_PIXELS_WIDTH</b>							
+						</div>
+						
+						<div class="description">
+							Default read rectangle width (in pixels).If less than zero, the width will be set to span the whole render target (starting from read rectangle x coordinate).
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#readPixels">SpiderGL.WebGL.Framebuffer#readPixels</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										-1
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_READ_PIXELS_X">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_READ_PIXELS_X</b>							
+						</div>
+						
+						<div class="description">
+							Default read rectangle left coordinate (in pixels).
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#readPixels">SpiderGL.WebGL.Framebuffer#readPixels</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										0
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_READ_PIXELS_Y">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>DEFAULT_READ_PIXELS_Y</b>							
+						</div>
+						
+						<div class="description">
+							Default read rectangle bottom coordinate (in pixels).
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd><a href="../symbols/SpiderGL.WebGL.Framebuffer.html#readPixels">SpiderGL.WebGL.Framebuffer#readPixels</a></dd>
+									
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										0
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="depthStencilTarget">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL.WebGL.Texture</a>|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span>
+							
+							<b>depthStencilTarget</b>							
+						</div>
+						
+						<div class="description">
+							Gets/Sets the resource attached to the depthStencil attachment.If no resource is attached the result is null.When setting, default attaching parameters are used.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>colorTarget</dd>
+									
+										<dd>depthTarget</dd>
+									
+										<dd>stencilTarget</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="depthTarget">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL.WebGL.Texture</a>|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span>
+							
+							<b>depthTarget</b>							
+						</div>
+						
+						<div class="description">
+							Gets/Sets the resource attached to the depth attachment.If no resource is attached the result is null.When setting, default attaching parameters are used.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>colorTarget</dd>
+									
+										<dd>stencilTarget</dd>
+									
+										<dd>depthStencilTarget</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="height">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>height</b>							
+						</div>
+						
+						<div class="description">
+							Gets the height of the attached resources.The value represents the height of the attached resources.It is equal to viewport[3].
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>width</dd>
+									
+										<dd>viewport</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="isComplete">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>isComplete</b>							
+						</div>
+						
+						<div class="description">
+							Indicates if the the status of the framebuffer is WebGLRenderingContext.FRAMEBUFFER_COMPLETE.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="isReady">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{bool}</span>
+							
+							<b>isReady</b>							
+						</div>
+						
+						<div class="description">
+							Tests if the framebuffer is ready to use.A framebuffer is considered ready if its status is WebGLRenderingContext.FRAMEBUFFER_COMPLETE.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>isComplete</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="status">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>status</b>							
+						</div>
+						
+						<div class="description">
+							The WebGL status of the framebuffer.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>isComplete</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="stencilTarget">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{<a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL.WebGL.Texture</a>|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span>
+							
+							<b>stencilTarget</b>							
+						</div>
+						
+						<div class="description">
+							Gets/Sets the resource attached to the stencil attachment.If no resource is attached the result is null.When setting, default attaching parameters are used.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>colorTarget</dd>
+									
+										<dd>depthTarget</dd>
+									
+										<dd>depthStencilTarget</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".TARGET">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>TARGET</b>							
+						</div>
+						
+						<div class="description">
+							WebGL target for framebuffers.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										WebGLRenderingContext.FRAMEBUFFER
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="viewport">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{array}</span>
+							
+							<b>viewport</b>							
+						</div>
+						
+						<div class="description">
+							Gets a 4-component array with the viewport parameters.Viewport parameters are stored as [0, 0, width, height] and will be set using WebGLRenderingContext.viewport() during a bind call if autoViewport is true.The width and height parameters corresponds to the width and height of the last resource attached with setAttachments.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>autoViewport</dd>
+									
+										<dd>setAttachments</dd>
+									
+								
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="width">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>width</b>							
+						</div>
+						
+						<div class="description">
+							Gets the width of the attached resources.The value represents the width of the attached resources.It is equal to viewport[2].
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+									<dt class="heading">See:</dt>
+									
+										<dd>height</dd>
+									
+										<dd>viewport</dd>
+									
+								
+								
+							</dl>
+						
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id="applyViewport">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>applyViewport</b>()
+								</div>
+								
+								<div class="description">
+									Sets the WebGL viewport to the framebuffer viewport rectangle.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd>viewport</dd>
+											
+												<dd>autoViewport</dd>
+											
+												<dd>setAttachments</dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id="bind">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>bind</b>(setViewport)
+								</div>
+								
+								<div class="description">
+									Binds the wrapped WebGLFramebuffer to the WebGLRenderingContex.FRAMEBUFFER target.If setViewport is not specified and autoViewport is true, the stored viewport is set with WebGLRenderingContext.viewport().
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{bool}</span> <b>setViewport</b>
+												<i>Optional</i>
+											</dt>
+											<dd>If specified, overrides the value of autoViewport.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd>unbind</dd>
+											
+												<dd>autoViewport</dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id="clear">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>clear</b>(mask)
+								</div>
+								
+								<div class="description">
+									Clears the framebuffer using current clear values.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>mask</b>
+												
+											</dt>
+											<dd>The clear mask as for WebGLRenderingContext.clear.</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id="destroy">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>destroy</b>()
+								</div>
+								
+								<div class="description">
+									Destroys the WebGLFramebuffer.After destruction, the handle is set to null and this object should not be used anymore.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd><a href="../symbols/SpiderGL.WebGL.ObjectGL.html#destroy">SpiderGL.WebGL.ObjectGL#destroy</a></dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id="detachAll">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>detachAll</b>()
+								</div>
+								
+								<div class="description">
+									Detaches all attached resources.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd>setAttachments</dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item5'
+							>
+								<div class="fixedFont heading" id="getAttachments">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{object}</span>
+									
+									<b>getAttachments</b>()
+								</div>
+								
+								<div class="description">
+									Retrieves the attached resources.This method returns a new object containing the attachments information.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{object}</span> The attachments data. The object fields may be: color, depth, stencil and depthStencil.</dd>
+											
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd>setAttachments</dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item6'
+							>
+								<div class="fixedFont heading" id="readPixels">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>readPixels</b>(buffer, options)
+								</div>
+								
+								<div class="description">
+									Reads the pixels from a rectangular region of the framebuffer.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{ArrayBufferView}</span> <b>buffer</b>
+												
+											</dt>
+											<dd>The destination buffer in which pixels will be written.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{object}</span> <b>options</b>
+												<i>Optional</i>
+											</dt>
+											<dd>Optional parameters.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>options.x</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_READ_PIXELS_X</i>
+											</dt>
+											<dd>The rectangle left coordinate (in pixels).</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>options.y</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_READ_PIXELS_X</i>
+											</dt>
+											<dd>The rectangle bottom coordinate (in pixels).</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>options.width</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_READ_PIXELS_WIDTH</i>
+											</dt>
+											<dd>The rectangle width (in pixels). If less than zero, the width will be set to span the whole render target (starting from rectangle x coordinate).</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>options.height</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_READ_PIXELS_HEIGHT</i>
+											</dt>
+											<dd>The rectangle height (in pixels). If less than zero, the height will be set to span the whole render target (starting from rectangle y coordinate).</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>options.format</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_READ_PIXELS_FORMAT</i>
+											</dt>
+											<dd>The WebGL pixel format.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>options.type</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_READ_PIXELS_TYPE</i>
+											</dt>
+											<dd>The WebGL pixel type.</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item7'
+							>
+								<div class="fixedFont heading" id="setAttachments">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<b>setAttachments</b>(attachments)
+								</div>
+								
+								<div class="description">
+									Sets the framebuffer attachments.It is used to attach resources (SpiderGL.WebGL.Texture2D, SpiderGL.WebGL.TextureCubeMap or SpiderGL.WebGL.Renderbuffer) as render targets.
+									
+									
+									
+									
+								</div>
+								
+								
+									
+										<pre class="code">var t2D = new SpiderGL.WebGL.Texture2D(...);var tCM = new SpiderGL.WebGL.TextureCubeMap(...);var rb  = new SpiderGL.WebGL.Renderbuffer(...);var fb = new SpiderGL.WebGL.Framebuffer(gl, {	color : {resource: t2D, level: 0 }, // alternatively: color: t2D; in this case level would default to SpiderGL.WebGL.Framebuffer.DEFAULT_ATTACHMENT_TEXTURE_LEVEL	depth : rb                          // alternatively: depth: {resource: rb}; renderbuffers do not have mipmap levels};// use fb// ...// change attachmentfb.setAttachments({	color: {resource: tCM, face: gl.TEXTURE_CUBE_MAP_NEGATIVE_Z} // if face is omitted, defaults to SpiderGL.WebGL.Framebuffer.DEFAULT_ATTACHMENT_CUBE_MAP_FACE})</pre>
+									
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{object}</span> <b>attachments</b>
+												
+											</dt>
+											<dd>The resources to attach to the WebGLFramebuffer.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{object|<a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL.WebGL.Texture2D</a>|<a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL.WebGL.TextureCubeMap</a>|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span> <b>attachments.color</b>
+												<i>Optional</i>
+											</dt>
+											<dd>The color attachment for target WebGLRenderingContext.COLOR_ATTACHMENT0; if omitted, the current color attachment is kept; if null, the current color attachment is detached.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{<a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL.WebGL.Texture2D</a>|<a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL.WebGL.TextureCubeMap</a>|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span> <b>attachments.color.resource</b>
+												<i>Optional</i>
+											</dt>
+											<dd>The resource to use as a render target for color attachment.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>attachments.color.level</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_ATTACHMENT_TEXTURE_LEVEL</i>
+											</dt>
+											<dd>If resource is SpiderGL.WebGL.Texture2D or SpiderGL.WebGL.TextureCubeMap, specifies the texture level to attach. As per WebGL specifications, level must be zero.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>attachments.color.face</b>
+												<i>Optional, Default: SpiderGL.WebGL.Framebuffer.DEFAULT_ATTACHMENT_CUBE_MAP_FACE</i>
+											</dt>
+											<dd>If resource is SpiderGL.WebGL.TextureCubeMap, specifies the texture cube map face to attach.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{object|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span> <b>attachments.depth</b>
+												<i>Optional</i>
+											</dt>
+											<dd>Same as attachments.color but for WebGLRenderingContext.DEPTH_ATTACHMENT. To ensure the restrictions of the WebGL specifications, stencil and depthStencil attachments are detached.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{object|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span> <b>attachments.stencil</b>
+												<i>Optional</i>
+											</dt>
+											<dd>Same as attachments.color but for WebGLRenderingContext.STENCIL_ATTACHMENT. To ensure the restrictions of the WebGL specifications, depth and depthStencil attachments are detached.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{object|<a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL.WebGL.Renderbuffer</a>}</span> <b>attachments.depthStencil</b>
+												<i>Optional</i>
+											</dt>
+											<dd>Same as attachments.color but for WebGLRenderingContext.DEPTH_STENCIL_ATTACHMENT. To ensure the restrictions of the WebGL specifications, depth and stencil attachments are detached.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> True if the framebuffer is complete, false otherwise.</dd>
+											
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd>getAttachments</dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item8'
+							>
+								<div class="fixedFont heading" id="unbind">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>unbind</b>()
+								</div>
+								
+								<div class="description">
+									Binds "null" to the WebGLRenderingContex.FRAMEBUFFER target.This method is provided only for simmetry with bind and is not relative to the object state.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">See:</dt>
+											
+												<dd>bind</dd>
+											
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item9'
+							>
+								<div class="fixedFont heading" id=".unbind">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">SpiderGL.WebGL.Framebuffer.</span><b>unbind</b>(gl)
+								</div>
+								
+								<div class="description">
+									WebGLFramebuffer unbinding.This function binds the null framebuffer to the WebGLRenderingContext.FRAMEBUFFER target.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{WebGLRenderingContext}</span> <b>gl</b>
+												
+											</dt>
+											<dd>A WebGLRenderingContext.</dd>
+										
+									</dl>
+								
+								
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

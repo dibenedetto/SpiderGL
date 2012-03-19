@@ -1,0 +1,2983 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>SpiderGL.Math | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/SpiderGL.html">SpiderGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core<span class='break'> </span>.<span class='break'> </span>ObjectBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.DOM.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>DOM</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.AggregateRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>AggregateRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.BinaryRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>BinaryRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.ImageRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>ImageRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.JSONRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>JSONRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.Request.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>Request</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.TextRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>TextRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequestBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequestBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Quat.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Quat</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec2.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec2</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.ModelRenderer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>ModelRenderer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Technique.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Technique</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>DepthRangeStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>MatrixStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.TransformationStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>TransformationStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>ViewportStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Type.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Type</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface<span class='break'> </span>.<span class='break'> </span>CanvasHandler</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Utility.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Utility</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Version.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Version</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Buffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Buffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Context.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Context</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.FragmentShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>FragmentShader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Framebuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Framebuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.IndexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>IndexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>ObjectGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Program.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Program</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Renderbuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Shader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Shader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture2D</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>TextureCubeMap</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexShader</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-19 17:11
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Namespace <span>SpiderGL.Math</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				The SpiderGL.Math namespace.
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_math.js.html">math.js</a></li>
+					
+						
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SpiderGL.Math.">
+					<caption class="sectionTitle">Namespace Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/SpiderGL.Math.html#constructor">SpiderGL.Math</a></b>
+								</div>
+								<div class="description">The SpiderGL.Math namespace.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class SpiderGL.Math.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.DEG_TO_RAD">DEG_TO_RAD</a></b>
+										</div>
+										<div class="description">Scale factor for degrees to radians conversion.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.E">E</a></b>
+										</div>
+										<div class="description">Alias for Math.E.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.INFINITY">INFINITY</a></b>
+										</div>
+										<div class="description">Alias for global Infinity.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.LN10">LN10</a></b>
+										</div>
+										<div class="description">Alias for Math.LN10.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.LN2">LN2</a></b>
+										</div>
+										<div class="description">Alias for Math.LN2.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.LOG10E">LOG10E</a></b>
+										</div>
+										<div class="description">Alias for Math.LOG10E.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.LOG2E">LOG2E</a></b>
+										</div>
+										<div class="description">Alias for Math.LOG2E.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.MAX_NUMBER">MAX_NUMBER</a></b>
+										</div>
+										<div class="description">Alias for SpiderGL.Math.MAX_VALUE.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.MAX_VALUE">MAX_VALUE</a></b>
+										</div>
+										<div class="description">Alias for Number.MAX_VALUE.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.MIN_NUMBER">MIN_NUMBER</a></b>
+										</div>
+										<div class="description">Alias for -SpiderGL.Math.MAX_VALUE.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.MIN_VALUE">MIN_VALUE</a></b>
+										</div>
+										<div class="description">Alias for Number.MIN_VALUE.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.NAN">NAN</a></b>
+										</div>
+										<div class="description">Alias for Number.NaN.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.PI">PI</a></b>
+										</div>
+										<div class="description">Alias for Math.PI.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.RAD_TO_DEG">RAD_TO_DEG</a></b>
+										</div>
+										<div class="description">Scale factor for radians to degrees conversion.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.SQRT2">SQRT2</a></b>
+										</div>
+										<div class="description">Alias for Math.SQRT2.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class SpiderGL.Math.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.abs">abs</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.abs.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.acos">acos</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.acos.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.asin">asin</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.asin.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.atan">atan</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.atan2.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.atan2">atan2</a></b>(y, x)
+										</div>
+										<div class="description">Alias for Math.atan2.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item5'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.ceil">ceil</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.ceil.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item6'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.clamp">clamp</a></b>(x, min, max)
+										</div>
+										<div class="description">Clamps a number over a range.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item7'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.cos">cos</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.cos.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item8'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.degToRad">degToRad</a></b>(x)
+										</div>
+										<div class="description">Converts degrees to radians.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item9'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.exp">exp</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.exp.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item10'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.floor">floor</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.floor.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item11'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.lerp">lerp</a></b>(x, y, t)
+										</div>
+										<div class="description">Linear interpolation between two numbers.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item12'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.ln">ln</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.log.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item13'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.log">log</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.log.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item14'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.log10">log10</a></b>(x)
+										</div>
+										<div class="description">Logarithm base 10.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item15'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.log2">log2</a></b>(x)
+										</div>
+										<div class="description">Logarithm base 2.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item16'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.max">max</a></b>(args)
+										</div>
+										<div class="description">Alias for Math.max.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item17'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.min">min</a></b>(args)
+										</div>
+										<div class="description">Alias for Math.min.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item18'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.pow">pow</a></b>(x, x)
+										</div>
+										<div class="description">Alias for Math.pow.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item19'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.project">project</a></b>(xyzw, modelViewProjectionMatrix, viewport, depthRange)
+										</div>
+										<div class="description"></div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item20'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.radToDeg">radToDeg</a></b>(x)
+										</div>
+										<div class="description">Converts radians to degrees.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item21'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.random">random</a></b>()
+										</div>
+										<div class="description">Alias for Math.random.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item22'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.random01">random01</a></b>()
+										</div>
+										<div class="description">Alias for SpiderGL.Math.random.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item23'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.random11">random11</a></b>()
+										</div>
+										<div class="description">Generates a random number between -1.0 and 1.0.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item24'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.randomRange">randomRange</a></b>(min, max)
+										</div>
+										<div class="description">Generates a random number between a and b.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item25'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.round">round</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.round.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item26'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.sin">sin</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.sin.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item27'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.sqrt">sqrt</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.sqrt.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item28'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.tan">tan</a></b>(x)
+										</div>
+										<div class="description">Alias for Math.tan.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item29'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.<b><a href="../symbols/SpiderGL.Math.html#.unproject">unproject</a></b>(xyz, modelViewProjectionMatrixInverse, viewport, depthRange)
+										</div>
+										<div class="description"></div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Namespace Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>SpiderGL.Math</b>
+					</div>
+					
+					<div class="description">
+						The SpiderGL.Math namespace.
+						
+					</div>
+					
+					
+				
+					
+					
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id=".DEG_TO_RAD">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>DEG_TO_RAD</b>							
+						</div>
+						
+						<div class="description">
+							Scale factor for degrees to radians conversion.It is equal to PI / 180.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".E">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>E</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Math.E.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".INFINITY">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>INFINITY</b>							
+						</div>
+						
+						<div class="description">
+							Alias for global Infinity.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".LN10">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>LN10</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Math.LN10.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".LN2">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>LN2</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Math.LN2.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".LOG10E">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>LOG10E</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Math.LOG10E.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".LOG2E">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>LOG2E</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Math.LOG2E.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".MAX_NUMBER">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>MAX_NUMBER</b>							
+						</div>
+						
+						<div class="description">
+							Alias for SpiderGL.Math.MAX_VALUE.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".MAX_VALUE">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>MAX_VALUE</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Number.MAX_VALUE.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".MIN_NUMBER">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>MIN_NUMBER</b>							
+						</div>
+						
+						<div class="description">
+							Alias for -SpiderGL.Math.MAX_VALUE.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".MIN_VALUE">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>MIN_VALUE</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Number.MIN_VALUE.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".NAN">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>NAN</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Number.NaN.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".PI">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>PI</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Math.PI.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".RAD_TO_DEG">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>RAD_TO_DEG</b>							
+						</div>
+						
+						<div class="description">
+							Scale factor for radians to degrees conversion.It is equal to 180 / PI.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".SQRT2">
+							<span class='lighter'>
+							&lt;static&gt; &lt;constant&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.Math.</span><b>SQRT2</b>							
+						</div>
+						
+						<div class="description">
+							Alias for Math.SQRT2.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id=".abs">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>abs</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.abs.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>A number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The absolute value of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id=".acos">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>acos</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.acos.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input cosine.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The arccosine of x, in radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id=".asin">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>asin</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.asin.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input sine.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The arcsine of x, in radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id=".atan">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>atan</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.atan2.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The arctangent of x as a numeric value between -PI/2 and PI/2 radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id=".atan2">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>atan2</b>(y, x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.atan2.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>y</b>
+												
+											</dt>
+											<dd>A number.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>A number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The the arctangent of the quotient of its arguments as a numeric value between PI and -PI.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item5'
+							>
+								<div class="fixedFont heading" id=".ceil">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>ceil</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.ceil.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> x rounded upwards to the nearest integer.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item6'
+							>
+								<div class="fixedFont heading" id=".clamp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>clamp</b>(x, min, max)
+								</div>
+								
+								<div class="description">
+									Clamps a number over a range.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The number to clamp.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>min</b>
+												
+											</dt>
+											<dd>The lower bound.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>max</b>
+												
+											</dt>
+											<dd>The upper bound.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> min if x < min, max if x > max, x otherwise.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item7'
+							>
+								<div class="fixedFont heading" id=".cos">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>cos</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.cos.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input angle, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The cosine of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item8'
+							>
+								<div class="fixedFont heading" id=".degToRad">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>degToRad</b>(x)
+								</div>
+								
+								<div class="description">
+									Converts degrees to radians.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input angle, in degrees.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> x in radians.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item9'
+							>
+								<div class="fixedFont heading" id=".exp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>exp</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.exp.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> E raised to x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item10'
+							>
+								<div class="fixedFont heading" id=".floor">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>floor</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.floor.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> x rounded downwards to the nearest integer.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item11'
+							>
+								<div class="fixedFont heading" id=".lerp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>lerp</b>(x, y, t)
+								</div>
+								
+								<div class="description">
+									Linear interpolation between two numbers.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The start interpolation bound.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>y</b>
+												
+											</dt>
+											<dd>The stop interpolation bound.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>t</b>
+												
+											</dt>
+											<dd>The interpolation factor, between 0 and 1..</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The interpolated value (1-t)*x + t*y.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item12'
+							>
+								<div class="fixedFont heading" id=".ln">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>ln</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.log.Same as <a href="../symbols/SpiderGL.Math.html#.log">SpiderGL.Math.log</a>.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The natural logarithm (base E) of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item13'
+							>
+								<div class="fixedFont heading" id=".log">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>log</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.log.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The natural logarithm (base E) of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item14'
+							>
+								<div class="fixedFont heading" id=".log10">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>log10</b>(x)
+								</div>
+								
+								<div class="description">
+									Logarithm base 10.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The base 10 logarithm of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item15'
+							>
+								<div class="fixedFont heading" id=".log2">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>log2</b>(x)
+								</div>
+								
+								<div class="description">
+									Logarithm base 2.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The base 2 logarithm of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item16'
+							>
+								<div class="fixedFont heading" id=".max">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>max</b>(args)
+								</div>
+								
+								<div class="description">
+									Alias for Math.max.
+									
+									
+									
+									
+								</div>
+								
+								
+									
+										<pre class="code">var x = SpiderGL.Math.max(3, 1.56, 2.1); // x == 3</pre>
+									
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>args</b>
+												
+											</dt>
+											<dd>Variable number of arguments</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The number with the highest value.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item17'
+							>
+								<div class="fixedFont heading" id=".min">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>min</b>(args)
+								</div>
+								
+								<div class="description">
+									Alias for Math.min.
+									
+									
+									
+									
+								</div>
+								
+								
+									
+										<pre class="code">var x = SpiderGL.Math.min(3, 1.56, 2.1); // x == 1.56</pre>
+									
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>args</b>
+												
+											</dt>
+											<dd>Variable number of arguments</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The number with the lowest value.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item18'
+							>
+								<div class="fixedFont heading" id=".pow">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>pow</b>(x, x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.pow.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The base number.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The exponent number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The value of x to the power of y.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item19'
+							>
+								<div class="fixedFont heading" id=".project">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">SpiderGL.Math.</span><b>project</b>(xyzw, modelViewProjectionMatrix, viewport, depthRange)
+								</div>
+								
+								<div class="description">
+									
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<b>xyzw</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<b>modelViewProjectionMatrix</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<b>viewport</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<b>depthRange</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item20'
+							>
+								<div class="fixedFont heading" id=".radToDeg">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>radToDeg</b>(x)
+								</div>
+								
+								<div class="description">
+									Converts radians to degrees.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input angle, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> x in degrees.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item21'
+							>
+								<div class="fixedFont heading" id=".random">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>random</b>()
+								</div>
+								
+								<div class="description">
+									Alias for Math.random.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> A random number between 0.0 and 1.0, inclusive.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item22'
+							>
+								<div class="fixedFont heading" id=".random01">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>random01</b>()
+								</div>
+								
+								<div class="description">
+									Alias for SpiderGL.Math.random.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> A random number between 0.0 and 1.0, inclusive.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item23'
+							>
+								<div class="fixedFont heading" id=".random11">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>random11</b>()
+								</div>
+								
+								<div class="description">
+									Generates a random number between -1.0 and 1.0.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> A random number between -1.0 and 1.0, inclusive.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item24'
+							>
+								<div class="fixedFont heading" id=".randomRange">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>randomRange</b>(min, max)
+								</div>
+								
+								<div class="description">
+									Generates a random number between a and b.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>min</b>
+												
+											</dt>
+											<dd>The range low end-point.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>max</b>
+												
+											</dt>
+											<dd>The range high end-point.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> A random number between min and max, inclusive.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item25'
+							>
+								<div class="fixedFont heading" id=".round">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>round</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.round.
+									
+									
+									
+									
+								</div>
+								
+								
+									
+										<pre class="code">var a = SpiderGL.Math.round(    3); // a ==  3var b = SpiderGL.Math.round(   -4); // b == -4var c = SpiderGL.Math.round( 7.21); // c ==  7var d = SpiderGL.Math.round( 7.56); // d ==  8var e = SpiderGL.Math.round(-7.56); // e == -8var f = SpiderGL.Math.round(-7.21); // f == -7</pre>
+									
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> x rounded to the nearest integer.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item26'
+							>
+								<div class="fixedFont heading" id=".sin">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>sin</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.sin.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input angle, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The sine of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item27'
+							>
+								<div class="fixedFont heading" id=".sqrt">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>sqrt</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.sqrt.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input number.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The square root of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item28'
+							>
+								<div class="fixedFont heading" id=".tan">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.</span><b>tan</b>(x)
+								</div>
+								
+								<div class="description">
+									Alias for Math.tan.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>x</b>
+												
+											</dt>
+											<dd>The input angle, in radians.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The tangent of x.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item29'
+							>
+								<div class="fixedFont heading" id=".unproject">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">SpiderGL.Math.</span><b>unproject</b>(xyz, modelViewProjectionMatrixInverse, viewport, depthRange)
+								</div>
+								
+								<div class="description">
+									
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<b>xyz</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<b>modelViewProjectionMatrixInverse</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<b>viewport</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<b>depthRange</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

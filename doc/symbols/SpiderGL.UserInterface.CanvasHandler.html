@@ -1,0 +1,1832 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>SpiderGL.UserInterface.CanvasHandler | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/SpiderGL.html">SpiderGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core<span class='break'> </span>.<span class='break'> </span>ObjectBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.DOM.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>DOM</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.AggregateRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>AggregateRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.BinaryRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>BinaryRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.ImageRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>ImageRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.JSONRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>JSONRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.Request.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>Request</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.TextRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>TextRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequestBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequestBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Quat.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Quat</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec2.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec2</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.ModelRenderer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>ModelRenderer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Technique.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Technique</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>DepthRangeStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>MatrixStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.TransformationStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>TransformationStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>ViewportStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Type.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Type</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface<span class='break'> </span>.<span class='break'> </span>CanvasHandler</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Utility.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Utility</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Version.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Version</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Buffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Buffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Context.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Context</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.FragmentShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>FragmentShader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Framebuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Framebuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.IndexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>IndexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>ObjectGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Program.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Program</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Renderbuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Shader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Shader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture2D</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>TextureCubeMap</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexShader</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-19 17:11
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Class <span>SpiderGL.UserInterface.CanvasHandler</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				The SpiderGL.UserInterface.CanvasHandler is an event handler used to implement an easy controller for WebGL canvas. It should not be directly used.
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_ui.js.html">ui.js</a></li>
+					
+						<li>Extends <span class="fixedFont">
+						<a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL.Core.ObjectBase</a></span></li>
+					
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SpiderGL.UserInterface.CanvasHandler.">
+					<caption class="sectionTitle">Class Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#constructor">SpiderGL.UserInterface.CanvasHandler</a></b>(gl, handler, options)
+								</div>
+								<div class="description">Creates a SpiderGL.UserInterface.CanvasHandler.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class SpiderGL.UserInterface.CanvasHandler.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#animateDeltaTime">animateDeltaTime</a></b>
+										</div>
+										<div class="description">Gets the elapsed time, in milliseconds, between the last and the current onAnimate event.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#animatePrevTime">animatePrevTime</a></b>
+										</div>
+										<div class="description">Gets the time, in seconds, of the last onAnimate event.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#animateRate">animateRate</a></b>
+										</div>
+										<div class="description">Gets/Sets the frequency (calls per second) used to emit the onAnimate event.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#animateTime">animateTime</a></b>
+										</div>
+										<div class="description">Gets the time, in seconds, of the current onAnimate event.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#canvas">canvas</a></b>
+										</div>
+										<div class="description">Gets the associated canvas.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#cursorDeltaX">cursorDeltaX</a></b>
+										</div>
+										<div class="description">Gets the difference between the current and the previous cursor x position, relative to the canvas lower left corner.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#cursorDeltaY">cursorDeltaY</a></b>
+										</div>
+										<div class="description">Gets the difference between the current and the previous cursor y position, relative to the canvas lower left corner.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#cursorPrevX">cursorPrevX</a></b>
+										</div>
+										<div class="description">Gets the previous cursor x position, relative to the canvas lower left corner.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#cursorPrevY">cursorPrevY</a></b>
+										</div>
+										<div class="description">Gets the previous cursor y position, relative to the canvas lower left corner.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#cursorX">cursorX</a></b>
+										</div>
+										<div class="description">Gets the cursor x position, relative to the canvas lower left corner.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#cursorY">cursorY</a></b>
+										</div>
+										<div class="description">Gets the cursor y position, relative to the canvas lower left corner.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.UserInterface.CanvasHandler.<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#.DEFAULT_ANIMATE_RATE">DEFAULT_ANIMATE_RATE</a></b>
+										</div>
+										<div class="description">Default value for animate rate.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.UserInterface.CanvasHandler.<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#.DEFAULT_IGNORE_KEY_REPEAT">DEFAULT_IGNORE_KEY_REPEAT</a></b>
+										</div>
+										<div class="description">Default value for ignoring key repeats.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.UserInterface.CanvasHandler.<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#.DEFAULT_PROPERTY_NAME">DEFAULT_PROPERTY_NAME</a></b>
+										</div>
+										<div class="description">Default name of the property to install in the handler object for accessing the canvas handler.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										SpiderGL.UserInterface.CanvasHandler.<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#.DEFAULT_STANDARD_GL_UNPACK">DEFAULT_STANDARD_GL_UNPACK</a></b>
+										</div>
+										<div class="description">Default value for applying standard OpenGL pixel unpack parameters.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#framesPerSecond">framesPerSecond</a></b>
+										</div>
+										<div class="description">Gets the number of draw events occurred in the last second.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#gl">gl</a></b>
+										</div>
+										<div class="description">Gets the canvas hijacked WebGLRenderingContext.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#height">height</a></b>
+										</div>
+										<div class="description">Gets the height of the associated canvas.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#ignoreKeyRepeat">ignoreKeyRepeat</a></b>
+										</div>
+										<div class="description">Gets/Sets if the key repeat must be ignored.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#postDrawEvent">postDrawEvent</a></b>
+										</div>
+										<div class="description">Gets a function that, once called, sends a draw event, which once handled will call the onDraw method of the registered handler.</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;readonly&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#width">width</a></b>
+										</div>
+										<div class="description">Gets the width of the associated canvas.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+				<dl class="inheritsList">
+				<dt>Fields borrowed from class <a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL.Core.ObjectBase</a>: </dt><dd><a href="../symbols/SpiderGL.Core.ObjectBase.html#uid">uid</a></dd>
+				</dl>
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class SpiderGL.UserInterface.CanvasHandler.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#dragDeltaX">dragDeltaX</a></b>(btn)
+										</div>
+										<div class="description">If dragging is ongoing, gets the difference between the current cursor x position and the cursor x position at dragging start.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#dragDeltaY">dragDeltaY</a></b>(btn)
+										</div>
+										<div class="description">If dragging is ongoing, gets the difference between the current cursor y position and the cursor x position at dragging start.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#dragEndX">dragEndX</a></b>(btn)
+										</div>
+										<div class="description">Gets the cursor x position when dragging has finished.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#dragEndY">dragEndY</a></b>(btn)
+										</div>
+										<div class="description">Gets the cursor y position when dragging has finished.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#dragStartX">dragStartX</a></b>(btn)
+										</div>
+										<div class="description">Gets the cursor x position when dragging has started.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item5'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#dragStartY">dragStartY</a></b>(btn)
+										</div>
+										<div class="description">Gets the cursor y position when dragging has started.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item6'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#draw">draw</a></b>()
+										</div>
+										<div class="description">Calls immediately the onDraw event handler.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item7'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#isDragging">isDragging</a></b>(btn)
+										</div>
+										<div class="description">Tests if a dragging (mouse move + mouse button down) operation is active.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item8'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#isKeyDown">isKeyDown</a></b>(key)
+										</div>
+										<div class="description">Tests if a key is pressed.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item9'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html#isMouseButtonDown">isMouseButtonDown</a></b>(btn)
+										</div>
+										<div class="description">Tests if a mouse button is pressed.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+					<dl class="inheritsList" id="MethodsListInherited">
+					
+					</dl>
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Class Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>SpiderGL.UserInterface.CanvasHandler</b>(gl, handler, options)
+					</div>
+					
+					<div class="description">
+						Creates a SpiderGL.UserInterface.CanvasHandler.SpiderGL.UserInterface.CanvasHandler is an event handler used to implement an easy controller for WebGL canvas.It should not be directly used. Use <a href="../symbols/SpiderGL.UserInterface.html#.handleCanvas">SpiderGL.UserInterface.handleCanvas</a> or <a href="../symbols/SpiderGL.UserInterface.html#.handleCanvasOnLoad">SpiderGL.UserInterface.handleCanvasOnLoad</a> to install it to a listener object.
+						
+					</div>
+					
+					
+				
+					
+						<dl class="detailList params">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{WebGLRenderingcontext}</span>  <b>gl</b>
+									
+								</dt>
+								<dd>The WebGLRenderingcontext to pass to the handler.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span>  <b>handler</b>
+									
+								</dt>
+								<dd>The event handler to which events will be dispatched.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span>  <b>options</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Optional parameters</dd>
+							
+								<dt>
+									<span class="light fixedFont">{bool}</span>  <b>options.standardGLUnpack</b>
+									<i>Optional, Default: SpiderGL.UserInterface.CanvasHandler.DEFAULT_STANDARD_GL_UNPACK</i>
+								</dt>
+								<dd>If true, sets the default OpenGL unpack behaviour.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span>  <b>options.animateRate</b>
+									<i>Optional, Default: SpiderGL.UserInterface.CanvasHandler.DEFAULT_ANIMATE_RATE</i>
+								</dt>
+								<dd>Additional options.</dd>
+							
+						</dl>
+					
+					
+					
+						<dl class="detailList nomargin">
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+								<dt class="heading">See:</dt>
+								
+									<dd><a href="../symbols/SpiderGL.UserInterface.html#.handleCanvas">SpiderGL.UserInterface.handleCanvas</a></dd>
+								
+									<dd><a href="../symbols/SpiderGL.UserInterface.html#.handleCanvasOnLoad">SpiderGL.UserInterface.handleCanvasOnLoad</a></dd>
+								
+							
+						</dl>
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id="animateDeltaTime">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>animateDeltaTime</b>							
+						</div>
+						
+						<div class="description">
+							Gets the elapsed time, in milliseconds, between the last and the current onAnimate event.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="animatePrevTime">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>animatePrevTime</b>							
+						</div>
+						
+						<div class="description">
+							Gets the time, in seconds, of the last onAnimate event.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="animateRate">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>animateRate</b>							
+						</div>
+						
+						<div class="description">
+							Gets/Sets the frequency (calls per second) used to emit the onAnimate event.If zero, the onAnimate event will be disabled. If greater than zero, specifies how many times emit the event per second.If less than zero, the event will be emitted as fast as possible.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										SpiderGL.UserInterface.CanvasHandler.DEFAULT_ANIMATE_RATE
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="animateTime">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>animateTime</b>							
+						</div>
+						
+						<div class="description">
+							Gets the time, in seconds, of the current onAnimate event.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="canvas">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{HTMLCanvasElement}</span>
+							
+							<b>canvas</b>							
+						</div>
+						
+						<div class="description">
+							Gets the associated canvas.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="cursorDeltaX">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>cursorDeltaX</b>							
+						</div>
+						
+						<div class="description">
+							Gets the difference between the current and the previous cursor x position, relative to the canvas lower left corner.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="cursorDeltaY">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>cursorDeltaY</b>							
+						</div>
+						
+						<div class="description">
+							Gets the difference between the current and the previous cursor y position, relative to the canvas lower left corner.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="cursorPrevX">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>cursorPrevX</b>							
+						</div>
+						
+						<div class="description">
+							Gets the previous cursor x position, relative to the canvas lower left corner.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="cursorPrevY">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>cursorPrevY</b>							
+						</div>
+						
+						<div class="description">
+							Gets the previous cursor y position, relative to the canvas lower left corner.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="cursorX">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>cursorX</b>							
+						</div>
+						
+						<div class="description">
+							Gets the cursor x position, relative to the canvas lower left corner.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="cursorY">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>cursorY</b>							
+						</div>
+						
+						<div class="description">
+							Gets the cursor y position, relative to the canvas lower left corner.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_ANIMATE_RATE">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<span class="light">SpiderGL.UserInterface.CanvasHandler.</span><b>DEFAULT_ANIMATE_RATE</b>							
+						</div>
+						
+						<div class="description">
+							Default value for animate rate.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										0
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_IGNORE_KEY_REPEAT">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{bool}</span>
+							
+							<span class="light">SpiderGL.UserInterface.CanvasHandler.</span><b>DEFAULT_IGNORE_KEY_REPEAT</b>							
+						</div>
+						
+						<div class="description">
+							Default value for ignoring key repeats.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										true
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_PROPERTY_NAME">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{string}</span>
+							
+							<span class="light">SpiderGL.UserInterface.CanvasHandler.</span><b>DEFAULT_PROPERTY_NAME</b>							
+						</div>
+						
+						<div class="description">
+							Default name of the property to install in the handler object for accessing the canvas handler.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										"ui"
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".DEFAULT_STANDARD_GL_UNPACK">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{bool}</span>
+							
+							<span class="light">SpiderGL.UserInterface.CanvasHandler.</span><b>DEFAULT_STANDARD_GL_UNPACK</b>							
+						</div>
+						
+						<div class="description">
+							Default value for applying standard OpenGL pixel unpack parameters.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										true
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="framesPerSecond">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>framesPerSecond</b>							
+						</div>
+						
+						<div class="description">
+							Gets the number of draw events occurred in the last second.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="gl">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{WebGLRenderingContext}</span>
+							
+							<b>gl</b>							
+						</div>
+						
+						<div class="description">
+							Gets the canvas hijacked WebGLRenderingContext.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="height">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>height</b>							
+						</div>
+						
+						<div class="description">
+							Gets the height of the associated canvas.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="ignoreKeyRepeat">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{bool}</span>
+							
+							<b>ignoreKeyRepeat</b>							
+						</div>
+						
+						<div class="description">
+							Gets/Sets if the key repeat must be ignored.
+							
+							
+							
+						</div>
+						
+						
+							
+							<dl class="detailList nomargin">
+							
+								
+								
+								
+								
+									<dt class="heading">Default Value:</dt>
+									<dd>
+										SpiderGL.UserInterface.CanvasHandler.DEFAULT_IGNORE_KEY_REPEAT
+									</dd>
+								
+							</dl>
+						
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="postDrawEvent">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{function}</span>
+							
+							<b>postDrawEvent</b>							
+						</div>
+						
+						<div class="description">
+							Gets a function that, once called, sends a draw event, which once handled will call the onDraw method of the registered handler.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="width">
+							<span class='lighter'>
+							&lt;readonly&gt; 
+							</span>
+							
+							<span class="light">{number}</span>
+							
+							<b>width</b>							
+						</div>
+						
+						<div class="description">
+							Gets the width of the associated canvas.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id="dragDeltaX">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<b>dragDeltaX</b>(btn)
+								</div>
+								
+								<div class="description">
+									If dragging is ongoing, gets the difference between the current cursor x position and the cursor x position at dragging start.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The difference between the current cursor x position and the cursor x position at dragging start.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id="dragDeltaY">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<b>dragDeltaY</b>(btn)
+								</div>
+								
+								<div class="description">
+									If dragging is ongoing, gets the difference between the current cursor y position and the cursor x position at dragging start.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The difference between the current cursor y position and the cursor y position at dragging start.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id="dragEndX">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<b>dragEndX</b>(btn)
+								</div>
+								
+								<div class="description">
+									Gets the cursor x position when dragging has finished.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The cursor x position, relative to the canvas lower left corner, when the dragging has finished.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id="dragEndY">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<b>dragEndY</b>(btn)
+								</div>
+								
+								<div class="description">
+									Gets the cursor y position when dragging has finished.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The cursor y position, relative to the canvas lower left corner, when the dragging has finished.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id="dragStartX">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<b>dragStartX</b>(btn)
+								</div>
+								
+								<div class="description">
+									Gets the cursor x position when dragging has started.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The cursor x position, relative to the canvas lower left corner, when the dragging has started.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item5'
+							>
+								<div class="fixedFont heading" id="dragStartY">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<b>dragStartY</b>(btn)
+								</div>
+								
+								<div class="description">
+									Gets the cursor y position when dragging has started.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The cursor y position, relative to the canvas lower left corner, when the dragging has started.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item6'
+							>
+								<div class="fixedFont heading" id="draw">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>draw</b>()
+								</div>
+								
+								<div class="description">
+									Calls immediately the onDraw event handler.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item7'
+							>
+								<div class="fixedFont heading" id="isDragging">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<b>isDragging</b>(btn)
+								</div>
+								
+								<div class="description">
+									Tests if a dragging (mouse move + mouse button down) operation is active.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> True if the dragging operation is active with the specified mouse button, false otherwise.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item8'
+							>
+								<div class="fixedFont heading" id="isKeyDown">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<b>isKeyDown</b>(key)
+								</div>
+								
+								<div class="description">
+									Tests if a key is pressed.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{string|number}</span> <b>key</b>
+												
+											</dt>
+											<dd>The key to test.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> True if the key is pressed, false otherwise.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item9'
+							>
+								<div class="fixedFont heading" id="isMouseButtonDown">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<b>isMouseButtonDown</b>(btn)
+								</div>
+								
+								<div class="description">
+									Tests if a mouse button is pressed.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>btn</b>
+												
+											</dt>
+											<dd>The button to test (0 = left, 1 = right, 2 = middle).</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> True if the mouse button is pressed, false otherwise.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

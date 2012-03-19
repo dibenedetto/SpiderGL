@@ -1,0 +1,4034 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>SpiderGL.Math.Mat4 | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/_global_.html">_global_</a></li>
+				
+					<li><a href="../symbols/SpiderGL.html">SpiderGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Core<span class='break'> </span>.<span class='break'> </span>ObjectBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.DOM.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>DOM</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.AggregateRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>AggregateRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.BinaryRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>BinaryRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.ImageRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>ImageRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.JSONRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>JSONRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.Request.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>Request</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.TextRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>TextRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequest.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequest</a></li>
+				
+					<li><a href="../symbols/SpiderGL.IO.XHRRequestBase.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>IO<span class='break'> </span>.<span class='break'> </span>XHRRequestBase</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Mat4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Mat4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Quat.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Quat</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec2.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec2</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec3.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec3</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Math.Vec4.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Math<span class='break'> </span>.<span class='break'> </span>Vec4</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Model.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Model</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.ModelRenderer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>ModelRenderer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Model.Technique.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Model<span class='break'> </span>.<span class='break'> </span>Technique</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.DepthRangeStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>DepthRangeStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.MatrixStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>MatrixStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.TransformationStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>TransformationStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Space.ViewportStack.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Space<span class='break'> </span>.<span class='break'> </span>ViewportStack</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Type.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Type</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface</a></li>
+				
+					<li><a href="../symbols/SpiderGL.UserInterface.CanvasHandler.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>UserInterface<span class='break'> </span>.<span class='break'> </span>CanvasHandler</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Utility.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Utility</a></li>
+				
+					<li><a href="../symbols/SpiderGL.Version.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>Version</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Buffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Buffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Context.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Context</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.FragmentShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>FragmentShader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Framebuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Framebuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.IndexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>IndexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.ObjectGL.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>ObjectGL</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Program.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Program</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Renderbuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Renderbuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Shader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Shader</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.Texture2D.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>Texture2D</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.TextureCubeMap.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>TextureCubeMap</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexBuffer.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexBuffer</a></li>
+				
+					<li><a href="../symbols/SpiderGL.WebGL.VertexShader.html">SpiderGL<span class='break'> </span>.<span class='break'> </span>WebGL<span class='break'> </span>.<span class='break'> </span>VertexShader</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2012-2-19 17:11
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Namespace <span>SpiderGL.Math.Mat4</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				The SpiderGL.Math.Mat4 namespace defines operations on 4x4 matrices.
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_math.js.html">math.js</a></li>
+					
+						
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class SpiderGL.Math.Mat4.">
+					<caption class="sectionTitle">Namespace Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/SpiderGL.Math.Mat4.html#constructor">SpiderGL.Math.Mat4</a></b>
+								</div>
+								<div class="description">The SpiderGL.Math.Mat4 namespace.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class SpiderGL.Math.Mat4.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.add">add</a></b>(a, b)
+										</div>
+										<div class="description">Component-wise addition of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.add$">add$</a></b>(a, b)
+										</div>
+										<div class="description">In-place addition of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.col">col</a></b>(m, col)
+										</div>
+										<div class="description">Gets a column of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.col$">col$</a></b>(m, col, v)
+										</div>
+										<div class="description">Sets a column of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.compDiv">compDiv</a></b>(a, b)
+										</div>
+										<div class="description">Component-wise division of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item5'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.compDiv$">compDiv$</a></b>(a, b)
+										</div>
+										<div class="description">In-place component-wise division of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item6'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.compMul">compMul</a></b>(a, b)
+										</div>
+										<div class="description">Component-wise multiplication of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item7'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.compMul$">compMul$</a></b>(a, b)
+										</div>
+										<div class="description">In-place component-wise multiplication of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item8'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.copy$">copy$</a></b>(dst, src)
+										</div>
+										<div class="description">Copies a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item9'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.determinant">determinant</a></b>(m)
+										</div>
+										<div class="description">Calculates the determinant of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item10'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.diag">diag</a></b>(d)
+										</div>
+										<div class="description">Creates a diagonal 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item11'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.dup">dup</a></b>(n)
+										</div>
+										<div class="description">Duplicates the input 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item12'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.elem">elem</a></b>(m, row, col)
+										</div>
+										<div class="description">Gets an element of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item13'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.elem$">elem$</a></b>(m, row, col, value)
+										</div>
+										<div class="description">Sets an element of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item14'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.frustum">frustum</a></b>(min, max)
+										</div>
+										<div class="description">Creates a column-major 4x4 frustum matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item15'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.identity">identity</a></b>()
+										</div>
+										<div class="description">Creates an identity 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item16'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.identity$">identity$</a></b>(m)
+										</div>
+										<div class="description">Sets a 4x4 matrix as the identity matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item17'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.inverse">inverse</a></b>(m)
+										</div>
+										<div class="description">Calculates the inverse of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item18'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.inverseTranspose33">inverseTranspose33</a></b>(m)
+										</div>
+										<div class="description">Calculates the inverse transpose of the upper-left 3x3 matrix of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item19'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.invert$">invert$</a></b>(m)
+										</div>
+										<div class="description">In-place inversion of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item20'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.isIdentity">isIdentity</a></b>(m)
+										</div>
+										<div class="description">Tests whether a 4x4 matrix is the identity matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item21'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.lookAt">lookAt</a></b>(position, target, position)
+										</div>
+										<div class="description">Creates a column-major 4x4 look-at matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item22'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.mul">mul</a></b>(a, b)
+										</div>
+										<div class="description">Multiplies of two column-major 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item23'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.mul$">mul$</a></b>(a, b)
+										</div>
+										<div class="description">In-place multiplication of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item24'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.mul3">mul3</a></b>(m, v, w)
+										</div>
+										<div class="description">Pre-multiplies a 3-dimensional vector by a column-major 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item25'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.mul4">mul4</a></b>(m, v)
+										</div>
+										<div class="description">Pre-multiplies a 4-dimensional vector by a column-major 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item26'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.muls">muls</a></b>(m, s)
+										</div>
+										<div class="description">Component-wise multiplication of a 4x4 matrix and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item27'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.muls$">muls$</a></b>(m, s)
+										</div>
+										<div class="description">In-place subtraction of a 4x4 matrix and a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item28'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.neg">neg</a></b>(m)
+										</div>
+										<div class="description">Component-wise negation of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item29'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.neg$">neg$</a></b>(m)
+										</div>
+										<div class="description">In-place negation of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item30'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.one">one</a></b>()
+										</div>
+										<div class="description">Creates a 4x4 matrix initialized with one.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item31'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.ortho">ortho</a></b>(min, max)
+										</div>
+										<div class="description">Creates a column-major 4x4 orthographic projection matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item32'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.perspective">perspective</a></b>(fovY, aspectRatio, zNear, zFar)
+										</div>
+										<div class="description">Creates a column-major 4x4 perspective projection matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item33'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.rcp">rcp</a></b>(m)
+										</div>
+										<div class="description">Component-wise reciprocal of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item34'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.rotateAngleAxis$">rotateAngleAxis$</a></b>(m, angle, axis)
+										</div>
+										<div class="description">In-place column-major rotation of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item35'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.rotationAngleAxis">rotationAngleAxis</a></b>(angle, axis)
+										</div>
+										<div class="description">Creates a column-major 4x4 rotation matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item36'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.row">row</a></b>(m, row)
+										</div>
+										<div class="description">Gets a row of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item37'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.row$">row$</a></b>(m, row, v)
+										</div>
+										<div class="description">Sets a row of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item38'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.scalar">scalar</a></b>(s)
+										</div>
+										<div class="description">Creates a 4x4 matrix initialized with a scalar.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item39'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.scale$">scale$</a></b>(m, v)
+										</div>
+										<div class="description">In-place column-major scaling of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item40'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.scaling">scaling</a></b>(v)
+										</div>
+										<div class="description">Creates a column-major 4x4 scaling matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item41'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.sub">sub</a></b>(a, b)
+										</div>
+										<div class="description">Component-wise addition of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item42'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.sub$">sub$</a></b>(a, b)
+										</div>
+										<div class="description">In-place subtraction of two 4x4 matrices.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item43'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.to33">to33</a></b>(m)
+										</div>
+										<div class="description">Extracts the upper-left 3x3 matrix from a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item44'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.trace">trace</a></b>(m)
+										</div>
+										<div class="description">Calculates the trace (i.e.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item45'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.translate$">translate$</a></b>(m, v)
+										</div>
+										<div class="description">In-place column-major translation of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item46'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.translation">translation</a></b>(v)
+										</div>
+										<div class="description">Creates a column-major 4x4 translation matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item47'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.transpose">transpose</a></b>(m)
+										</div>
+										<div class="description">Creates the transpose of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item48'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.transpose$">transpose$</a></b>(m)
+										</div>
+										<div class="description">In-place transpose of a 4x4 matrix.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item49'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">SpiderGL.Math.Mat4.<b><a href="../symbols/SpiderGL.Math.Mat4.html#.zero">zero</a></b>()
+										</div>
+										<div class="description">Creates a 4x4 matrix initialized with zero.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Namespace Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>SpiderGL.Math.Mat4</b>
+					</div>
+					
+					<div class="description">
+						The SpiderGL.Math.Mat4 namespace.The provided functions operate on 4x4 matrices, represented as standard JavaScript arrays of length 16.In general, matrices are considered in column-major format.
+						
+					</div>
+					
+					
+				
+					
+					
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id=".add">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>add</b>(a, b)
+								</div>
+								
+								<div class="description">
+									Component-wise addition of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The first input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, where r[i] = a[i] + b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id=".add$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>add$</b>(a, b)
+								</div>
+								
+								<div class="description">
+									In-place addition of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The second 4x4 input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix a, where a[i] = a[i] + b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id=".col">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>col</b>(m, col)
+								</div>
+								
+								<div class="description">
+									Gets a column of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>col</b>
+												
+											</dt>
+											<dd>The column index.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4-component array representing the col-th column of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id=".col$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>col$</b>(m, col, v)
+								</div>
+								
+								<div class="description">
+									Sets a column of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>col</b>
+												
+											</dt>
+											<dd>The column index.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>A 4-component array that will be copied to the col-th column of m.</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id=".compDiv">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>compDiv</b>(a, b)
+								</div>
+								
+								<div class="description">
+									Component-wise division of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The second matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, where r[i] = a[i] / b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item5'
+							>
+								<div class="fixedFont heading" id=".compDiv$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>compDiv$</b>(a, b)
+								</div>
+								
+								<div class="description">
+									In-place component-wise division of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The second 4x4 input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix a, where a[i] = a[i] / b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item6'
+							>
+								<div class="fixedFont heading" id=".compMul">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>compMul</b>(a, b)
+								</div>
+								
+								<div class="description">
+									Component-wise multiplication of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The second matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, where r[i] = a[i] * b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item7'
+							>
+								<div class="fixedFont heading" id=".compMul$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>compMul$</b>(a, b)
+								</div>
+								
+								<div class="description">
+									In-place component-wise multiplication of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The second 4x4 input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix a, where a[i] = a[i] * b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item8'
+							>
+								<div class="fixedFont heading" id=".copy$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>copy$</b>(dst, src)
+								</div>
+								
+								<div class="description">
+									Copies a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>dst</b>
+												
+											</dt>
+											<dd>The destination 4x4 matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>src</b>
+												
+											</dt>
+											<dd>The source 4x4 matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix dst, where dst[i] = src[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item9'
+							>
+								<div class="fixedFont heading" id=".determinant">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>determinant</b>(m)
+								</div>
+								
+								<div class="description">
+									Calculates the determinant of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The determinant of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item10'
+							>
+								<div class="fixedFont heading" id=".diag">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>diag</b>(d)
+								</div>
+								
+								<div class="description">
+									Creates a diagonal 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>d</b>
+												
+											</dt>
+											<dd>A 4-dimensional vector</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 16-component array representing a 4x4 matrix with diagonal elements set to d.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item11'
+							>
+								<div class="fixedFont heading" id=".dup">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>dup</b>(n)
+								</div>
+								
+								<div class="description">
+									Duplicates the input 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>n</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 16-component array r, where r[i] = m[i] (same as m.slice(0, 16)).</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item12'
+							>
+								<div class="fixedFont heading" id=".elem">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>elem</b>(m, row, col)
+								</div>
+								
+								<div class="description">
+									Gets an element of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>row</b>
+												
+											</dt>
+											<dd>The element row index.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>col</b>
+												
+											</dt>
+											<dd>The element column index.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The value of the (i-th, j-th) element of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item13'
+							>
+								<div class="fixedFont heading" id=".elem$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>elem$</b>(m, row, col, value)
+								</div>
+								
+								<div class="description">
+									Sets an element of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>row</b>
+												
+											</dt>
+											<dd>The element row index.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>col</b>
+												
+											</dt>
+											<dd>The element column index.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>value</b>
+												
+											</dt>
+											<dd>The element value to set.</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item14'
+							>
+								<div class="fixedFont heading" id=".frustum">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>frustum</b>(min, max)
+								</div>
+								
+								<div class="description">
+									Creates a column-major 4x4 frustum matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>min</b>
+												
+											</dt>
+											<dd>A 3-component array with the minimum coordinates of the frustum volume.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>max</b>
+												
+											</dt>
+											<dd>A 3-component array with the maximum coordinates of the frustum volume.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A column-major 4x4 frustum matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item15'
+							>
+								<div class="fixedFont heading" id=".identity">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>identity</b>()
+								</div>
+								
+								<div class="description">
+									Creates an identity 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 16-component array representing an identity 4x4 matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item16'
+							>
+								<div class="fixedFont heading" id=".identity$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>identity$</b>(m)
+								</div>
+								
+								<div class="description">
+									Sets a 4x4 matrix as the identity matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input 4x4 matrix to be set as identity.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item17'
+							>
+								<div class="fixedFont heading" id=".inverse">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>inverse</b>(m)
+								</div>
+								
+								<div class="description">
+									Calculates the inverse of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix representing the inverse of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item18'
+							>
+								<div class="fixedFont heading" id=".inverseTranspose33">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>inverseTranspose33</b>(m)
+								</div>
+								
+								<div class="description">
+									Calculates the inverse transpose of the upper-left 3x3 matrix of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 3x3 matrix representing the inverse transpose of the upper-left 3x3 matrix of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item19'
+							>
+								<div class="fixedFont heading" id=".invert$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>invert$</b>(m)
+								</div>
+								
+								<div class="description">
+									In-place inversion of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The 4x4 input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The inverted input matrix m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item20'
+							>
+								<div class="fixedFont heading" id=".isIdentity">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>isIdentity</b>(m)
+								</div>
+								
+								<div class="description">
+									Tests whether a 4x4 matrix is the identity matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> True if the input matrix is the identity matrix, false otherwise.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item21'
+							>
+								<div class="fixedFont heading" id=".lookAt">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>lookAt</b>(position, target, position)
+								</div>
+								
+								<div class="description">
+									Creates a column-major 4x4 look-at matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>position</b>
+												
+											</dt>
+											<dd>The viewer's position as a 3-dimensional vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>target</b>
+												
+											</dt>
+											<dd>The viewer's look-at point as a 3-dimensional vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>position</b>
+												
+											</dt>
+											<dd>The viewer's up vector as a 3-dimensional vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A column-major 4x4 look-at matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item22'
+							>
+								<div class="fixedFont heading" id=".mul">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>mul</b>(a, b)
+								</div>
+								
+								<div class="description">
+									Multiplies of two column-major 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The first input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, result of matrix multiplication r = a * b.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item23'
+							>
+								<div class="fixedFont heading" id=".mul$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>mul$</b>(a, b)
+								</div>
+								
+								<div class="description">
+									In-place multiplication of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The second 4x4 input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix a, where a = a * b.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item24'
+							>
+								<div class="fixedFont heading" id=".mul3">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>mul3</b>(m, v, w)
+								</div>
+								
+								<div class="description">
+									Pre-multiplies a 3-dimensional vector by a column-major 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input column-major 4x4 matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input 3-dimensional vector.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>w</b>
+												<i>Optional, Default: 1</i>
+											</dt>
+											<dd>The 4th component of the input 3-dimensional vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 3-dimensional vector r, where r = m * v.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item25'
+							>
+								<div class="fixedFont heading" id=".mul4">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>mul4</b>(m, v)
+								</div>
+								
+								<div class="description">
+									Pre-multiplies a 4-dimensional vector by a column-major 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input column-major 4x4 matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The input 4-dimensional vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4-dimensional vector r, where r = m * v.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item26'
+							>
+								<div class="fixedFont heading" id=".muls">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>muls</b>(m, s)
+								</div>
+								
+								<div class="description">
+									Component-wise multiplication of a 4x4 matrix and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The matrix operand.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The scalar operand.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, where r[i] = m[i] * s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item27'
+							>
+								<div class="fixedFont heading" id=".muls$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>muls$</b>(m, s)
+								</div>
+								
+								<div class="description">
+									In-place subtraction of a 4x4 matrix and a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The input scalar.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix m, where m[i] = m[i] * s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item28'
+							>
+								<div class="fixedFont heading" id=".neg">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>neg</b>(m)
+								</div>
+								
+								<div class="description">
+									Component-wise negation of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, where r[i] = -m[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item29'
+							>
+								<div class="fixedFont heading" id=".neg$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>neg$</b>(m)
+								</div>
+								
+								<div class="description">
+									In-place negation of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input 4x4 matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix m, where m[i] = -m[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item30'
+							>
+								<div class="fixedFont heading" id=".one">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>one</b>()
+								</div>
+								
+								<div class="description">
+									Creates a 4x4 matrix initialized with one.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 16-component array r, where r[i] = 1.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item31'
+							>
+								<div class="fixedFont heading" id=".ortho">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>ortho</b>(min, max)
+								</div>
+								
+								<div class="description">
+									Creates a column-major 4x4 orthographic projection matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>min</b>
+												
+											</dt>
+											<dd>A 3-component array with the minimum coordinates of the parallel viewing volume.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>max</b>
+												
+											</dt>
+											<dd>A 3-component array with the maximum coordinates of the parallel viewing volume.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A column-major 4x4 orthographic projection matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item32'
+							>
+								<div class="fixedFont heading" id=".perspective">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>perspective</b>(fovY, aspectRatio, zNear, zFar)
+								</div>
+								
+								<div class="description">
+									Creates a column-major 4x4 perspective projection matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>fovY</b>
+												
+											</dt>
+											<dd>The vertical field-of-view angle, in radians.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>aspectRatio</b>
+												
+											</dt>
+											<dd>The projection plane aspect ratio.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>zNear</b>
+												
+											</dt>
+											<dd>The distance of the near clipping plane.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>zFar</b>
+												
+											</dt>
+											<dd>The distance of the far clipping plane.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A column-major 4x4 perspective projection matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item33'
+							>
+								<div class="fixedFont heading" id=".rcp">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>rcp</b>(m)
+								</div>
+								
+								<div class="description">
+									Component-wise reciprocal of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, where r[i] = 1 / m[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item34'
+							>
+								<div class="fixedFont heading" id=".rotateAngleAxis$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>rotateAngleAxis$</b>(m, angle, axis)
+								</div>
+								
+								<div class="description">
+									In-place column-major rotation of a 4x4 matrix.The input matrix m will be post-multiplied by a matrix r representing a counter-clockwise rotation about the input axis by the input angle in radians.The input axis need not to be normalized.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input 4x4 matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>angle</b>
+												
+											</dt>
+											<dd>The counter-clockwise rotation angle, in radians.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>axis</b>
+												
+											</dt>
+											<dd>A 3-dimensional vector representing the rotation axis.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The rotated input matrix m with the same result as m = m * r, where r is a rotation matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item35'
+							>
+								<div class="fixedFont heading" id=".rotationAngleAxis">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>rotationAngleAxis</b>(angle, axis)
+								</div>
+								
+								<div class="description">
+									Creates a column-major 4x4 rotation matrix.The returned matrix will represent a counter-clockwise rotation about the input axis by the input angle in radians.The input axis need not to be normalized.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>angle</b>
+												
+											</dt>
+											<dd>The counter-clockwise rotation angle, in radians.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>axis</b>
+												
+											</dt>
+											<dd>A 3-dimensional vector representing the rotation axis.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A column-major 4x4 rotation matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item36'
+							>
+								<div class="fixedFont heading" id=".row">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>row</b>(m, row)
+								</div>
+								
+								<div class="description">
+									Gets a row of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>row</b>
+												
+											</dt>
+											<dd>The row index.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4-component array representing the row-th row of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item37'
+							>
+								<div class="fixedFont heading" id=".row$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>row$</b>(m, row, v)
+								</div>
+								
+								<div class="description">
+									Sets a row of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>row</b>
+												
+											</dt>
+											<dd>The row index.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>A 4-component array that will be copied to the row-th row of m.</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item38'
+							>
+								<div class="fixedFont heading" id=".scalar">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>scalar</b>(s)
+								</div>
+								
+								<div class="description">
+									Creates a 4x4 matrix initialized with a scalar.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{number}</span> <b>s</b>
+												
+											</dt>
+											<dd>The input scalar.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 16-component array r, where r[i] = s.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item39'
+							>
+								<div class="fixedFont heading" id=".scale$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>scale$</b>(m, v)
+								</div>
+								
+								<div class="description">
+									In-place column-major scaling of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The scaling amount as a 3-dimensional array.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The scaled input matrix m with the same result as m = m * s, where s is a scaling matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item40'
+							>
+								<div class="fixedFont heading" id=".scaling">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>scaling</b>(v)
+								</div>
+								
+								<div class="description">
+									Creates a column-major 4x4 scaling matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The scaling amount as a 3-dimensional array.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 scaling matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item41'
+							>
+								<div class="fixedFont heading" id=".sub">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>sub</b>(a, b)
+								</div>
+								
+								<div class="description">
+									Component-wise addition of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The first input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix r, where r[i] = a[i] - b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item42'
+							>
+								<div class="fixedFont heading" id=".sub$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>sub$</b>(a, b)
+								</div>
+								
+								<div class="description">
+									In-place subtraction of two 4x4 matrices.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>a</b>
+												
+											</dt>
+											<dd>The first 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>b</b>
+												
+											</dt>
+											<dd>The second 4x4 input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The input matrix a, where a[i] = a[i] - b[i].</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item43'
+							>
+								<div class="fixedFont heading" id=".to33">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>to33</b>(m)
+								</div>
+								
+								<div class="description">
+									Extracts the upper-left 3x3 matrix from a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 9-component array representing the upper-left 3x3 matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item44'
+							>
+								<div class="fixedFont heading" id=".trace">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{number}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>trace</b>(m)
+								</div>
+								
+								<div class="description">
+									Calculates the trace (i.e. the sum of the diagonal elements) of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{number}</span> The trace of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item45'
+							>
+								<div class="fixedFont heading" id=".translate$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>translate$</b>(m, v)
+								</div>
+								
+								<div class="description">
+									In-place column-major translation of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The 4x4 input matrix.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>The 3-dimensional translation vector.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The translated input matrix m with the same result as m = m * t, where t is a translation matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item46'
+							>
+								<div class="fixedFont heading" id=".translation">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>translation</b>(v)
+								</div>
+								
+								<div class="description">
+									Creates a column-major 4x4 translation matrix.The input translation vector will be placed on the 4th column of an identity matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>v</b>
+												
+											</dt>
+											<dd>A 3-dimensional vector with translation offsets.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A column-major 4x4 translation matrix.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item47'
+							>
+								<div class="fixedFont heading" id=".transpose">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>transpose</b>(m)
+								</div>
+								
+								<div class="description">
+									Creates the transpose of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 4x4 matrix representing the transpose of m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item48'
+							>
+								<div class="fixedFont heading" id=".transpose$">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>transpose$</b>(m)
+								</div>
+								
+								<div class="description">
+									In-place transpose of a 4x4 matrix.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{array}</span> <b>m</b>
+												
+											</dt>
+											<dd>The 4x4 input matrix.</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> The transposed input matrix m.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item49'
+							>
+								<div class="fixedFont heading" id=".zero">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{array}</span>
+									
+									<span class="light">SpiderGL.Math.Mat4.</span><b>zero</b>()
+								</div>
+								
+								<div class="description">
+									Creates a 4x4 matrix initialized with zero.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{array}</span> A 16-component array r, where r[i] = 0.</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

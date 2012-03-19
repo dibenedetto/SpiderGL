@@ -1,0 +1,252 @@
+<html>
+<head>
+<title>SpiderGL Simple Model</title>
+<script type="text/javascript" src="../lib/spidergl.js"></script>
+<script type="text/javascript">
+function log(msg) {
+	var textarea = document.getElementById("log-area");
+	textarea.innerHTML += (msg + "\n");
+	textarea.scrollTop = textarea.scrollHeight;
+}
+
+SpiderGL.openNamespace();
+
+function CanvasHandler() {
+}
+
+CanvasHandler.prototype = {
+	onInitialize : function () {
+		var gl = this.ui.gl;
+
+		this.sceneTechnique = new SglTechnique(gl, {
+			vertexShader : "\
+				precision highp float;                                                \n\
+																					  \n\
+				uniform   mat4 uModelViewProjectionMatrix;                            \n\
+				uniform   mat3 uViewSpaceNormalMatrix;                                \n\
+																					  \n\
+				attribute vec3 aPosition;                                             \n\
+				attribute vec3 aNormal;                                               \n\
+				attribute vec3 aColor;                                                \n\
+																					  \n\
+				varying   vec3 vNormal;                                               \n\
+				varying   vec3 vColor;                                                \n\
+																					  \n\
+				void main(void)                                                       \n\
+				{                                                                     \n\
+					vNormal     = uViewSpaceNormalMatrix * aNormal;                   \n\
+					vColor      = aColor;                                             \n\
+																					  \n\
+					gl_Position = uModelViewProjectionMatrix * vec4(aPosition, 1.0);  \n\
+				}                                                                     \n\
+			",
+			fragmentShader : "\
+				precision highp float;                                                \n\
+																					  \n\
+				uniform   vec3      uViewSpaceLightDirection;                         \n\
+																					  \n\
+				varying   vec3 vNormal;                                               \n\
+				varying   vec3 vColor;                                                \n\
+																					  \n\
+				void main(void)                                                       \n\
+				{                                                                     \n\
+					vec3  normal    = normalize(vNormal);                             \n\
+					float nDotL     = dot(normal, -uViewSpaceLightDirection);         \n\
+					float lambert   = max(0.0, nDotL);                                \n\
+																					  \n\
+					vec3  baseColor = vec3(1.0);                                      \n\
+					vec3  diffuse   = vColor * baseColor * lambert;                   \n\
+																					  \n\
+					gl_FragColor    = vec4(diffuse, 1.0);                             \n\
+				}                                                                     \n\
+			",
+			vertexStreams : {
+				"aNormal" : [ 0.0, 0.0, 1.0, 0.0 ],
+				"aColor"  : [ 1.0, 0.0, 0.0, 1.0 ]
+			},
+			globals : {
+				"uModelViewProjectionMatrix" : { semantic : "MODEL_VIEW_PROJECTION_MATRIX", value : SglMat4.identity() },
+				"uViewSpaceNormalMatrix"     : { semantic : "VIEW_SPACE_NORMAL_MATRIX",     value : SglMat3.identity() },
+				"uViewSpaceLightDirection"   : { semantic : "VIEW_SPACE_LIGHT_DIRECTION",   value : [ 0.0, 0.0, -1.0 ] }
+			}
+		});
+		log(this.sceneTechnique.program.log);
+
+		this.sceneModel = new SglModel(gl, {
+			vertices : {
+				position : [
+					-1.0, -1.0,  0.0,
+					 1.0, -1.0,  0.0,
+					-1.0,  1.0,  0.0,
+					 1.0,  1.0,  0.0
+				],
+				color : {value:[0.0, 1.0, 0.0, 1.0]}
+			},
+			primitives : "triangleStrip"
+		});
+
+		this.sceneColorTexture = new SglTexture2D(gl, {
+			internalFormat : gl.RGBA,
+			width          : this.ui.width,
+			height         : this.ui.height
+		});
+
+		this.sceneDepthRenderbuffer = new SglRenderbuffer(gl, {
+			internalFormat : gl.DEPTH_COMPONENT16,
+			width          : this.ui.width,
+			height         : this.ui.height
+		});
+
+		this.postProcessTechnique = new SglTechnique(gl, {
+			vertexShader : "\
+				precision highp float;                                                \n\
+																					  \n\
+				attribute vec2 aPosition;                                             \n\
+																					  \n\
+				varying   vec2 vTexCoords;                                            \n\
+																					  \n\
+				void main(void)                                                       \n\
+				{                                                                     \n\
+					vTexCoords  = aPosition * 0.5 + vec2(0.5);                        \n\
+																					  \n\
+					gl_Position = vec4(aPosition, 0.0, 1.0);                          \n\
+				}                                                                     \n\
+			",
+			fragmentShader : "\
+				precision highp float;                                                \n\
+																					  \n\
+				uniform   sampler2D uSceneTexture;                                    \n\
+																					  \n\
+				varying   vec2 vTexCoords;                                            \n\
+																					  \n\
+				void main(void)                                                       \n\
+				{                                                                     \n\
+					vec4 sceneColor = texture2D(uSceneTexture, vTexCoords);           \n\
+																					  \n\
+					gl_FragColor    = vec4(vec3(1.0) - sceneColor.xyz, sceneColor.w); \n\
+				}                                                                     \n\
+			",
+			globals : {
+				"uSceneTexture" : { semantic : "SCENE_TEXTURE", value : 0 }
+			}
+		});
+		log(this.postProcessTechnique.program.log);
+
+		this.quadModel = new SglModel(gl, {
+			vertices : {
+				position : [
+					-1.0, -1.0,  0.0,
+					 1.0, -1.0,  0.0,
+					-1.0,  1.0,  0.0,
+					 1.0,  1.0,  0.0
+				]
+			},
+			primitives : "triangleStrip"
+		});
+
+		this.renderer = new SglModelRenderer(gl);
+		this.xform    = new SglTransformationStack();
+		this.angle    = 0.0;
+
+		this.ui.animateRate = 60;
+
+		var that = this;
+		setInterval(function() {
+			document.getElementById("fps-div").innerHTML = "FPS: " + that.ui.framesPerSecond;
+		}, 1000);
+	},
+
+	onAnimate : function (dt) {
+		this.angle += 90.0 * dt;
+		this.ui.postDrawEvent();
+	},
+
+	onDraw : function () {
+		var gl       = this.ui.gl;
+		var width    = this.ui.width;
+		var height   = this.ui.height;
+		var xform    = this.xform;
+		var renderer = this.renderer;
+
+		gl.clearColor(0.4, 0.4, 0.4, 1.0);
+		gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
+
+		gl.viewport(0, 0, width, height);
+
+		xform.projection.loadIdentity();
+		xform.projection.perspective(sglDegToRad(50.0), width/height, 0.1, 10.0);
+
+		xform.view.loadIdentity();
+		xform.view.lookAt([0.0, 0.0, 3.0], [0.0, 0.0, 0.0], [0.0, 1.0, 0.0]);
+
+		xform.model.loadIdentity();
+		xform.model.rotate(sglDegToRad(this.angle), [0.0, 1.0, 0.0]);
+
+		var globals = {
+			"MODEL_VIEW_PROJECTION_MATRIX" : xform.modelViewProjectionMatrix,
+			"VIEW_SPACE_NORMAL_MATRIX"     : xform.viewSpaceNormalMatrix
+		};
+
+		gl.enable(gl.DEPTH_TEST);
+
+		renderer.begin();
+			renderer.setPrimitiveMode("FILL");
+
+			renderer.activateOffScreenFramebuffer();
+			renderer.setColorRenderTarget(this.sceneColorTexture);
+			renderer.setDepthRenderTarget(this.sceneDepthRenderbuffer);
+			renderer.clearFramebuffer({
+				color : [0.0, 0.0, 0.0, 0.0],
+				depth : 1.0
+			});
+			renderer.setTechnique(this.sceneTechnique);
+			renderer.setDefaultGlobals();
+			renderer.setGlobals(globals);
+			renderer.setModel(this.sceneModel);
+			/*
+			var parts = renderer.model.descriptor.logic.parts;
+			for (var partName in parts) {
+				var part = parts[partName];
+				renderer.setPart(partName);
+				for (var c in part.chunks) {
+					var chunkName = part.chunks[c];
+					renderer.setChunk(chunkName);
+					renderer.render();
+				}
+			}
+			*/
+			renderer.renderModel();
+
+			renderer.activateMainFramebuffer();
+			renderer.clearFramebuffer({
+				color : [0.0, 0.0, 0.0, 0.0],
+				depth : 1.0
+			});
+			renderer.setViewport(0, 0, width, height);
+			renderer.setTexture(0, this.sceneColorTexture);
+			renderer.setTechnique(this.postProcessTechnique);
+			renderer.setDefaultGlobals();
+			renderer.setModel(this.quadModel);
+			renderer.renderModel();
+		renderer.end();
+
+		gl.disable(gl.DEPTH_TEST);
+	}
+};
+
+sglHandleCanvasOnLoad("draw-canvas", new CanvasHandler());
+</script>
+</head>
+<body style="background-color:#aaa;">
+	<center>
+		<h2><font color="#880000">SpiderGL Simple Model</font></h2>
+		<br/>
+		<canvas id="draw-canvas" width="256" height="256" style="border:2px solid black;"></canvas>
+		<br/>
+		<div id="fps-div">FPS : 0</div>
+		<br/>
+		<textarea id="log-area" rows="10" cols="80"></textarea>
+		<br/>
+	</center>
+</body>
+</html>
