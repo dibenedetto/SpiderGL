@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>SpiderGL - Tutorial - Template</title>
+<script type="text/javascript" src="../lib/spidergl.js"></script>
+<script type="text/javascript">
+
+/*****************************************************************************/
+
+SpiderGL.openNamespace();
+
+function log(msg) {
+	document.getElementById("log-text").innerHTML += msg + "\n";
+}
+
+function tutorial() {
+	log("SpiderGL Version: " + SGL_VERSION_STRING);
+}
+
+window.onload = tutorial;
+
+/*****************************************************************************/
+
+</script>
+</head>
+<body>
+<center>
+<h3>SpiderGL - Tutorial - Template</h3>
+<hr/>
+<textarea id="log-text" rows="10" cols="80"></textarea>
+<hr/>
+</center>
+</body>
+</html>

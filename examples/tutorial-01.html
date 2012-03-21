@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>SpiderGL - Tutorial 1 - Math</title>
+<script type="text/javascript" src="../lib/spidergl.js"></script>
+<script type="text/javascript">
+
+/*****************************************************************************/
+
+SpiderGL.openNamespace();
+
+function log(msg) {
+	document.getElementById("log-text").innerHTML += msg + "\n";
+}
+
+function tutorial() {
+	log("SpiderGL Version: " + SGL_VERSION_STRING);
+
+	// vectors, matrices and quaternions do not have class implementation: they are implemented as plain JS arrays.
+	// a series of functions are provided for manipulating them.
+
+	var point0 = [0.0, 0.0, 0.0];
+	var point1 = [1.0, 0.0, 0.0];
+	var point2 = [0.0, 1.0, 0.0];
+
+	// functions operates "out-of-place", returning a new array
+	var edge01 = SglVec3.sub(point1, point0);
+	var edge02 = SglVec3.sub(point2, point0);
+
+	var normal = SglVec3.normalize(SglVec3.cross(edge01, edge02));
+	log(normal);
+
+	var translation = SglMat4.translation([1.0, 2.0, 3.0]);
+	var rotation    = SglMat4.rotationAngleAxis(sglDegToRad(75.0), [0.0, 1.0, 0.0]);
+	var transform   = SglMat4.mul(translation, rotation);
+
+	// 4x4 matrix and 3-d vector multiplication:
+	// if a 3rd parameter is specified, it takes place of the 4th vector component (w).
+	// default is w == 1.0
+	var xformedPoint1 = SglMat4.mul3(transform, point1, 1.0);
+	log(xformedPoint1);
+
+	var normalTransform = SglMat4.inverseTranspose33(transform); // 3x3 matrix
+	var xformedNormal   = SglMat3.mul3(normalTransform, normal);
+	log(xformedNormal);
+
+	// functions with an "s" after the operation name take a scalar as second operand;
+	// functions ending with "$" operate "in-place", returning the modified first operand
+	SglVec3.adds$(point0, 1.5);
+	log(point0);
+}
+
+window.onload = tutorial;
+
+/*****************************************************************************/
+
+</script>
+</head>
+<body>
+<center>
+<h3>SpiderGL - Tutorial 1 - Math</h3>
+<hr/>
+<textarea id="log-text" rows="10" cols="80"></textarea>
+<hr/>
+</center>
+</body>
+</html>
