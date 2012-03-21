@@ -15,12 +15,75 @@ function log(msg) {
 function tutorial() {
 	log("SpiderGL Version: " + SGL_VERSION_STRING);
 
-	var textReq = new SglTextRequest("data/lorem.txt", {
-		onSuccess : function (req) {
-			log(req.text);
-			log(req.elapsedTime);
+	/*******************************************************/
+	// plain text request
+	var textURL = "data/data.txt";
+
+	// asynchronous request
+	sglRequestText(textURL, {
+		onSuccess : function (request) {
+			log("---------------------");
+			log("Text Asynch:");
+			log(request.text);
+			log("Elapsed Time: " + request.elapsedTime);
+			log("---------------------");
 		}
 	});
+
+	// same request, synchronous read
+	var text = sglReadText(textURL);
+	log("---------------------");
+	log("Text Synch:");
+	log(text);
+	log("---------------------");
+	/*******************************************************/
+
+
+	/*******************************************************/
+	// JSON request
+	var jsonURL = "data/data.json";
+	sglRequestJSON(jsonURL, {
+		onSuccess : function (request) {
+			log("---------------------");
+			log("JSON Asynch:");
+			var obj = request.json;
+			for (var p in obj) {
+				log("obj." + p + " = " + obj[p]);
+			}
+			log("Elapsed Time: " + request.elapsedTime);
+			log("---------------------");
+		}
+	});
+
+	var obj = sglReadJSON(jsonURL);
+	log("---------------------");
+	log("JSON Synch:");
+	for (var p in obj) {
+		log("obj1." + p + " = " + obj[p]);
+	}
+	log("---------------------");
+	/*******************************************************/
+
+
+	/*******************************************************/
+	// binary request
+	var binaryURL = "data/data.bin";
+	sglRequestBinary(binaryURL, {
+		onSuccess : function (request) {
+			var bin = request.buffer;
+			log("---------------------");
+			log("Binary Asynch:");
+			log("Bytes: " + bin.byteLength);
+			log("---------------------");
+		}
+	});
+
+	var bin = sglReadBinary(binaryURL);
+	log("---------------------");
+	log("Binary Synch:");
+	log("Bytes: " + bin.byteLength);
+	log("---------------------");
+	/*******************************************************/
 }
 
 window.onload = tutorial;

@@ -484,6 +484,23 @@ SpiderGL.IO.readText = function (url) {
 };
 
 /**
+ * Asynchronous text read.
+ * This function creates a SpiderGL.IO.TextRequest with the async and seng flags set to true, overriding their values in the options parameter.
+ *
+ * @param {string} url The URL of the content
+ * @param {object} options The request options.
+ *
+ * @returns {SpiderGL.IO.TextRequest} The internally generated SpiderGL.IO.TextRequest.
+ */
+SpiderGL.IO.requestText = function (url, options) {
+	options = SpiderGL.Utility.getDefaultObject({ }, options);
+	options.async = true;
+	options.send  = true;
+	var r = new SpiderGL.IO.TextRequest(url, options);
+	return r;
+};
+
+/**
  * Creates a SpiderGL.IO.JSONRequest.
  *
  * SpiderGL.IO.JSONRequest is the base class for I/O requests.
@@ -523,6 +540,23 @@ SpiderGL.Type.extend(SpiderGL.IO.JSONRequest, SpiderGL.IO.XHRRequestBase);
 SpiderGL.IO.readJSON = function (url) {
 	var r = new SpiderGL.IO.JSONRequest(url, {async:false});
 	return r.json;
+};
+
+/**
+ * Asynchronous JSON read.
+ * This function creates a SpiderGL.IO.JSONRequest with the async and seng flags set to true, overriding their values in the options parameter.
+ *
+ * @param {string} url The URL of the content
+ * @param {object} options The request options.
+ *
+ * @returns {SpiderGL.IO.JSONRequest} The internally generated SpiderGL.IO.JSONRequest.
+ */
+SpiderGL.IO.requestJSON = function (url, options) {
+	options = SpiderGL.Utility.getDefaultObject({ }, options);
+	options.async = true;
+	options.send  = true;
+	var r = new SpiderGL.IO.JSONRequest(url, options);
+	return r;
 };
 
 /**
@@ -618,6 +652,23 @@ SpiderGL.IO.readBinary = function (url) {
 };
 
 /**
+ * Asynchronous binary read.
+ * This function creates a SpiderGL.IO.BinaryRequest with the async and seng flags set to true, overriding their values in the options parameter.
+ *
+ * @param {string} url The URL of the content
+ * @param {object} options The request options.
+ *
+ * @returns {SpiderGL.IO.BinaryRequest} The internally generated SpiderGL.IO.BinaryRequest.
+ */
+SpiderGL.IO.requestBinary = function (url, options) {
+	options = SpiderGL.Utility.getDefaultObject({ }, options);
+	options.async = true;
+	options.send  = true;
+	var r = new SpiderGL.IO.BinaryRequest(url, options);
+	return r;
+};
+
+/**
  * Creates a SpiderGL.IO.ImageRequest.
  *
  * SpiderGL.IO.ImageRequest is the base class for I/O requests.
@@ -683,6 +734,23 @@ SpiderGL.IO.ImageRequest.prototype = {
 };
 
 SpiderGL.Type.extend(SpiderGL.IO.ImageRequest, SpiderGL.IO.Request);
+
+/**
+ * Asynchronous image read.
+ * This function creates a SpiderGL.IO.ImageRequest with the async and seng flags set to true, overriding their values in the options parameter.
+ *
+ * @param {string} url The URL of the content
+ * @param {object} options The request options.
+ *
+ * @returns {SpiderGL.IO.ImageRequest} The internally generated SpiderGL.IO.ImageRequest.
+ */
+SpiderGL.IO.requestImage = function (url, options) {
+	options = SpiderGL.Utility.getDefaultObject({ }, options);
+	options.async = true;
+	options.send  = true;
+	var r = new SpiderGL.IO.ImageRequest(url, options);
+	return r;
+};
 
 /**
  * Creates a SpiderGL.IO.AggregateRequest.
