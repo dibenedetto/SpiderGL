@@ -543,6 +543,7 @@ SpiderGL.Model.Model._createSimpleDescriptor = function (options) {
 			else {
 				continue;
 			}
+			count = SpiderGL.Math.floor(count);
 			hasBuffered = true;
 			minBufferedCount = (minBufferedCount >= 0) ? (SpiderGL.Math.min(minBufferedCount, count)) : (count);
 			var bufferName = x + vertexBufferSuffix;
@@ -611,19 +612,26 @@ SpiderGL.Model.Model._createSimpleDescriptor = function (options) {
 		};
 
 		if (info.data) {
-			var buffer = { };
+			var buffer = {
+				type : info.type
+			};
+			var count = 0
 			if (SpiderGL.Type.isArray(info.data)) {
 				buffer.untypedArray = info.data;
+				count = buffer.untypedArray.length;
 			}
 			else if (SpiderGL.Type.isTypedArray(src) || SpiderGL.Type.instanceOf(src, ArrayBuffer)) {
 				buffer.typedArray = info.data;
+				count = (buffer.typedArray.byteLength - accessor.offset) / (SpiderGL.Type.typeSize(accessor.type));
 			}
 			else {
 				continue;
 			}
+			count = SpiderGL.Math.floor(count);
 			var bufferName = x + indexBufferSuffix;
 			d.data.indexBuffers[bufferName] = buffer;
 			accessor.buffer = bufferName;
+			accessor.count  = count;
 		}
 
 		var streamName = x;
