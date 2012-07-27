@@ -4079,11 +4079,12 @@ SpiderGL.WebGL.Renderbuffer = function (gl, options) {
 	var height = 0;
 
 	if (h) {
-		cb.pushRenderbuffer(h);
+		cb.pushRenderbuffer(t);
+		gl.bindRenderbuffer(t, h);
 		format = gl.getRenderbufferParameter(t, gl.RENDERBUFFER_INTERNAL_FORMAT);
 		width  = gl.getRenderbufferParameter(t, gl.RENDERBUFFER_WIDTH);
 		height = gl.getRenderbufferParameter(t, gl.RENDERBUFFER_HEIGHT);
-		cb.popRenderbuffer();
+		cb.popRenderbuffer(t);
 	}
 	else {
 		h = gl.createRenderbuffer();
@@ -4725,14 +4726,13 @@ SpiderGL.WebGL.Texture = function (gl, target, options) {
 	var t = this._t;
 	var h = this._h;
 
-	cb.pushTexture(t);
-	if (h) {
-	}
-	else {
+	if (!h) {
 		h = gl.createTexture();
-		gl.bindTexture(t, h);
-		this._h         = h;
+		this._h = h;
 	}
+
+	cb.pushTexture(t);
+	gl.bindTexture(t, h);
 	this._magFilter = gl.getTexParameter(t, gl.TEXTURE_MAG_FILTER);
 	this._minFilter = gl.getTexParameter(t, gl.TEXTURE_MIN_FILTER);
 	this._wrapS     = gl.getTexParameter(t, gl.TEXTURE_WRAP_S);
