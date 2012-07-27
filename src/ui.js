@@ -115,7 +115,6 @@ SpiderGL.UserInterface.CanvasHandler = function (gl, handler, options) {
 	};
 	window.addEventListener("message", handleMessage, true);
  
-	canvas.contentEditable = true;
 	canvas.tabIndex = 0;
 
 	canvas.addEventListener("unload",          function (e) { that._onTerminate       (e); }, false);
@@ -346,6 +345,7 @@ SpiderGL.UserInterface.CanvasHandler.prototype = {
 		this._dragStartPos[btn] = [xy[0], xy[1]];
 		this._dispatch("onMouseButtonDown", btn, xy[0], xy[1], e);
 
+		e.preventDefault();
 		e.stopPropagation();
 	},
 
