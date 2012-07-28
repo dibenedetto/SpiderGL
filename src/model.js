@@ -40,6 +40,10 @@ SpiderGL.Model = { };
 /**
  * Creates a SpiderGL.Model.Model.
  *
+ * A SpiderGL.Model.Model is a layered data structure that represents a geometric model.
+ * Through the model descriptor, it provides the elements needed to form a 3D model, e.g. raw data, semantic bindings, logical sub-structures, and higher level information.
+ * Bottom to top, each layer in the stack relies at most on the previous one. While layer flexibility decreases bottom to top, their expressiveness increases.
+ *
  * @class The SpiderGL.Model.Model represents a complex geometric model.
  *
  * @augments SpiderGL.Core.ObjectBase
