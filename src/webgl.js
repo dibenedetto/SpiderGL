@@ -4977,7 +4977,7 @@ SpiderGL.WebGL.Texture.prototype = {
 			case gl.TEXTURE_MAG_FILTER : this._magFilter = param; break;
 			case gl.TEXTURE_MIN_FILTER : this._minFilter = param; break;
 			case gl.TEXTURE_WRAP_S     : this._wrapS     = param; break;
-			case gl.TEXTURE_WRAP_T     : this._wrapS     = param; break;
+			case gl.TEXTURE_WRAP_T     : this._wrapT     = param; break;
 			default : break;
 		}
 	},
