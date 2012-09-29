@@ -339,7 +339,10 @@ SpiderGL.UserInterface.CanvasHandler.prototype = {
 
 	_onMouseButtonDown : function (e) {
 		this._canvas.focus();
-		var xy  = this._getMouseClientPos(e);
+
+		var xy = this._getMouseClientPos(e);
+		this._cursorPos = xy;
+
 		var btn = e.button;
 		this._mouseButtonsDown[btn] = true;
 		this._dragStartPos[btn] = [xy[0], xy[1]];
@@ -351,6 +354,8 @@ SpiderGL.UserInterface.CanvasHandler.prototype = {
 
 	_onMouseButtonUp : function (e) {
 		var xy = this._getMouseClientPos(e);
+		this._cursorPos = xy;
+
 		var btn = e.button;
 		this._mouseButtonsDown[btn] = false;
 		this._dispatch("onMouseButtonUp", btn, xy[0], xy[1], e);
@@ -369,6 +374,8 @@ SpiderGL.UserInterface.CanvasHandler.prototype = {
 
 	_onWindowMouseButtonUp : function (e) {
 		var xy = this._getMouseClientPos(e);
+		this._cursorPos = xy;
+
 		var btn = e.button;
 		if (!xy[2] || !this._mouseButtonsDown[btn]) return;
 
@@ -388,10 +395,11 @@ SpiderGL.UserInterface.CanvasHandler.prototype = {
 	},
 
 	_onMouseMove : function (e) {
-		var xy = this._getMouseClientPos(e);
+		this._cursorPrevPos = this._cursorPos;
 
-		this._cursorPrevPos  = this._cursorPos;
+		var xy = this._getMouseClientPos(e);
 		this._cursorPos      = xy;
+
 		this._cursorDeltaPos = [this._cursorPos[0] - this._cursorPrevPos[0], this._cursorPos[1] - this._cursorPrevPos[1]];
 		this._dispatch("onMouseMove", xy[0], xy[1], e);
 
