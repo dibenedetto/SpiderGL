@@ -1535,6 +1535,7 @@ SpiderGL.Model.ModelRenderer.prototype = {
 		var globalsMap = technique.renderData.globalsMap;
 		var uniforms = { };
 		for (var semantic in g) {
+			if (!globalsMap[semantic]) continue;
 			var uniformName  = globalsMap[semantic].name;
 			var uniformValue = g[semantic];
 			uniforms[uniformName] = uniformValue;
