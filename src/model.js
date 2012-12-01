@@ -754,6 +754,29 @@ SpiderGL.Model.Model.prototype = {
 		return true;
 	},
 
+	destroyGL : function () {
+		var d = this._descriptor;
+		if (!d) return false;
+
+		var buffer = null;
+
+		for (var x in d.data.vertexBuffers) {
+			buffer = d.data.vertexBuffers[x];
+			if (buffer.glBuffer) {
+				buffer.glBuffer.destroy();
+				buffer.glBuffer = null;
+			}
+		}
+
+		for (var x in d.data.indexBuffers) {
+			buffer = d.data.indexBuffers[x];
+			if (buffer.glBuffer) {
+				buffer.glBuffer.destroy();
+				buffer.glBuffer = null;
+			}
+		}
+	},
+
 	updateRenderData : function () {
 		var d = this._descriptor;
 		if (!d) return false;
@@ -1420,6 +1443,10 @@ SpiderGL.Model.ModelRenderer.prototype = {
 			else if (tex.target == gl.TEXTURE_CUBE_MAP) {
 				SpiderGL.WebGL.TextureCubeMap.unbind(gl, tex.unit);
 			}
+		}
+
+		if (this._framebuffer) {
+			SpiderGL.WebGL.Framebuffer.unbind(this._gl);
 		}
 
 		this._internalFramebuffer.detachAll();
