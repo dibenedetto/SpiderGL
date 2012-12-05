@@ -628,6 +628,8 @@ SpiderGL.UserInterface.CanvasHandler.prototype = {
 			this._animateID = null;
 		}
 
+		this._animateRate = r;
+
 		if (r > 0) {
 			this._animateMS = SpiderGL.Math.floor(1000 / r);
 			if (this._animateWithTimeout) {
