@@ -1734,6 +1734,16 @@ SpiderGL.Model.ModelRenderer.prototype = {
 		//////////////
 	},
 
+	renderModelPart : function(partName) {
+		var part = this.model.descriptor.logic.parts[partName];
+		this.setPart(partName);
+		for (var c in part.chunks) {
+			var chunkName = part.chunks[c];
+			this.setChunk(chunkName);
+			this.render();
+		}
+	},
+
 	renderModel : function() {
 		var parts = this.model.descriptor.logic.parts;
 		for (var partName in parts) {
