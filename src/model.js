@@ -1574,7 +1574,7 @@ SpiderGL.Model.ModelRenderer.prototype = {
 	setFramebuffer : function (fb) {
 		if (!this._inBegin) return;
 
-		this._internalFramebuffer.detachAll();
+		//this._internalFramebuffer.detachAll();
 		if (this._framebuffer == fb) return;
 
 		this._framebuffer = fb;
@@ -1582,7 +1582,10 @@ SpiderGL.Model.ModelRenderer.prototype = {
 		this._viewportDirty = true;
 		this._dirty = true;
 
-		if (!fb) {
+		if (fb) {
+			fb.bind();
+		}
+		else {
 			SpiderGL.WebGL.Framebuffer.unbind(this._gl);
 		}
 	},
