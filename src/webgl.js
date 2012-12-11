@@ -2263,7 +2263,6 @@ SpiderGL.WebGL.VertexBuffer.prototype = {
 	 * Latches the WebGL vertex attribute pointer with the internal buffer.
 	 * The effect of this method is to bind the SpiderGL.WebGL.VertexBuffer and call WebGLRenderingContext.vertexAttribPointer() with the provided parameters.
 	 *
-	 * @param {number} index The vertex attribute index.
 	 * @param {object} [options] Vertex attribute pointer parameters.
 	 * @param {number} [options.index=SpiderGL.WebGL.VertexBuffer.DEFAULT_ATTRIBUTE_INDEX] Attribute index.
 	 * @param {number} [options.size=SpiderGL.WebGL.VertexBuffer.DEFAULT_ATTRIBUTE_SIZE] Attribute size.
@@ -2290,7 +2289,7 @@ SpiderGL.WebGL.VertexBuffer.prototype = {
 	 * 	enable     : true       // if omitted, defaults to SpiderGL.WebGL.VertexBuffer.DEFAULT_ATTRIBUTE_ENABLE
 	 * });
 	 */
-	vertexAttribPointer : function (index, options) {
+	vertexAttribPointer : function (options) {
 		options = SpiderGL.Utility.getDefaultObject({
 			index      : SpiderGL.WebGL.VertexBuffer.DEFAULT_ATTRIBUTE_INDEX,
 			size       : SpiderGL.WebGL.VertexBuffer.DEFAULT_ATTRIBUTE_SIZE,
@@ -2301,9 +2300,9 @@ SpiderGL.WebGL.VertexBuffer.prototype = {
 			enable     : SpiderGL.WebGL.VertexBuffer.DEFAULT_ATTRIBUTE_ENABLE
 		}, options);
 
-		this._dsa.vertexAttribPointer(this._h, index, options.size, options.glType, options.normalized, options.stride, options.offset);
+		this._dsa.vertexAttribPointer(this._h, options.index, options.size, options.glType, options.normalized, options.stride, options.offset);
 		if (options.enable) {
-			this._gl.enableVertexAttribArray(index);
+			this._gl.enableVertexAttribArray(options.index);
 		}
 	}
 };
