@@ -1325,7 +1325,7 @@ SpiderGL.Model.ModelRenderer.prototype = {
 						if (!attributesMap[info.semantic] || !attributesMap[info.semantic][info.index]) continue;
 						var index  = attributesMap[info.semantic][info.index].index;
 						var stream = info.stream;
-						strea.index = index;
+						stream.index = index;
 						enabledArrays.push(index);
 						buffer.vertexAttribPointer(stream);
 						//gl.enableVertexAttribArray(index);

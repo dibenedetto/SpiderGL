@@ -5502,6 +5502,7 @@ SpiderGL.WebGL.Texture2D.prototype = {
 	 * @param {object} options The image data and type parameters (see SpiderGL.WebGL.Texture constructor).
 	 * @param {ArrayBuffer|ArrayBufferView|ImageData|HTMLImageElement|HTMLCanvasElement|HTMLVideoElement} [options.data] The texture image pixel data.
 	 * @param {number} [options.internalFormat=SpiderGL.WebGL.Texture.DEFAULT_INTERNAL_FORMAT] The texture internal format.
+	 * @param {number} [options.level=SpiderGL.WebGL.Texture.DEFAULT_LEVEL] The texture image mip level.
 	 * @param {number} [options.width] If data is null or a typed array, specifies the texture image width. If handle is provided, the width parameter will supply the width information, not querable to the WebGLRenderingContext.
 	 * @param {number} [options.height] If data is null or a typed array, specifies the texture image height. If handle is provided, the width parameter will supply the height information, not querable to the WebGLRenderingContext.
 	 * @param {number} [options.border=SpiderGL.WebGL.Texture.DEFAULT_BORDER] Texture border.
