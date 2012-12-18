@@ -1,0 +1,12 @@
+* :doc:`Class index <index>`
+* :doc:`File index <files>`
+
+Classes
+=======
+<for each="thisClass" in="data">
+{!
+  if (thisClass.alias != "_global_") {
+    output += "* :class:`"+thisClass.alias+"`";
+  }
+!}
+</for>

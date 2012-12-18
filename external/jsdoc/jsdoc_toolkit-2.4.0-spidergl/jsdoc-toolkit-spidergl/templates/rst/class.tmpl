@@ -1,0 +1,598 @@
+{!
+  var classType = "";
+  var docType = "";
+  
+  if (data.isBuiltin()) {
+    classType += "Built-In";
+    docType = "container";
+  }
+  
+  if (data.isNamespace) {
+    if (data.is('FUNCTION')) {
+      classType += "Function";
+      docType = "function";
+    }
+    else {
+      classType += "Namespace";
+      docType = "module";
+    }
+  }
+  else {
+    classType += "Class";
+    docType = "class";
+  }
+
+
+  // Constructor 
+  contructor = "";
+  if (!data.isBuiltin() && (data.isNamespace || data.is('CONSTRUCTOR'))) {
+    visibility = "";
+    contructor = data.alias;
+    
+    if (data.isPrivate) visbility = "private";
+    if (data.isInner) visibility += "inner";
+  }
+!}
+
+===============================================
+{+data.alias+} ({+docType+})
+===============================================
+{+reJoin(restify(resolveLinks(data.classDesc)))+}
+
+.. contents::
+   :local:
+
+{!
+if (docType == 'function' || docType == 'class') {
+  output += ".. " + docType + ":: " + data.alias + " " + makeSignature(data.params);
+} else {
+  output += ".. " + docType + ":: " + data.alias;
+}
+!}
+
+
+.. ============================== class summary ==========================
+  <if test="data.version">Version {+ data.version +}.</if>
+
+<if test="data.augments.length">Extends
+{+
+  data.augments
+  .sort()
+  .map(
+    function($) { return ':doc:`' + $ + '`'; }
+  )
+  .join(", ")
++}.
+</if>
+
+  {+reJoin(restify(resolveLinks(data.classDesc)))+}
+
+.. ============================== properties summary =====================
+
+<if test="data.properties.length">
+{! var ownProperties = data.properties.filter(function($){return $.memberOf == data.alias && !$.isNamespace}).sort(makeSortby("name")); !}
+
+..
+  <if test="ownProperties.length">
+    <for each="member" in="ownProperties">
+      {!
+        if (member.isPrivate) output += "<private> ";
+        if (member.isInner) output += "<inner> ";
+        if (member.isStatic) output += "<static> ";
+        if (member.isConstant) output += "<constant> ";
+      !}
+      <if test="member.isStatic && member.memberOf != '_global_'">{+member.memberOf+}.</if>{+member.name+}
+        {+reJoin(resolveLinks(summarize(member.desc)))+}
+    </for>
+  </if>
+
+..
+  <if test="data.inheritsFrom.length">
+        {!
+          var borrowedMembers = data.properties.filter(function($) {return $.memberOf != data.alias});
+          var contributers = [];
+          borrowedMembers.map(function($) {if (contributers.indexOf($.memberOf) < 0) contributers.push($.memberOf)});
+          for (var i = 0, l = contributers.length; i < l; i++) {
+            output +=
+              "<dt>Fields borrowed from class "+new Link().toSymbol(contributers[i])+": </dt>"
+              +
+              "<dd>" +
+              borrowedMembers
+              .filter(
+                function($) { return $.memberOf == contributers[i] }
+              )
+              .sort(makeSortby("name"))
+              .map(
+                function($) { return new Link().toSymbol($.alias).withText($.name) }
+              )
+              .join(", ")
+              +
+              "</dd>";
+          }
+        !}
+  </if>
+</if>
+
+.. ============================== methods summary ========================
+
+<if test="data.methods.length">
+  {! var ownMethods = data.methods.filter(function($){return $.memberOf == data.alias  && !$.isNamespace}).sort(makeSortby("name")); !}
+
+..
+  <if test="ownMethods.length">
+    <for each="member" in="ownMethods">
+       {!
+         var visiblity = "";
+         if (member.isPrivate) visibility = "<private> ";
+         if (member.isInner) visibility = "<inner> ";
+         if (member.isStatic) visibility = "<static> ";
+       !}
+       .. method:: {+member.name.replace(/\^\d+$/, '')+}{+makeSignature(member.params)+}
+
+         {+reIndent(reJoin(resolveLinks(restify(summarize(member.desc)))), 9)+}
+    </for>
+  </if>
+        
+        <if test="data.inheritsFrom.length">
+        <dl class="inheritsList">
+        {!
+          var borrowedMembers = data.methods.filter(function($) {return $.memberOf != data.alias});
+          var contributers = [];
+          borrowedMembers.map(function($) {if (contributers.indexOf($.memberOf) < 0) contributers.push($.memberOf)});
+          for (var i = 0, l = contributers.length; i < l; i++) {
+            output +=
+              "<dt>Methods borrowed from class "+new Link().toSymbol(contributers[i])+": </dt>"
+              +
+              "<dd>" +
+              borrowedMembers
+              .filter(
+                function($) { return $.memberOf == contributers[i] }
+              )
+              .sort(makeSortby("name"))
+              .map(
+                function($) { return new Link().toSymbol($.alias).withText($.name) }
+              )
+              .join(", ")
+              +
+              "</dd>";
+          }
+        
+        !}
+        </dl>
+        </if>
+      </if>
+
+.. ============================== events summary ========================
+
+
+      <if test="data.events.length">
+        {! var ownEvents = data.events.filter(function($){return $.memberOf == data.alias  && !$.isNamespace}).sort(makeSortby("name")); !}
+        <if test="ownEvents.length">
+
+          <for each="member" in="ownEvents">
+            {!
+              if (member.isPrivate) output += "<private> ";
+              if (member.isInner) output += "<inner> ";
+              if (member.isStatic) output += "<static> ";
+            !}
+            <if test="member.isStatic && member.memberOf != '_global_'">{+member.memberOf+}.</if>{+new Link().toSymbol(member.alias).withText(member.name)+} {+makeSignature(member.params)+}
+              {+reJoin(restify(resolveLinks(summarize(member.desc))))+}
+          </for>
+        </if>
+        
+        <if test="data.inheritsFrom.length">
+        <dl class="inheritsList">
+        {!
+          var borrowedMembers = data.events.filter(function($) {return $.memberOf != data.alias});
+          var contributers = [];
+          borrowedMembers.map(function($) {if (contributers.indexOf($.memberOf) < 0) contributers.push($.memberOf)});
+          for (var i = 0, l = contributers.length; i < l; i++) {
+            output +=
+              "<dt>Events borrowed from class "+new Link().toSymbol(contributers[i])+": </dt>"
+              +
+              "<dd>" +
+              borrowedMembers
+              .filter(
+                function($) { return $.memberOf == contributers[i] }
+              )
+              .sort(makeSortby("name"))
+              .map(
+                function($) { return new Link().toSymbol($.alias).withText($.name) }
+              )
+              .join(", ")
+              +
+              "</dd>";
+          }
+        
+        !}
+        </dl>
+        </if>
+      </if>
+
+.. ============================== constructor details ====================
+
+Constructor details
+===================
+
+      <if test="!data.isBuiltin() && (data.isNamespace || data.is('CONSTRUCTOR'))">
+        
+        {!
+          if (data.isPrivate) output += "<private> ";
+          if (data.isInner) output += "<inner> ";
+        !}
+
+..        {+ data.alias +}<if test="classType != 'Namespace '">{+ makeSignature(data.params) +}</if>
+        
+        .. container:: description
+
+            {+reIndent(reJoin(restify(resolveLinks(data.desc))), 12)+}
+            
+            <if test="data.author">Author: {+data.author+}</if>
+        
+            <if test="data.example.length">
+            <for each="example" in="data.example">
+
+            .. code-block:: javascript
+
+               {+reIndent(example, 16)+}
+
+
+            </for>
+            </if>
+
+
+          <if test="data.params.length">
+            <dl class="detailList">
+            <dt class="heading">Parameters:</dt>
+            <for each="item" in="data.params">
+              <dt>
+                {+((item.type)?""+("<span class=\"light fixedFont\">{"+(new Link().toSymbol(item.type)+"}</span> ")) : "")+} <b>{+item.name+}</b>
+                <if test="item.isOptional"><i>Optional<if test="item.defaultValue">, Default: {+item.defaultValue+}</if></i></if>
+              </dt>
+                <dd>{+resolveLinks(item.desc)+}</dd>
+            </for>
+            </dl>
+          </if>
+          <if test="data.deprecated">
+            <dl class="detailList">
+            <dt class="heading">Deprecated:</dt>
+            <dt>
+              {+resolveLinks(data.deprecated)+}
+            </dt>
+            </dl>
+          </if>
+          <if test="data.since">
+            <dl class="detailList">
+            <dt class="heading">Since:</dt>
+              <dd>{+ data.since +}</dd>
+            </dl>
+          </if>
+          <if test="data.exceptions.length">
+            <dl class="detailList">
+            <dt class="heading">Throws:</dt>
+            <for each="item" in="data.exceptions">
+              <dt>
+                {+((item.type)?"<span class=\"light fixedFont\">{"+(new Link().toSymbol(item.type))+"}</span> " : "")+} <b>{+item.name+}</b>
+              </dt>
+                <dd>{+resolveLinks(item.desc)+}</dd>
+            </for>
+            </dl>
+          </if>
+          <if test="data.returns.length">
+            <dl class="detailList">
+            <dt class="heading">Returns:</dt>
+            <for each="item" in="data.returns">
+                <dd>{+((item.type)?"<span class=\"light fixedFont\">{"+(new Link().toSymbol(item.type))+"}</span> " : "")+}{+resolveLinks(item.desc)+}</dd>
+            </for>
+            </dl>
+          </if>
+          <if test="data.requires.length">
+            <dl class="detailList">
+            <dt class="heading">Requires:</dt>
+            <for each="item" in="data.requires">
+              <dd>{+ resolveLinks(item) +}</dd>
+            </for>
+            </dl>
+          </if>
+          <if test="data.see.length">
+            <dl class="detailList">
+            <dt class="heading">See:</dt>
+            <for each="item" in="data.see">
+              <dd>{+ new Link().toSymbol(item) +}</dd>
+            </for>
+            </dl>
+          </if>
+
+      </if>
+
+.. ============================== field details ==========================
+
+Field details
+=============
+
+      <if test="defined(ownProperties) && ownProperties.length">
+        <div class="sectionTitle">
+          Field Detail
+        </div>
+        <for each="member" in="ownProperties">
+          <a name="{+Link.symbolNameToLinkName(member)+}"> </a>
+          <div class="fixedFont">{!
+            if (member.isPrivate) output += "<private> ";
+            if (member.isInner) output += "<inner> ";
+            if (member.isStatic) output += "<static> ";
+            if (member.isConstant) output += "<constant> ";
+          !}
+          
+          <if test="member.type"><span class="light">{{+new Link().toSymbol(member.type)+}}</span></if>
+          <if test="member.isStatic && member.memberOf != '_global_'"><span class="light">{+member.memberOf+}.</span></if><b>{+member.name+}</b>
+          
+          </div>
+          <div class="description">
+            {+resolveLinks(member.desc)+}
+            <if test="member.srcFile != data.srcFile">
+              <br />
+              <i>Defined in: </i> {+new Link().toSrc(member.srcFile)+}.
+            </if>
+            <if test="member.author"><br /><i>Author: </i>{+member.author+}.</if>
+          </div>
+
+<if test="member.example.length">
+<for each="example" in="member.example">
+
+.. code-block:: javascript
+
+   {+reIndent(example, 3)+}
+
+
+</for>
+</if>
+ 
+
+            <if test="member.deprecated">
+              <dl class="detailList">
+              <dt class="heading">Deprecated:</dt>
+              <dt>
+                {+ resolveLinks(member.deprecated) +}
+              </dt>
+              </dl>
+            </if>
+            <if test="member.since">
+              <dl class="detailList">
+              <dt class="heading">Since:</dt>
+                <dd>{+ member.since +}</dd>
+              </dl>
+            </if>
+            <if test="member.see.length">
+              <dl class="detailList">
+              <dt class="heading">See:</dt>
+              <for each="item" in="member.see">
+              <dd>{+ new Link().toSymbol(item) +}</dd>
+              </for>
+              </dl>
+            </if>
+            <if test="member.defaultValue">
+              <dl class="detailList">
+              <dt class="heading">Default Value:</dt>
+              <dd>
+                {+resolveLinks(member.defaultValue)+}
+              </dd>
+              </dl>
+            </if>
+
+          <if test="!$member_last"><hr /></if>
+        </for>
+      </if>
+
+.. ============================== method details =========================
+
+Method details
+==============
+
+..
+      <if test="defined(ownMethods) && ownMethods.length">
+        <for each="member" in="ownMethods">
+          <a name="{+Link.symbolNameToLinkName(member)+}"> </a>
+          <div class="fixedFont">{!
+            if (member.isPrivate) output += "<private> ";
+            if (member.isInner) output += "<inner> ";
+            if (member.isStatic) output += "<static> ";
+          !}
+          
+          <if test="member.type"><span class="light">{{+new Link().toSymbol(member.type)+}}</span></if>
+          <if test="member.isStatic && member.memberOf != '_global_'"><span class="light">{+member.memberOf+}.</span></if><b>{+member.name.replace(/\^\d+$/, '')+}</b>{+makeSignature(member.params)+}
+          </div>
+
+..
+          <div class="description">
+            {+resolveLinks(member.desc)+}
+            <if test="member.srcFile != data.srcFile">
+              Defined in: {+new Link().toSrc(member.srcFile)+}.
+            </if>
+            <if test="member.author">Author: {+member.author+}.</if>
+          </div>
+
+<if test="member.example.length">
+<for each="example" in="member.example">
+
+.. code-block:: javascript
+
+   {+reIndent(example, 3)+}
+
+
+</for>
+</if>
+
+            <if test="member.params.length">
+..
+              <dl class="detailList">
+              <dt class="heading">Parameters:</dt>
+              <for each="item" in="member.params">
+                <dt>
+                  {+((item.type)?"<span class=\"light fixedFont\">{"+(new Link().toSymbol(item.type))+"}</span> " : "")+}<b>{+item.name+}</b>
+                  <if test="item.isOptional"><i>Optional<if test="item.defaultValue">, Default: {+item.defaultValue+}</if></i></if>
+                </dt>
+                <dd>{+resolveLinks(item.desc)+}</dd>
+              </for>
+              </dl>
+            </if>
+
+            <if test="member.deprecated">
+..
+              <dl class="detailList">
+              <dt class="heading">Deprecated:</dt>
+              <dt>
+                {+ resolveLinks(member.deprecated) +}
+              </dt>
+              </dl>
+            </if>
+
+            <if test="member.since">
+..
+              <dl class="detailList">
+              <dt class="heading">Since:</dt>
+                <dd>{+ member.since +}</dd>
+              </dl>
+              </dl>
+            </if>
+
+            <if test="member.exceptions.length">
+..
+              Throws:
+              <for each="item" in="member.exceptions">
+                * {+((item.type)?"<span class=\"light fixedFont\">{"+(new Link().toSymbol(item.type))+"}</span> " : "")+} <b>{+item.name+}</b>
+                  
+                  {+resolveLinks(item.desc)+}
+              </for>
+              </dl>
+            </if>
+
+            <if test="member.returns.length">
+..
+              Returns:
+              <for each="item" in="member.returns">
+                * {+((item.type)?"{"+(new Link().toSymbol(item.type))+"} " : "")+}{+resolveLinks(item.desc)+}
+              </for>
+            </if>
+
+            <if test="member.requires.length">
+..
+              <dl class="detailList">
+              <dt class="heading">Requires:</dt>
+              <for each="item" in="member.requires">
+                <dd>{+ resolveLinks(item) +}</dd>
+              </for>
+              </dl>
+            </if>
+
+..
+            <if test="member.see.length">
+              <dl class="detailList">
+              <dt class="heading">See:</dt>
+              <for each="item" in="member.see">
+                <dd>{+ new Link().toSymbol(item) +}</dd>
+              </for>
+              </dl>
+            </if>
+
+..
+          <if test="!$member_last"><hr /></if>
+        </for>
+      </if>
+      
+.. ============================== event details =========================
+
+<if test="defined(ownEvents) && ownEvents.length">
+
+<for each="member" in="ownEvents">
+
+  .. method:: {+member.name+} {+makeSignature(member.params)+}
+
+{!
+if (member.isPrivate) output += "<private> ";
+if (member.isInner) output += "<inner> ";
+if (member.isStatic) output += "<static> ";
+!}
+
+<if test="member.type">{{+new Link().toSymbol(member.type)+}}</if>
+<if test="member.isStatic && member.memberOf != '_global_'">{+member.memberOf+}.</if>
+
+    {+reIndent(resolveLinks(member.desc), 2)+}
+
+    <if test="member.author">Author: {+member.author+}.</if>
+
+
+<if test="member.example.length">
+<for each="example" in="member.example">
+
+    .. code-block:: javascript
+
+      {+reIndent(example, 6)+}
+
+
+</for>
+</if>
+
+         
+<if test="member.params.length">
+  <for each="item" in="member.params">
+    :param {+item.name+}: {+ resolveLinks(item.desc) +}
+  </for>
+</if>
+
+            <if test="member.deprecated">
+              <dl class="detailList">
+              <dt class="heading">Deprecated:</dt>
+              <dt>
+                {+ resolveLinks(member.deprecated) +}
+              </dt>
+              </dl>
+            </if>
+            <if test="member.since">
+              <dl class="detailList">
+              <dt class="heading">Since:</dt>
+                <dd>{+ member.since +}</dd>
+              </dl>
+              </dl>
+            </if>
+            <if test="member.exceptions.length">
+              <dl class="detailList">
+              <dt class="heading">Throws:</dt>
+              <for each="item" in="member.exceptions">
+                <dt>
+                  {+((item.type)?"<span class=\"light fixedFont\">{"+(new Link().toSymbol(item.type))+"}</span> " : "")+} <b>{+item.name+}</b>
+                </dt>
+                <dd>{+ resolveLinks(item.desc) +}</dd>
+              </for>
+              </dl>
+            </if>
+            <if test="member.returns.length">
+              <dl class="detailList">
+              <dt class="heading">Returns:</dt>
+              <for each="item" in="member.returns">
+                <dd>{+((item.type)?"<span class=\"light fixedFont\">{"+(new Link().toSymbol(item.type))+"}</span> " : "")+}{+resolveLinks(item.desc)+}</dd>
+              </for>
+              </dl>
+            </if>
+            <if test="member.requires.length">
+              <dl class="detailList">
+              <dt class="heading">Requires:</dt>
+              <for each="item" in="member.requires">
+                <dd>{+ resolveLinks(item) +}</dd>
+              </for>
+              </dl>
+            </if>
+            <if test="member.see.length">
+              <dl class="detailList">
+              <dt class="heading">See:</dt>
+              <for each="item" in="member.see">
+                <dd>{+ new Link().toSymbol(item) +}</dd>
+              </for>
+              </dl>
+            </if>
+  </for>
+</if>
+
+{+includeTemplate("footer.tmpl")+}
+
+
+.. vim: set ft=rst :

@@ -143,7 +143,7 @@
 		
 		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
 		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
-		Generated on: 2012-2-19 17:11
+		Generated on: 2012-11-19 0:05
 	</div>
 </div>
 
@@ -166,7 +166,7 @@
 					
 					
 					
-						<li>Defined in: <a href="../symbols/src/C__devel_spidergl_jsdoc_src_model.js.html">model.js</a></li>
+						<li>Defined in: <a href="../symbols/src/C__devel_SpiderGL_external_jsdoc_src_model.js.html">model.js</a></li>
 					
 						<li>Extends <span class="fixedFont">
 						<a href="../symbols/SpiderGL.Core.ObjectBase.html">SpiderGL.Core.ObjectBase</a></span></li>
@@ -236,7 +236,7 @@
 								>
 									<td class="attributes">&nbsp;</td>
 									<td class="nameDescription">
-										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Model.Model.html#updateGL">updateGL</a></b>(gl, options)
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Model.Model.html#destroyGL">destroyGL</a></b>()
 										</div>
 										<div class="description"></div>
 									</td>
@@ -247,7 +247,7 @@
 								>
 									<td class="attributes">&nbsp;</td>
 									<td class="nameDescription">
-										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Model.Model.html#updateRenderData">updateRenderData</a></b>()
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Model.Model.html#updateGL">updateGL</a></b>(gl, options)
 										</div>
 										<div class="description"></div>
 									</td>
@@ -255,6 +255,17 @@
 							
 								<tr
 									 class='item2'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/SpiderGL.Model.Model.html#updateRenderData">updateRenderData</a></b>()
+										</div>
+										<div class="description"></div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
 								>
 									<td class="attributes">&nbsp;</td>
 									<td class="nameDescription">
@@ -295,7 +306,7 @@
 					</div>
 					
 					<div class="description">
-						Creates a SpiderGL.Model.Model.
+						Creates a SpiderGL.Model.Model.A SpiderGL.Model.Model is a layered data structure that represents a geometric model.Through the model descriptor, it provides the elements needed to form a 3D model, e.g. raw data, semantic bindings, logical sub-structures, and higher level information.Bottom to top, each layer in the stack relies at most on the previous one. While layer flexibility decreases bottom to top, their expressiveness increases.
 						
 					</div>
 					
@@ -350,6 +361,35 @@
 							<li 
 								 class='item0'
 							>
+								<div class="fixedFont heading" id="destroyGL">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>destroyGL</b>()
+								</div>
+								
+								<div class="description">
+									
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
 								<div class="fixedFont heading" id="updateGL">
 									<span class='lighter'>
 									
@@ -394,7 +434,7 @@
 							</li>
 						
 							<li 
-								 class='item1'
+								 class='item2'
 							>
 								<div class="fixedFont heading" id="updateRenderData">
 									<span class='lighter'>
@@ -423,7 +463,7 @@
 							</li>
 						
 							<li 
-								 class='item2'
+								 class='item3'
 							>
 								<div class="fixedFont heading" id="updateTypedArrays">
 									<span class='lighter'>

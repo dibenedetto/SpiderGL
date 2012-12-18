@@ -1,0 +1,32 @@
+API: File index
+================
+:generator: JsDoc Toolkit
+
+.. contents::
+   :local:
+
+<for each="item" in="data">
+
+* {+item.alias+}
+
+  <if test="item.desc">{+reIndent(restify(resolveLinks(item.desc)), 2)+}</if>
+
+  <if test="item.author">
+  Author: {+item.author+}
+  </if>
+  <if test="item.version">
+  Version: {+item.version+}
+  </if>
+
+  {! var locations = item.comment.getTag('location').map(function($){return $.toString().replace(/(^\$ ?| ?\$$)/g, '').replace(/^HeadURL: https:/g, 'http:');}) !}
+
+  <if test="locations.length">
+  Location:
+   <for each="location" in="locations">
+   * {+location+}
+   </for>
+  </if>
+
+</for>
+
+{+includeTemplate("footer.tmpl")+}

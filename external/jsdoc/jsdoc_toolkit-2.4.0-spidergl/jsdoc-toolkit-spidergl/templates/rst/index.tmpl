@@ -1,0 +1,29 @@
+=============
+API Reference
+=============
+:generator: JsDoc Toolkit
+
+.. toctree::
+   :glob:
+
+   core-js/symbols/*
+   jsdoc-toolkit/symbols/*
+
+.. contents::
+   :local:
+     
+<for each="thisClass" in="data">
+
+{!
+var ctype = "class";
+if (thisClass.isNamespace)
+  ctype = "mod";
+!}
+
+:{+ctype+}:`{+thisClass.alias+}`
+  {+resolveLinks(reJoin(restify(summarize(thisClass.classDesc))))+}
+</for>
+
+{+includeTemplate("footer.tmpl")+}
+
+.. vim: set ft=rst :

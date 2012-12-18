@@ -530,7 +530,7 @@ SpiderGL.Math.Vec2 = { };
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = v[i] (same as v.slice(0, 2)).
+ * @returns {array} A new 2-dimensional array r, where r[i] = v[i] (same as v.slice(0, 2)).
  */
 SpiderGL.Math.Vec2.dup = function (v) {
 	return v.slice(0, 2);
@@ -541,7 +541,7 @@ SpiderGL.Math.Vec2.dup = function (v) {
  *
  * @param {number} s The input scalar.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = s.
+ * @returns {array} A new 2-dimensional array r, where r[i] = s.
  */
 SpiderGL.Math.Vec2.scalar = function (s) {
 	return [s, s];
@@ -550,7 +550,7 @@ SpiderGL.Math.Vec2.scalar = function (s) {
 /**
  * Creates a 2-dimensional vector initialized with zero.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = 0.
+ * @returns {array} A new 2-dimensional array r, where r[i] = 0.
  */
 SpiderGL.Math.Vec2.zero = function () {
 	return [0, 0];
@@ -559,7 +559,7 @@ SpiderGL.Math.Vec2.zero = function () {
 /**
  * Creates a 2-dimensional vector initialized with one.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = 1.0.
+ * @returns {array} A new 2-dimensional array r, where r[i] = 1.0.
  */
 SpiderGL.Math.Vec2.one = function () {
 	return [1, 1];
@@ -568,7 +568,7 @@ SpiderGL.Math.Vec2.one = function () {
 /**
  * Creates a 2-dimensional vector initialized with SpiderGL.Math.MAX_NUMBER.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = SpiderGL.Math.MAX_NUMBER.
+ * @returns {array} A new 2-dimensional array r, where r[i] = SpiderGL.Math.MAX_NUMBER.
  */
 SpiderGL.Math.Vec2.maxNumber = function () {
 	return [SpiderGL.Math.MAX_NUMBER, SpiderGL.Math.MAX_NUMBER];
@@ -577,7 +577,7 @@ SpiderGL.Math.Vec2.maxNumber = function () {
 /**
  * Creates a 2-dimensional vector initialized with SpiderGL.Math.MIN_NUMBER.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = SpiderGL.Math.MIN_NUMBER.
+ * @returns {array} A new 2-dimensional array r, where r[i] = SpiderGL.Math.MIN_NUMBER.
  */
 SpiderGL.Math.Vec2.minNumber = function () {
 	return [SpiderGL.Math.MIN_NUMBER, SpiderGL.Math.MIN_NUMBER];
@@ -589,7 +589,7 @@ SpiderGL.Math.Vec2.minNumber = function () {
  * @param {array} v The input vector.
  * @param {number} [z=0.0] The 3th component.
  *
- * @returns {array} A 4-dimensional vector r equal to v extended with z as 3rd component.
+ * @returns {array} A new 3-dimensional array r equal to v extended with z as 3rd component.
  */
 SpiderGL.Math.Vec2.to3 = function (v, z) {
 	return [v[0], v[1], (z != undefined) ? z : 0];
@@ -602,7 +602,7 @@ SpiderGL.Math.Vec2.to3 = function (v, z) {
  * @param {number} [z=0.0] The 3th component.
  * @param {number} [w=1.0] The 4th component.
  *
- * @returns {array} A 4-dimensional vector r equal to v extended with z as 3rd component and w as 4th component.
+ * @returns {array} A new 4-dimensional array r equal to v extended with z as 3rd component and w as 4th component.
  */
 SpiderGL.Math.Vec2.to4 = function (v, z, w) {
 	return [v[0], v[1], v[2], (z != undefined) ? z : 0, (w != undefined) ? w : 1];
@@ -613,7 +613,7 @@ SpiderGL.Math.Vec2.to4 = function (v, z, w) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = -v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = -v[i].
  */
 SpiderGL.Math.Vec2.neg = function (v) {
 	return [-v[0], -v[1]];
@@ -625,7 +625,7 @@ SpiderGL.Math.Vec2.neg = function (v) {
  * @param {array} u The first addition operand.
  * @param {array} v The second addition operand.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = u[i] + v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = u[i] + v[i].
  */
 SpiderGL.Math.Vec2.add = function (u, v) {
 	return [u[0]+v[0], u[1]+v[1]];
@@ -637,7 +637,7 @@ SpiderGL.Math.Vec2.add = function (u, v) {
  * @param {array} v The vector addition operand.
  * @param {number} s The scalar addition operand.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = v[i] + s.
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = v[i] + s.
  */
 SpiderGL.Math.Vec2.adds = function (v, s) {
 	return [v[0]+s, v[1]+s];
@@ -649,7 +649,7 @@ SpiderGL.Math.Vec2.adds = function (v, s) {
  * @param {array} u The first subtraction operand.
  * @param {array} v The second subtraction operand.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = u[i] - v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = u[i] - v[i].
  */
 SpiderGL.Math.Vec2.sub = function (u, v) {
 	return [u[0]-v[0], u[1]-v[1]];
@@ -661,7 +661,7 @@ SpiderGL.Math.Vec2.sub = function (u, v) {
  * @param {array} v The vector subtraction operand.
  * @param {number} s The scalar subtraction operand.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = v[i] - s.
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = v[i] - s.
  */
 SpiderGL.Math.Vec2.subs = function (v, s) {
 	return [v[0]-s, v[1]-s];
@@ -673,7 +673,7 @@ SpiderGL.Math.Vec2.subs = function (v, s) {
  * @param {number} s The scalar subtraction operand.
  * @param {array} v The vector subtraction operand.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = s - v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = s - v[i].
  */
 SpiderGL.Math.Vec2.ssub = function (s, v) {
 	return [s-v[0], s-v[1]];
@@ -685,7 +685,7 @@ SpiderGL.Math.Vec2.ssub = function (s, v) {
  * @param {array} u The first multiplication operand.
  * @param {array} v The second multiplication operand.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = u[i] * v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = u[i] * v[i].
  */
 SpiderGL.Math.Vec2.mul = function (u, v) {
 	return [u[0]*v[0], u[1]*v[1]];
@@ -697,7 +697,7 @@ SpiderGL.Math.Vec2.mul = function (u, v) {
  * @param {array} v The vector multiplication operand.
  * @param {number} s The scalar multiplication operand.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = v[i] * s.
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = v[i] * s.
  */
 SpiderGL.Math.Vec2.muls = function (v, s) {
 	return [v[0]*s, v[1]*s];
@@ -709,7 +709,7 @@ SpiderGL.Math.Vec2.muls = function (v, s) {
  * @param {array} u The numerator vector.
  * @param {array} v The denominator vector.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = u[i] / v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = u[i] / v[i].
  */
 SpiderGL.Math.Vec2.div = function (u, v) {
 	return [u[0]/v[0], u[1]/v[1]];
@@ -721,7 +721,7 @@ SpiderGL.Math.Vec2.div = function (u, v) {
  * @param {array} v The numerator vector.
  * @param {number} s The scalar denominator.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = v[i] / s.
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = v[i] / s.
  */
 SpiderGL.Math.Vec2.divs = function (v, s) {
 	return [v[0]/s, v[1]/s];
@@ -733,7 +733,7 @@ SpiderGL.Math.Vec2.divs = function (v, s) {
  * @param {number} s The denominator scalar.
  * @param {array} v The numerator vector.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = s / v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = s / v[i].
  */
 SpiderGL.Math.Vec2.sdiv = function (s, v) {
 	return [s/v[0], s/v[1]];
@@ -744,7 +744,7 @@ SpiderGL.Math.Vec2.sdiv = function (s, v) {
  *
  * @param {array} v The input (denominator) vector.
  *
- * @returns {array} A 2-dimensionals vector r, where r[i] = 1.0 / v[i].
+ * @returns {array} A new 2-dimensionals vector r, where r[i] = 1.0 / v[i].
  */
 SpiderGL.Math.Vec2.rcp = function (v) {
 	return [1.0/v[0], 1.0/v[1]];
@@ -768,7 +768,7 @@ SpiderGL.Math.Vec2.dot = function (u, v) {
  * @param {array} u The first vector operand.
  * @param {array} v The second vector operand.
  *
- * @returns {array} A 2-dimensional vector equal to the cross product of u and v.
+ * @returns {array} A new 2-dimensional array equal to the cross product of u and v.
  */
 SpiderGL.Math.Vec2.cross = function (u, v) {
 	return (u[0]*v[1] - u[1]*v[0]);
@@ -780,7 +780,7 @@ SpiderGL.Math.Vec2.cross = function (u, v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r = [v[1], -v[0]].
+ * @returns {array} A new 2-dimensional array r, where r = [v[1], -v[0]].
  */
 SpiderGL.Math.Vec2.perp = function (v) {
 	return [v[1], -v[0]];
@@ -813,7 +813,7 @@ SpiderGL.Math.Vec2.length = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r representing the normalized v, where r[i] = v[i] / {@link SpiderGL.Math.Vec2.length}(v).
+ * @returns {array} A new 2-dimensional array r representing the normalized v, where r[i] = v[i] / {@link SpiderGL.Math.Vec2.length}(v).
  */
 SpiderGL.Math.Vec2.normalize = function (v) {
 	var f = 1.0 / SpiderGL.Math.Vec2.length(v);
@@ -825,7 +825,7 @@ SpiderGL.Math.Vec2.normalize = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.abs}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.abs}(v[i]).
  */
 SpiderGL.Math.Vec2.abs = function (v) {
 	return [SpiderGL.Math.abs(v[0]), SpiderGL.Math.abs(v[1])];
@@ -836,7 +836,7 @@ SpiderGL.Math.Vec2.abs = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.acos}(v[i]), in radians.
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.acos}(v[i]), in radians.
  */
 SpiderGL.Math.Vec2.acos = function (v) {
 	return [SpiderGL.Math.acos(v[0]), SpiderGL.Math.acos(v[1])];
@@ -847,7 +847,7 @@ SpiderGL.Math.Vec2.acos = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.asin}(v[i]), in radians.
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.asin}(v[i]), in radians.
  */
 SpiderGL.Math.Vec2.asin = function (v) {
 	return [SpiderGL.Math.asin(v[0]), SpiderGL.Math.asin(v[1])];
@@ -858,7 +858,7 @@ SpiderGL.Math.Vec2.asin = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.atan}(v[i]), between -PI/2 and PI/2 radians.
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.atan}(v[i]), between -PI/2 and PI/2 radians.
  */
 SpiderGL.Math.Vec2.atan = function (v) {
 	return [SpiderGL.Math.atan(v[0]), SpiderGL.Math.atan(v[1])];
@@ -870,7 +870,7 @@ SpiderGL.Math.Vec2.atan = function (v) {
  * @param {array} y The numerator vector.
  * @param {array} x The denominator vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.atan2}(y[i], x[i]), between PI and -PI radians.
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.atan2}(y[i], x[i]), between PI and -PI radians.
  */
 SpiderGL.Math.Vec2.atan2 = function (y, x) {
 	return [SpiderGL.Math.atan2(y[0], x[0]), SpiderGL.Math.atan2(y[1], x[1])];
@@ -881,7 +881,7 @@ SpiderGL.Math.Vec2.atan2 = function (y, x) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.ceil}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.ceil}(v[i]).
  */
 SpiderGL.Math.Vec2.ceil = function (v) {
 	return [SpiderGL.Math.ceil(v[0]), SpiderGL.Math.ceil(v[1])];
@@ -894,7 +894,7 @@ SpiderGL.Math.Vec2.ceil = function (v) {
  * @param {array} min The lower 2-dimensional bound.
  * @param {array} max The upper 2-dimensional bound.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.clamp}(v[i], min[i], max[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.clamp}(v[i], min[i], max[i]).
  */
 SpiderGL.Math.Vec2.clamp = function (v, min, max) {
 	return [SpiderGL.Math.clamp(v[0], min[0], max[0]), SpiderGL.Math.clamp(v[1], min[1], max[1])];
@@ -905,7 +905,7 @@ SpiderGL.Math.Vec2.clamp = function (v, min, max) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.cos}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.cos}(v[i]).
  */
 SpiderGL.Math.Vec2.cos = function (v) {
 	return [SpiderGL.Math.cos(v[0]), SpiderGL.Math.cos(v[1])];
@@ -916,7 +916,7 @@ SpiderGL.Math.Vec2.cos = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.degToRad}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.degToRad}(v[i]).
  */
 SpiderGL.Math.Vec2.degToRad = function (v) {
 	return [SpiderGL.Math.degToRad(v[0]), SpiderGL.Math.degToRad(v[1])];
@@ -927,7 +927,7 @@ SpiderGL.Math.Vec2.degToRad = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.exp}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.exp}(v[i]).
  */
 SpiderGL.Math.Vec2.exp = function (v) {
 	return [SpiderGL.Math.exp(v[0]), SpiderGL.Math.exp(v[1])];
@@ -938,7 +938,7 @@ SpiderGL.Math.Vec2.exp = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.floor}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.floor}(v[i]).
  */
 SpiderGL.Math.Vec2.floor = function (v) {
 	return [SpiderGL.Math.floor(v[0]), SpiderGL.Math.floor(v[1])];
@@ -951,7 +951,7 @@ SpiderGL.Math.Vec2.floor = function (v) {
  * @param {array} v The stop interpolation bound.
  * @param {number} t The interpolation factor, between 0 and 1.
  *
- * @returns {array} The interpolated vector r, where r[i] = (1-t)*u[i] + t*v[i].
+ * @returns {array} A new 2-dimensional array r, where r[i] = (1-t)*u[i] + t*v[i].
  */
 SpiderGL.Math.Vec2.lerp = function (u, v, t) {
 	return [
@@ -966,7 +966,7 @@ SpiderGL.Math.Vec2.lerp = function (u, v, t) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.ln}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.ln}(v[i]).
  */
 SpiderGL.Math.Vec2.ln = function (v) {
 	return [SpiderGL.Math.ln(v[0]), SpiderGL.Math.ln(v[1])];
@@ -977,7 +977,7 @@ SpiderGL.Math.Vec2.ln = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.log}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.log}(v[i]).
  */
 SpiderGL.Math.Vec2.log = function (v) {
 	return [SpiderGL.Math.log(v[0]), SpiderGL.Math.log(v[1])];
@@ -988,7 +988,7 @@ SpiderGL.Math.Vec2.log = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.log2}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.log2}(v[i]).
  */
 SpiderGL.Math.Vec2.log2 = function (v) {
 	return [SpiderGL.Math.log2(v[0]), SpiderGL.Math.log2(v[1])];
@@ -999,7 +999,7 @@ SpiderGL.Math.Vec2.log2 = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.log10}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.log10}(v[i]).
  */
 SpiderGL.Math.Vec2.log10 = function (v) {
 	return [SpiderGL.Math.log10(v[0]), SpiderGL.Math.log10(v[1])];
@@ -1011,7 +1011,7 @@ SpiderGL.Math.Vec2.log10 = function (v) {
  * @param {array} u The first vector.
  * @param {array} v The second vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.max}(u[i], v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.max}(u[i], v[i]).
  */
 SpiderGL.Math.Vec2.max = function (u, v) {
 	return [SpiderGL.Math.max(u[0], v[0]), SpiderGL.Math.max(u[1], v[1])];
@@ -1023,7 +1023,7 @@ SpiderGL.Math.Vec2.max = function (u, v) {
  * @param {array} u The first vector.
  * @param {array} v The second vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.min}(u[i], v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.min}(u[i], v[i]).
  */
 SpiderGL.Math.Vec2.min = function (u, v) {
 	return [SpiderGL.Math.min(u[0], v[0]), SpiderGL.Math.min(u[1], v[1])];
@@ -1035,7 +1035,7 @@ SpiderGL.Math.Vec2.min = function (u, v) {
  * @param {array} u The base vector.
  * @param {array} v The exponent vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.pow}(u[i], v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.pow}(u[i], v[i]).
  */
 SpiderGL.Math.Vec2.pow = function (u, v) {
 	return [SpiderGL.Math.pow(u[0], v[0]), SpiderGL.Math.pow(u[1], v[1])];
@@ -1046,7 +1046,7 @@ SpiderGL.Math.Vec2.pow = function (u, v) {
  *
  * @param {array} v The input vector, in degrees.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.pow}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.pow}(v[i]).
  */
 SpiderGL.Math.Vec2.radToDeg = function (v) {
 	return [SpiderGL.Math.radToDeg(v[0]), SpiderGL.Math.radToDeg(v[1])];
@@ -1055,7 +1055,7 @@ SpiderGL.Math.Vec2.radToDeg = function (v) {
 /**
  * Creates a random 2-dimensional vector between 0 and 1.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.random}().
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.random}().
  */
 SpiderGL.Math.Vec2.random = function () {
 	return [SpiderGL.Math.random(), SpiderGL.Math.random()];
@@ -1065,7 +1065,7 @@ SpiderGL.Math.Vec2.random = function () {
  * Creates a random 2-dimensional vector between 0 and 1.
  * Same as {@link SpiderGL.Math.Vec2.random}.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.random01}().
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.random01}().
  */
 SpiderGL.Math.Vec2.random01 = function () {
 	return [SpiderGL.Math.random01(), SpiderGL.Math.random01()];
@@ -1074,7 +1074,7 @@ SpiderGL.Math.Vec2.random01 = function () {
 /**
  * Creates a random 2-dimensional vector between -1 and 1.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.random11}().
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.random11}().
  */
 SpiderGL.Math.Vec2.random11 = function () {
 	return [SpiderGL.Math.random11(), SpiderGL.Math.random11()];
@@ -1086,7 +1086,7 @@ SpiderGL.Math.Vec2.random11 = function () {
  * @param {array} min The range vector lower bound.
  * @param {array} max The range vector upper bound.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.randomRange}(min[i], max[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.randomRange}(min[i], max[i]).
  */
 SpiderGL.Math.Vec2.randomRange = function (min, max) {
 	return [SpiderGL.Math.randomRange(min[0], max[0]), SpiderGL.Math.randomRange(min[1], max[1])];
@@ -1097,7 +1097,7 @@ SpiderGL.Math.Vec2.randomRange = function (min, max) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.round}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.round}(v[i]).
  */
 SpiderGL.Math.Vec2.round = function (v) {
 	return [SpiderGL.Math.round(v[0]), SpiderGL.Math.round(v[1])];
@@ -1108,7 +1108,7 @@ SpiderGL.Math.Vec2.round = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.sin}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.sin}(v[i]).
  */
 SpiderGL.Math.Vec2.sin = function (v) {
 	return [SpiderGL.Math.sin(v[0]), SpiderGL.Math.sin(v[1])];
@@ -1119,7 +1119,7 @@ SpiderGL.Math.Vec2.sin = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.sqrt}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.sqrt}(v[i]).
  */
 SpiderGL.Math.Vec2.sqrt = function (v) {
 	return [SpiderGL.Math.sqrt(v[0]), SpiderGL.Math.sqrt(v[1])];
@@ -1130,7 +1130,7 @@ SpiderGL.Math.Vec2.sqrt = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 2-dimensional vector r, where r[i] = {@link SpiderGL.Math.tan}(v[i]).
+ * @returns {array} A new 2-dimensional array r, where r[i] = {@link SpiderGL.Math.tan}(v[i]).
  */
 SpiderGL.Math.Vec2.tan = function (v) {
 	return [SpiderGL.Math.tan(v[0]), SpiderGL.Math.tan(v[1])];
@@ -1351,7 +1351,7 @@ SpiderGL.Math.Vec3 = { };
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = v[i] (same as v.slice(0, 3)).
+ * @returns {array} A new 3-dimensional array r, where r[i] = v[i] (same as v.slice(0, 3)).
  */
 SpiderGL.Math.Vec3.dup = function (v) {
 	return v.slice(0, 3);
@@ -1362,7 +1362,7 @@ SpiderGL.Math.Vec3.dup = function (v) {
  *
  * @param {number} s The input scalar.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = s.
+ * @returns {array} A new 3-dimensional array r, where r[i] = s.
  */
 SpiderGL.Math.Vec3.scalar = function (s) {
 	return [s, s, s];
@@ -1371,7 +1371,7 @@ SpiderGL.Math.Vec3.scalar = function (s) {
 /**
  * Creates a 3-dimensional vector initialized with zero.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = 0.
+ * @returns {array} A new 3-dimensional array r, where r[i] = 0.
  */
 SpiderGL.Math.Vec3.zero = function () {
 	return [0, 0, 0];
@@ -1380,7 +1380,7 @@ SpiderGL.Math.Vec3.zero = function () {
 /**
  * Creates a 3-dimensional vector initialized with one.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = 1.0.
+ * @returns {array} A new 3-dimensional array r, where r[i] = 1.0.
  */
 SpiderGL.Math.Vec3.one = function () {
 	return [1, 1, 1];
@@ -1389,7 +1389,7 @@ SpiderGL.Math.Vec3.one = function () {
 /**
  * Creates a 3-dimensional vector initialized with SpiderGL.Math.MAX_NUMBER.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = SpiderGL.Math.MAX_NUMBER.
+ * @returns {array} A new 3-dimensional array r, where r[i] = SpiderGL.Math.MAX_NUMBER.
  */
 SpiderGL.Math.Vec3.maxNumber = function () {
 	return [SpiderGL.Math.MAX_NUMBER, SpiderGL.Math.MAX_NUMBER, SpiderGL.Math.MAX_NUMBER];
@@ -1398,7 +1398,7 @@ SpiderGL.Math.Vec3.maxNumber = function () {
 /**
  * Creates a 3-dimensional vector initialized with SpiderGL.Math.MIN_NUMBER.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = SpiderGL.Math.MIN_NUMBER.
+ * @returns {array} A new 3-dimensional array r, where r[i] = SpiderGL.Math.MIN_NUMBER.
  */
 SpiderGL.Math.Vec3.minNumber = function () {
 	return [SpiderGL.Math.MIN_NUMBER, SpiderGL.Math.MIN_NUMBER, SpiderGL.Math.MIN_NUMBER];
@@ -1409,7 +1409,7 @@ SpiderGL.Math.Vec3.minNumber = function () {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r equal to v with the 3rd component dropped.
+ * @returns {array} A new 2-dimensional array r equal to v with the 3rd component dropped.
  */
 SpiderGL.Math.Vec3.to2 = function (v) {
 	return [v[0], v[1]];
@@ -1421,7 +1421,7 @@ SpiderGL.Math.Vec3.to2 = function (v) {
  * @param {array} v The input vector.
  * @param {number} [w=1.0] The 4th component.
  *
- * @returns {array} A 4-dimensional vector r equal to v extended with w as 4th component.
+ * @returns {array} A new 4-dimensional array r equal to v extended with w as 4th component.
  */
 SpiderGL.Math.Vec3.to4 = function (v, w) {
 	return [v[0], v[1], v[2], (w != undefined) ? w : 1];
@@ -1432,7 +1432,7 @@ SpiderGL.Math.Vec3.to4 = function (v, w) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = -v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = -v[i].
  */
 SpiderGL.Math.Vec3.neg = function (v) {
 	return [-v[0], -v[1], -v[2]];
@@ -1444,7 +1444,7 @@ SpiderGL.Math.Vec3.neg = function (v) {
  * @param {array} u The first addition operand.
  * @param {array} v The second addition operand.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = u[i] + v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = u[i] + v[i].
  */
 SpiderGL.Math.Vec3.add = function (u, v) {
 	return [u[0]+v[0], u[1]+v[1], u[2]+v[2]];
@@ -1456,7 +1456,7 @@ SpiderGL.Math.Vec3.add = function (u, v) {
  * @param {array} v The vector addition operand.
  * @param {number} s The scalar addition operand.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = v[i] + s.
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = v[i] + s.
  */
 SpiderGL.Math.Vec3.adds = function (v, s) {
 	return [v[0]+s, v[1]+s, v[2]+s];
@@ -1468,7 +1468,7 @@ SpiderGL.Math.Vec3.adds = function (v, s) {
  * @param {array} u The first subtraction operand.
  * @param {array} v The second subtraction operand.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = u[i] - v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = u[i] - v[i].
  */
 SpiderGL.Math.Vec3.sub = function (u, v) {
 	return [u[0]-v[0], u[1]-v[1], u[2]-v[2]];
@@ -1480,7 +1480,7 @@ SpiderGL.Math.Vec3.sub = function (u, v) {
  * @param {array} v The vector subtraction operand.
  * @param {number} s The scalar subtraction operand.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = v[i] - s.
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = v[i] - s.
  */
 SpiderGL.Math.Vec3.subs = function (v, s) {
 	return [v[0]-s, v[1]-s, v[2]-s];
@@ -1492,7 +1492,7 @@ SpiderGL.Math.Vec3.subs = function (v, s) {
  * @param {number} s The scalar subtraction operand.
  * @param {array} v The vector subtraction operand.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = s - v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = s - v[i].
  */
 SpiderGL.Math.Vec3.ssub = function (s, v) {
 	return [s-v[0], s-v[1], s-v[2]];
@@ -1504,7 +1504,7 @@ SpiderGL.Math.Vec3.ssub = function (s, v) {
  * @param {array} u The first multiplication operand.
  * @param {array} v The second multiplication operand.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = u[i] * v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = u[i] * v[i].
  */
 SpiderGL.Math.Vec3.mul = function (u, v) {
 	return [u[0]*v[0], u[1]*v[1], u[2]*v[2]];
@@ -1516,7 +1516,7 @@ SpiderGL.Math.Vec3.mul = function (u, v) {
  * @param {array} v The vector multiplication operand.
  * @param {number} s The scalar multiplication operand.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = v[i] * s.
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = v[i] * s.
  */
 SpiderGL.Math.Vec3.muls = function (v, s) {
 	return [v[0]*s, v[1]*s, v[2]*s];
@@ -1528,7 +1528,7 @@ SpiderGL.Math.Vec3.muls = function (v, s) {
  * @param {array} u The numerator vector.
  * @param {array} v The denominator vector.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = u[i] / v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = u[i] / v[i].
  */
 SpiderGL.Math.Vec3.div = function (u, v) {
 	return [u[0]/v[0], u[1]/v[1], u[2]/v[2]];
@@ -1540,7 +1540,7 @@ SpiderGL.Math.Vec3.div = function (u, v) {
  * @param {array} v The numerator vector.
  * @param {number} s The scalar denominator.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = v[i] / s.
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = v[i] / s.
  */
 SpiderGL.Math.Vec3.divs = function (v, s) {
 	return [v[0]/s, v[1]/s, v[2]/s];
@@ -1552,7 +1552,7 @@ SpiderGL.Math.Vec3.divs = function (v, s) {
  * @param {number} s The denominator scalar.
  * @param {array} v The numerator vector.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = s / v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = s / v[i].
  */
 SpiderGL.Math.Vec3.sdiv = function (s, v) {
 	return [s/v[0], s/v[1], s/v[2]];
@@ -1563,7 +1563,7 @@ SpiderGL.Math.Vec3.sdiv = function (s, v) {
  *
  * @param {array} v The input (denominator) vector.
  *
- * @returns {array} A 3-dimensionals vector r, where r[i] = 1.0 / v[i].
+ * @returns {array} A new 3-dimensionals vector r, where r[i] = 1.0 / v[i].
  */
 SpiderGL.Math.Vec3.rcp = function (v) {
 	return [1.0/v[0], 1.0/v[1], 1.0/v[2]];
@@ -1587,7 +1587,7 @@ SpiderGL.Math.Vec3.dot = function (u, v) {
  * @param {array} u The first vector operand.
  * @param {array} v The second vector operand.
  *
- * @returns {array} A 3-dimensional vector equal to the cross product of u and v.
+ * @returns {array} A new 3-dimensional array equal to the cross product of u and v.
  */
 SpiderGL.Math.Vec3.cross = function (u, v) {
 	return [u[1]*v[2] - u[2]*v[1], u[2]*v[0] - u[0]*v[2], u[0]*v[1] - u[1]*v[0]];
@@ -1620,7 +1620,7 @@ SpiderGL.Math.Vec3.length = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r representing the normalized v, where r[i] = v[i] / {@link SpiderGL.Math.Vec3.length}(v).
+ * @returns {array} A new 3-dimensional array r representing the normalized v, where r[i] = v[i] / {@link SpiderGL.Math.Vec3.length}(v).
  */
 SpiderGL.Math.Vec3.normalize = function (v) {
 	var f = 1.0 / SpiderGL.Math.Vec3.length(v);
@@ -1632,7 +1632,7 @@ SpiderGL.Math.Vec3.normalize = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.abs}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.abs}(v[i]).
  */
 SpiderGL.Math.Vec3.abs = function (v) {
 	return [SpiderGL.Math.abs(v[0]), SpiderGL.Math.abs(v[1]), SpiderGL.Math.abs(v[2])];
@@ -1643,7 +1643,7 @@ SpiderGL.Math.Vec3.abs = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.acos}(v[i]), in radians.
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.acos}(v[i]), in radians.
  */
 SpiderGL.Math.Vec3.acos = function (v) {
 	return [SpiderGL.Math.acos(v[0]), SpiderGL.Math.acos(v[1]), SpiderGL.Math.acos(v[2])];
@@ -1654,7 +1654,7 @@ SpiderGL.Math.Vec3.acos = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.asin}(v[i]), in radians.
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.asin}(v[i]), in radians.
  */
 SpiderGL.Math.Vec3.asin = function (v) {
 	return [SpiderGL.Math.asin(v[0]), SpiderGL.Math.asin(v[1]), SpiderGL.Math.asin(v[2])];
@@ -1665,7 +1665,7 @@ SpiderGL.Math.Vec3.asin = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.atan}(v[i]), between -PI/2 and PI/2 radians.
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.atan}(v[i]), between -PI/2 and PI/2 radians.
  */
 SpiderGL.Math.Vec3.atan = function (v) {
 	return [SpiderGL.Math.atan(v[0]), SpiderGL.Math.atan(v[1]), SpiderGL.Math.atan(v[2])];
@@ -1677,7 +1677,7 @@ SpiderGL.Math.Vec3.atan = function (v) {
  * @param {array} y The numerator vector.
  * @param {array} x The denominator vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.atan2}(y[i], x[i]), between PI and -PI radians.
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.atan2}(y[i], x[i]), between PI and -PI radians.
  */
 SpiderGL.Math.Vec3.atan2 = function (y, x) {
 	return [SpiderGL.Math.atan2(y[0], x[0]), SpiderGL.Math.atan2(y[1], x[1]), SpiderGL.Math.atan2(y[2], x[2])];
@@ -1688,7 +1688,7 @@ SpiderGL.Math.Vec3.atan2 = function (y, x) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.ceil}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.ceil}(v[i]).
  */
 SpiderGL.Math.Vec3.ceil = function (v) {
 	return [SpiderGL.Math.ceil(v[0]), SpiderGL.Math.ceil(v[1]), SpiderGL.Math.ceil(v[2])];
@@ -1701,7 +1701,7 @@ SpiderGL.Math.Vec3.ceil = function (v) {
  * @param {array} min The lower 3-dimensional bound.
  * @param {array} max The upper 3-dimensional bound.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.clamp}(v[i], min[i], max[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.clamp}(v[i], min[i], max[i]).
  */
 SpiderGL.Math.Vec3.clamp = function (v, min, max) {
 	return [SpiderGL.Math.clamp(v[0], min[0], max[0]), SpiderGL.Math.clamp(v[1], min[1], max[1]), SpiderGL.Math.clamp(v[2], min[2], max[2])];
@@ -1712,7 +1712,7 @@ SpiderGL.Math.Vec3.clamp = function (v, min, max) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.cos}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.cos}(v[i]).
  */
 SpiderGL.Math.Vec3.cos = function (v) {
 	return [SpiderGL.Math.cos(v[0]), SpiderGL.Math.cos(v[1]), SpiderGL.Math.cos(v[2])];
@@ -1723,7 +1723,7 @@ SpiderGL.Math.Vec3.cos = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.degToRad}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.degToRad}(v[i]).
  */
 SpiderGL.Math.Vec3.degToRad = function (v) {
 	return [SpiderGL.Math.degToRad(v[0]), SpiderGL.Math.degToRad(v[1]), SpiderGL.Math.degToRad(v[2])];
@@ -1734,7 +1734,7 @@ SpiderGL.Math.Vec3.degToRad = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.exp}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.exp}(v[i]).
  */
 SpiderGL.Math.Vec3.exp = function (v) {
 	return [SpiderGL.Math.exp(v[0]), SpiderGL.Math.exp(v[1]), SpiderGL.Math.exp(v[2])];
@@ -1745,7 +1745,7 @@ SpiderGL.Math.Vec3.exp = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.floor}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.floor}(v[i]).
  */
 SpiderGL.Math.Vec3.floor = function (v) {
 	return [SpiderGL.Math.floor(v[0]), SpiderGL.Math.floor(v[1]), SpiderGL.Math.floor(v[2])];
@@ -1758,7 +1758,7 @@ SpiderGL.Math.Vec3.floor = function (v) {
  * @param {array} v The stop interpolation bound.
  * @param {number} t The interpolation factor, between 0 and 1.
  *
- * @returns {array} The interpolated vector r, where r[i] = (1-t)*u[i] + t*v[i].
+ * @returns {array} A new 3-dimensional array r, where r[i] = (1-t)*u[i] + t*v[i].
  */
 SpiderGL.Math.Vec3.lerp = function (u, v, t) {
 	return [
@@ -1774,7 +1774,7 @@ SpiderGL.Math.Vec3.lerp = function (u, v, t) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.ln}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.ln}(v[i]).
  */
 SpiderGL.Math.Vec3.ln = function (v) {
 	return [SpiderGL.Math.ln(v[0]), SpiderGL.Math.ln(v[1]), SpiderGL.Math.ln(v[2])];
@@ -1785,7 +1785,7 @@ SpiderGL.Math.Vec3.ln = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.log}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.log}(v[i]).
  */
 SpiderGL.Math.Vec3.log = function (v) {
 	return [SpiderGL.Math.log(v[0]), SpiderGL.Math.log(v[1]), SpiderGL.Math.log(v[2])];
@@ -1796,7 +1796,7 @@ SpiderGL.Math.Vec3.log = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.log2}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.log2}(v[i]).
  */
 SpiderGL.Math.Vec3.log2 = function (v) {
 	return [SpiderGL.Math.log2(v[0]), SpiderGL.Math.log2(v[1]), SpiderGL.Math.log2(v[2])];
@@ -1807,7 +1807,7 @@ SpiderGL.Math.Vec3.log2 = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.log10}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.log10}(v[i]).
  */
 SpiderGL.Math.Vec3.log10 = function (v) {
 	return [SpiderGL.Math.log10(v[0]), SpiderGL.Math.log10(v[1]), SpiderGL.Math.log10(v[2])];
@@ -1819,7 +1819,7 @@ SpiderGL.Math.Vec3.log10 = function (v) {
  * @param {array} u The first vector.
  * @param {array} v The second vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.max}(u[i], v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.max}(u[i], v[i]).
  */
 SpiderGL.Math.Vec3.max = function (u, v) {
 	return [SpiderGL.Math.max(u[0], v[0]), SpiderGL.Math.max(u[1], v[1]), SpiderGL.Math.max(u[2], v[2])];
@@ -1831,7 +1831,7 @@ SpiderGL.Math.Vec3.max = function (u, v) {
  * @param {array} u The first vector.
  * @param {array} v The second vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.min}(u[i], v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.min}(u[i], v[i]).
  */
 SpiderGL.Math.Vec3.min = function (u, v) {
 	return [SpiderGL.Math.min(u[0], v[0]), SpiderGL.Math.min(u[1], v[1]), SpiderGL.Math.min(u[2], v[2])];
@@ -1843,7 +1843,7 @@ SpiderGL.Math.Vec3.min = function (u, v) {
  * @param {array} u The base vector.
  * @param {array} v The exponent vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.pow}(u[i], v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.pow}(u[i], v[i]).
  */
 SpiderGL.Math.Vec3.pow = function (u, v) {
 	return [SpiderGL.Math.pow(u[0], v[0]), SpiderGL.Math.pow(u[1], v[1]), SpiderGL.Math.pow(u[2], v[2])];
@@ -1854,7 +1854,7 @@ SpiderGL.Math.Vec3.pow = function (u, v) {
  *
  * @param {array} v The input vector, in degrees.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.pow}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.pow}(v[i]).
  */
 SpiderGL.Math.Vec3.radToDeg = function (v) {
 	return [SpiderGL.Math.radToDeg(v[0]), SpiderGL.Math.radToDeg(v[1]), SpiderGL.Math.radToDeg(v[2])];
@@ -1863,7 +1863,7 @@ SpiderGL.Math.Vec3.radToDeg = function (v) {
 /**
  * Creates a random 3-dimensional vector between 0 and 1.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.random}().
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.random}().
  */
 SpiderGL.Math.Vec3.random = function () {
 	return [SpiderGL.Math.random(), SpiderGL.Math.random(), SpiderGL.Math.random()];
@@ -1873,7 +1873,7 @@ SpiderGL.Math.Vec3.random = function () {
  * Creates a random 3-dimensional vector between 0 and 1.
  * Same as {@link SpiderGL.Math.Vec3.random}.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.random01}().
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.random01}().
  */
 SpiderGL.Math.Vec3.random01 = function () {
 	return [SpiderGL.Math.random01(), SpiderGL.Math.random01(), SpiderGL.Math.random01()];
@@ -1882,7 +1882,7 @@ SpiderGL.Math.Vec3.random01 = function () {
 /**
  * Creates a random 3-dimensional vector between -1 and 1.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.random11}().
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.random11}().
  */
 SpiderGL.Math.Vec3.random11 = function () {
 	return [SpiderGL.Math.random11(), SpiderGL.Math.random11(), SpiderGL.Math.random11()];
@@ -1894,7 +1894,7 @@ SpiderGL.Math.Vec3.random11 = function () {
  * @param {array} min The range vector lower bound.
  * @param {array} max The range vector upper bound.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.randomRange}(min[i], max[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.randomRange}(min[i], max[i]).
  */
 SpiderGL.Math.Vec3.randomRange = function (min, max) {
 	return [SpiderGL.Math.randomRange(min[0], max[0]), SpiderGL.Math.randomRange(min[1], max[1]), SpiderGL.Math.randomRange(min[2], max[2])];
@@ -1905,7 +1905,7 @@ SpiderGL.Math.Vec3.randomRange = function (min, max) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.round}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.round}(v[i]).
  */
 SpiderGL.Math.Vec3.round = function (v) {
 	return [SpiderGL.Math.round(v[0]), SpiderGL.Math.round(v[1]), SpiderGL.Math.round(v[2])];
@@ -1916,7 +1916,7 @@ SpiderGL.Math.Vec3.round = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.sin}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.sin}(v[i]).
  */
 SpiderGL.Math.Vec3.sin = function (v) {
 	return [SpiderGL.Math.sin(v[0]), SpiderGL.Math.sin(v[1]), SpiderGL.Math.sin(v[2])];
@@ -1927,7 +1927,7 @@ SpiderGL.Math.Vec3.sin = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.sqrt}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.sqrt}(v[i]).
  */
 SpiderGL.Math.Vec3.sqrt = function (v) {
 	return [SpiderGL.Math.sqrt(v[0]), SpiderGL.Math.sqrt(v[1]), SpiderGL.Math.sqrt(v[2])];
@@ -1938,7 +1938,7 @@ SpiderGL.Math.Vec3.sqrt = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 3-dimensional vector r, where r[i] = {@link SpiderGL.Math.tan}(v[i]).
+ * @returns {array} A new 3-dimensional array r, where r[i] = {@link SpiderGL.Math.tan}(v[i]).
  */
 SpiderGL.Math.Vec3.tan = function (v) {
 	return [SpiderGL.Math.tan(v[0]), SpiderGL.Math.tan(v[1]), SpiderGL.Math.tan(v[2])];
@@ -2156,7 +2156,7 @@ SpiderGL.Math.Vec4 = { };
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = v[i] (same as v.slice(0, 4)).
+ * @returns {array} A new 4-dimensional array r, where r[i] = v[i] (same as v.slice(0, 4)).
  */
 SpiderGL.Math.Vec4.dup = function (v) {
 	return v.slice(0, 4);
@@ -2167,7 +2167,7 @@ SpiderGL.Math.Vec4.dup = function (v) {
  *
  * @param {number} s The input scalar.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = s.
+ * @returns {array} A new 4-dimensional array r, where r[i] = s.
  */
 SpiderGL.Math.Vec4.scalar = function (s) {
 	return [s, s, s, s];
@@ -2176,7 +2176,7 @@ SpiderGL.Math.Vec4.scalar = function (s) {
 /**
  * Creates a 4-dimensional vector initialized with zero.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = 0.
+ * @returns {array} A new 4-dimensional array r, where r[i] = 0.
  */
 SpiderGL.Math.Vec4.zero = function () {
 	return [0, 0, 0, 0];
@@ -2185,7 +2185,7 @@ SpiderGL.Math.Vec4.zero = function () {
 /**
  * Creates a 4-dimensional vector initialized with one.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = 1.0.
+ * @returns {array} A new 4-dimensional array r, where r[i] = 1.0.
  */
 SpiderGL.Math.Vec4.one = function () {
 	return [1, 1, 1, 1];
@@ -2194,7 +2194,7 @@ SpiderGL.Math.Vec4.one = function () {
 /**
  * Creates a 4-dimensional vector initialized with SpiderGL.Math.MAX_NUMBER.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = SpiderGL.Math.MAX_NUMBER.
+ * @returns {array} A new 4-dimensional array r, where r[i] = SpiderGL.Math.MAX_NUMBER.
  */
 SpiderGL.Math.Vec4.maxNumber = function () {
 	return [SpiderGL.Math.MAX_NUMBER, SpiderGL.Math.MAX_NUMBER, SpiderGL.Math.MAX_NUMBER, SpiderGL.Math.MAX_NUMBER];
@@ -2203,7 +2203,7 @@ SpiderGL.Math.Vec4.maxNumber = function () {
 /**
  * Creates a 4-dimensional vector initialized with SpiderGL.Math.MIN_NUMBER.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = SpiderGL.Math.MIN_NUMBER.
+ * @returns {array} A new 4-dimensional array r, where r[i] = SpiderGL.Math.MIN_NUMBER.
  */
 SpiderGL.Math.Vec4.minNumber = function () {
 	return [SpiderGL.Math.MIN_NUMBER, SpiderGL.Math.MIN_NUMBER, SpiderGL.Math.MIN_NUMBER, SpiderGL.Math.MIN_NUMBER];
@@ -2214,7 +2214,7 @@ SpiderGL.Math.Vec4.minNumber = function () {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 2-dimensional vector r equal to v with the 3rd and 4th components dropped.
+ * @returns {array} A new 2-dimensional array r equal to v with the 3rd and 4th components dropped.
  */
 SpiderGL.Math.Vec4.to2 = function (v) {
 	return [v[0], v[1]];
@@ -2225,7 +2225,7 @@ SpiderGL.Math.Vec4.to2 = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 3-dimensional vector r equal to v with the 4th component dropped.
+ * @returns {array} A new 3-dimensional array r equal to v with the 4th component dropped.
  */
 SpiderGL.Math.Vec4.to3 = function (v) {
 	return [v[0], v[1], v[2]];
@@ -2236,7 +2236,7 @@ SpiderGL.Math.Vec4.to3 = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = -v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = -v[i].
  */
 SpiderGL.Math.Vec4.neg = function (v) {
 	return [-v[0], -v[1], -v[2], -v[3]];
@@ -2248,7 +2248,7 @@ SpiderGL.Math.Vec4.neg = function (v) {
  * @param {array} u The first addition operand.
  * @param {array} v The second addition operand.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = u[i] + v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = u[i] + v[i].
  */
 SpiderGL.Math.Vec4.add = function (u, v) {
 	return [u[0]+v[0], u[1]+v[1], u[2]+v[2], u[3]+v[3]];
@@ -2260,7 +2260,7 @@ SpiderGL.Math.Vec4.add = function (u, v) {
  * @param {array} v The vector addition operand.
  * @param {number} s The scalar addition operand.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = v[i] + s.
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = v[i] + s.
  */
 SpiderGL.Math.Vec4.adds = function (v, s) {
 	return [v[0]+s, v[1]+s, v[2]+s, v[3]+s];
@@ -2272,7 +2272,7 @@ SpiderGL.Math.Vec4.adds = function (v, s) {
  * @param {array} u The first subtraction operand.
  * @param {array} v The second subtraction operand.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = u[i] - v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = u[i] - v[i].
  */
 SpiderGL.Math.Vec4.sub = function (u, v) {
 	return [u[0]-v[0], u[1]-v[1], u[2]-v[2], u[3]-v[3]];
@@ -2284,7 +2284,7 @@ SpiderGL.Math.Vec4.sub = function (u, v) {
  * @param {array} v The vector subtraction operand.
  * @param {number} s The scalar subtraction operand.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = v[i] - s.
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = v[i] - s.
  */
 SpiderGL.Math.Vec4.subs = function (v, s) {
 	return [v[0]-s, v[1]-s, v[2]-s, v[3]-s];
@@ -2296,7 +2296,7 @@ SpiderGL.Math.Vec4.subs = function (v, s) {
  * @param {number} s The scalar subtraction operand.
  * @param {array} v The vector subtraction operand.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = s - v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = s - v[i].
  */
 SpiderGL.Math.Vec4.ssub = function (s, v) {
 	return [s-v[0], s-v[1], s-v[2], s-v[3]];
@@ -2308,7 +2308,7 @@ SpiderGL.Math.Vec4.ssub = function (s, v) {
  * @param {array} u The first multiplication operand.
  * @param {array} v The second multiplication operand.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = u[i] * v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = u[i] * v[i].
  */
 SpiderGL.Math.Vec4.mul = function (u, v) {
 	return [u[0]*v[0], u[1]*v[1], u[2]*v[2], u[3]*v[3]];
@@ -2320,7 +2320,7 @@ SpiderGL.Math.Vec4.mul = function (u, v) {
  * @param {array} v The vector multiplication operand.
  * @param {number} s The scalar multiplication operand.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = v[i] * s.
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = v[i] * s.
  */
 SpiderGL.Math.Vec4.muls = function (v, s) {
 	return [v[0]*s, v[1]*s, v[2]*s, v[3]*s];
@@ -2332,7 +2332,7 @@ SpiderGL.Math.Vec4.muls = function (v, s) {
  * @param {array} u The numerator vector.
  * @param {array} v The denominator vector.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = u[i] / v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = u[i] / v[i].
  */
 SpiderGL.Math.Vec4.div = function (u, v) {
 	return [u[0]/v[0], u[1]/v[1], u[2]/v[2], u[3]/v[3]];
@@ -2344,7 +2344,7 @@ SpiderGL.Math.Vec4.div = function (u, v) {
  * @param {array} v The numerator vector.
  * @param {number} s The scalar denominator.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = v[i] / s.
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = v[i] / s.
  */
 SpiderGL.Math.Vec4.divs = function (v, s) {
 	return [v[0]/s, v[1]/s, v[2]/s, v[3]/s];
@@ -2356,7 +2356,7 @@ SpiderGL.Math.Vec4.divs = function (v, s) {
  * @param {number} s The denominator scalar.
  * @param {array} v The numerator vector.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = s / v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = s / v[i].
  */
 SpiderGL.Math.Vec4.sdiv = function (s, v) {
 	return [s/v[0], s/v[1], s/v[2], s/v[3]];
@@ -2367,7 +2367,7 @@ SpiderGL.Math.Vec4.sdiv = function (s, v) {
  *
  * @param {array} v The input (denominator) vector.
  *
- * @returns {array} A 4-dimensionals vector r, where r[i] = 1.0 / v[i].
+ * @returns {array} A new 4-dimensionals vector r, where r[i] = 1.0 / v[i].
  */
 SpiderGL.Math.Vec4.rcp = function (v) {
 	return [1.0/v[0], 1.0/v[1], 1.0/v[2], 1.0/v[3]];
@@ -2392,7 +2392,7 @@ SpiderGL.Math.Vec4.dot = function (u, v) {
  * @param {array} v The second vector operand.
  * @param {array} w The third vector operand.
  *
- * @returns {array} A 4-dimensional vector equal to the cross product of u, v and w.
+ * @returns {array} A new 4-dimensional array equal to the cross product of u, v and w.
  */
 SpiderGL.Math.Vec4.cross = function (u, v, w) {
 	var a = v[0]*w[1] - v[1]*w[0];
@@ -2437,7 +2437,7 @@ SpiderGL.Math.Vec4.length = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r representing the normalized v, where r[i] = v[i] / {@link SpiderGL.Math.Vec4.length}(v).
+ * @returns {array} A new 4-dimensional array r representing the normalized v, where r[i] = v[i] / {@link SpiderGL.Math.Vec4.length}(v).
  */
 SpiderGL.Math.Vec4.normalize = function (v) {
 	var f = 1.0 / SpiderGL.Math.Vec4.length(v);
@@ -2449,7 +2449,7 @@ SpiderGL.Math.Vec4.normalize = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = v[i] / v[3].
+ * @returns {array} A new 4-dimensional array r, where r[i] = v[i] / v[3].
  */
 SpiderGL.Math.Vec4.project = function (v) {
 	var f = 1.0 / v[3];
@@ -2461,7 +2461,7 @@ SpiderGL.Math.Vec4.project = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.abs}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.abs}(v[i]).
  */
 SpiderGL.Math.Vec4.abs = function (v) {
 	return [SpiderGL.Math.abs(v[0]), SpiderGL.Math.abs(v[1]), SpiderGL.Math.abs(v[2]), SpiderGL.Math.abs(v[3])];
@@ -2472,7 +2472,7 @@ SpiderGL.Math.Vec4.abs = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.acos}(v[i]), in radians.
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.acos}(v[i]), in radians.
  */
 SpiderGL.Math.Vec4.acos = function (v) {
 	return [SpiderGL.Math.acos(v[0]), SpiderGL.Math.acos(v[1]), SpiderGL.Math.acos(v[2]), SpiderGL.Math.acos(v[3])];
@@ -2483,7 +2483,7 @@ SpiderGL.Math.Vec4.acos = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.asin}(v[i]), in radians.
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.asin}(v[i]), in radians.
  */
 SpiderGL.Math.Vec4.asin = function (v) {
 	return [SpiderGL.Math.asin(v[0]), SpiderGL.Math.asin(v[1]), SpiderGL.Math.asin(v[2]), SpiderGL.Math.asin(v[3])];
@@ -2494,7 +2494,7 @@ SpiderGL.Math.Vec4.asin = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.atan}(v[i]), between -PI/2 and PI/2 radians.
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.atan}(v[i]), between -PI/2 and PI/2 radians.
  */
 SpiderGL.Math.Vec4.atan = function (v) {
 	return [SpiderGL.Math.atan(v[0]), SpiderGL.Math.atan(v[1]), SpiderGL.Math.atan(v[2]), SpiderGL.Math.atan(v[3])];
@@ -2506,7 +2506,7 @@ SpiderGL.Math.Vec4.atan = function (v) {
  * @param {array} y The numerator vector.
  * @param {array} x The denominator vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.atan2}(y[i], x[i]), between PI and -PI radians.
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.atan2}(y[i], x[i]), between PI and -PI radians.
  */
 SpiderGL.Math.Vec4.atan2 = function (y, x) {
 	return [SpiderGL.Math.atan2(y[0], x[0]), SpiderGL.Math.atan2(y[1], x[1]), SpiderGL.Math.atan2(y[2], x[2]), SpiderGL.Math.atan2(y[3], x[3])];
@@ -2517,7 +2517,7 @@ SpiderGL.Math.Vec4.atan2 = function (y, x) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.ceil}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.ceil}(v[i]).
  */
 SpiderGL.Math.Vec4.ceil = function (v) {
 	return [SpiderGL.Math.ceil(v[0]), SpiderGL.Math.ceil(v[1]), SpiderGL.Math.ceil(v[2]), SpiderGL.Math.ceil(v[3])];
@@ -2530,7 +2530,7 @@ SpiderGL.Math.Vec4.ceil = function (v) {
  * @param {array} min The lower 4-dimensional bound.
  * @param {array} max The upper 4-dimensional bound.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.clamp}(v[i], min[i], max[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.clamp}(v[i], min[i], max[i]).
  */
 SpiderGL.Math.Vec4.clamp = function (v, min, max) {
 	return [SpiderGL.Math.clamp(v[0], min[0], max[0]), SpiderGL.Math.clamp(v[1], min[1], max[1]), SpiderGL.Math.clamp(v[2], min[2], max[2]), SpiderGL.Math.clamp(v[3], min[3], max[3])];
@@ -2541,7 +2541,7 @@ SpiderGL.Math.Vec4.clamp = function (v, min, max) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.cos}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.cos}(v[i]).
  */
 SpiderGL.Math.Vec4.cos = function (v) {
 	return [SpiderGL.Math.cos(v[0]), SpiderGL.Math.cos(v[1]), SpiderGL.Math.cos(v[2]), SpiderGL.Math.cos(v[3])];
@@ -2552,7 +2552,7 @@ SpiderGL.Math.Vec4.cos = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.degToRad}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.degToRad}(v[i]).
  */
 SpiderGL.Math.Vec4.degToRad = function (v) {
 	return [SpiderGL.Math.degToRad(v[0]), SpiderGL.Math.degToRad(v[1]), SpiderGL.Math.degToRad(v[2]), SpiderGL.Math.degToRad(v[3])];
@@ -2563,7 +2563,7 @@ SpiderGL.Math.Vec4.degToRad = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.exp}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.exp}(v[i]).
  */
 SpiderGL.Math.Vec4.exp = function (v) {
 	return [SpiderGL.Math.exp(v[0]), SpiderGL.Math.exp(v[1]), SpiderGL.Math.exp(v[2]), SpiderGL.Math.exp(v[3])];
@@ -2574,7 +2574,7 @@ SpiderGL.Math.Vec4.exp = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.floor}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.floor}(v[i]).
  */
 SpiderGL.Math.Vec4.floor = function (v) {
 	return [SpiderGL.Math.floor(v[0]), SpiderGL.Math.floor(v[1]), SpiderGL.Math.floor(v[2]), SpiderGL.Math.floor(v[3])];
@@ -2587,7 +2587,7 @@ SpiderGL.Math.Vec4.floor = function (v) {
  * @param {array} v The stop interpolation bound.
  * @param {number} t The interpolation factor, between 0 and 1.
  *
- * @returns {array} The interpolated vector r, where r[i] = (1-t)*u[i] + t*v[i].
+ * @returns {array} A new 4-dimensional array r, where r[i] = (1-t)*u[i] + t*v[i].
  */
 SpiderGL.Math.Vec4.lerp = function (u, v, t) {
 	return [
@@ -2604,7 +2604,7 @@ SpiderGL.Math.Vec4.lerp = function (u, v, t) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.ln}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.ln}(v[i]).
  */
 SpiderGL.Math.Vec4.ln = function (v) {
 	return [SpiderGL.Math.ln(v[0]), SpiderGL.Math.ln(v[1]), SpiderGL.Math.ln(v[2]), SpiderGL.Math.ln(v[3])];
@@ -2615,7 +2615,7 @@ SpiderGL.Math.Vec4.ln = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.log}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.log}(v[i]).
  */
 SpiderGL.Math.Vec4.log = function (v) {
 	return [SpiderGL.Math.log(v[0]), SpiderGL.Math.log(v[1]), SpiderGL.Math.log(v[2]), SpiderGL.Math.log(v[3])];
@@ -2626,7 +2626,7 @@ SpiderGL.Math.Vec4.log = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.log2}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.log2}(v[i]).
  */
 SpiderGL.Math.Vec4.log2 = function (v) {
 	return [SpiderGL.Math.log2(v[0]), SpiderGL.Math.log2(v[1]), SpiderGL.Math.log2(v[2]), SpiderGL.Math.log2(v[3])];
@@ -2637,7 +2637,7 @@ SpiderGL.Math.Vec4.log2 = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.log10}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.log10}(v[i]).
  */
 SpiderGL.Math.Vec4.log10 = function (v) {
 	return [SpiderGL.Math.log10(v[0]), SpiderGL.Math.log10(v[1]), SpiderGL.Math.log10(v[2]), SpiderGL.Math.log10(v[3])];
@@ -2649,7 +2649,7 @@ SpiderGL.Math.Vec4.log10 = function (v) {
  * @param {array} u The first vector.
  * @param {array} v The second vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.max}(u[i], v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.max}(u[i], v[i]).
  */
 SpiderGL.Math.Vec4.max = function (u, v) {
 	return [SpiderGL.Math.max(u[0], v[0]), SpiderGL.Math.max(u[1], v[1]), SpiderGL.Math.max(u[2], v[2]), SpiderGL.Math.max(u[3], v[3])];
@@ -2661,7 +2661,7 @@ SpiderGL.Math.Vec4.max = function (u, v) {
  * @param {array} u The first vector.
  * @param {array} v The second vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.min}(u[i], v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.min}(u[i], v[i]).
  */
 SpiderGL.Math.Vec4.min = function (u, v) {
 	return [SpiderGL.Math.min(u[0], v[0]), SpiderGL.Math.min(u[1], v[1]), SpiderGL.Math.min(u[2], v[2]), SpiderGL.Math.min(u[3], v[3])];
@@ -2673,7 +2673,7 @@ SpiderGL.Math.Vec4.min = function (u, v) {
  * @param {array} u The base vector.
  * @param {array} v The exponent vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.pow}(u[i], v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.pow}(u[i], v[i]).
  */
 SpiderGL.Math.Vec4.pow = function (u, v) {
 	return [SpiderGL.Math.pow(u[0], v[0]), SpiderGL.Math.pow(u[1], v[1]), SpiderGL.Math.pow(u[2], v[2]), SpiderGL.Math.pow(u[3], v[3])];
@@ -2684,7 +2684,7 @@ SpiderGL.Math.Vec4.pow = function (u, v) {
  *
  * @param {array} v The input vector, in degrees.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.pow}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.pow}(v[i]).
  */
 SpiderGL.Math.Vec4.radToDeg = function (v) {
 	return [SpiderGL.Math.radToDeg(v[0]), SpiderGL.Math.radToDeg(v[1]), SpiderGL.Math.radToDeg(v[2]), SpiderGL.Math.radToDeg(v[3])];
@@ -2693,7 +2693,7 @@ SpiderGL.Math.Vec4.radToDeg = function (v) {
 /**
  * Creates a random 4-dimensional vector between 0 and 1.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.random}().
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.random}().
  */
 SpiderGL.Math.Vec4.random = function () {
 	return [SpiderGL.Math.random(), SpiderGL.Math.random(), SpiderGL.Math.random(), SpiderGL.Math.random()];
@@ -2703,7 +2703,7 @@ SpiderGL.Math.Vec4.random = function () {
  * Creates a random 4-dimensional vector between 0 and 1.
  * Same as {@link SpiderGL.Math.Vec4.random}.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.random01}().
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.random01}().
  */
 SpiderGL.Math.Vec4.random01 = function () {
 	return [SpiderGL.Math.random01(), SpiderGL.Math.random01(), SpiderGL.Math.random01(), SpiderGL.Math.random01()];
@@ -2712,7 +2712,7 @@ SpiderGL.Math.Vec4.random01 = function () {
 /**
  * Creates a random 4-dimensional vector between -1 and 1.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.random11}().
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.random11}().
  */
 SpiderGL.Math.Vec4.random11 = function () {
 	return [SpiderGL.Math.random11(), SpiderGL.Math.random11(), SpiderGL.Math.random11(), SpiderGL.Math.random11()];
@@ -2724,7 +2724,7 @@ SpiderGL.Math.Vec4.random11 = function () {
  * @param {array} min The range vector lower bound.
  * @param {array} max The range vector upper bound.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.randomRange}(min[i], max[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.randomRange}(min[i], max[i]).
  */
 SpiderGL.Math.Vec4.randomRange = function (min, max) {
 	return [SpiderGL.Math.randomRange(min[0], max[0]), SpiderGL.Math.randomRange(min[1], max[1]), SpiderGL.Math.randomRange(min[2], max[2]), SpiderGL.Math.randomRange(min[3], max[3])];
@@ -2735,7 +2735,7 @@ SpiderGL.Math.Vec4.randomRange = function (min, max) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.round}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.round}(v[i]).
  */
 SpiderGL.Math.Vec4.round = function (v) {
 	return [SpiderGL.Math.round(v[0]), SpiderGL.Math.round(v[1]), SpiderGL.Math.round(v[2]), SpiderGL.Math.round(v[3])];
@@ -2746,7 +2746,7 @@ SpiderGL.Math.Vec4.round = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.sin}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.sin}(v[i]).
  */
 SpiderGL.Math.Vec4.sin = function (v) {
 	return [SpiderGL.Math.sin(v[0]), SpiderGL.Math.sin(v[1]), SpiderGL.Math.sin(v[2]), SpiderGL.Math.sin(v[3])];
@@ -2757,7 +2757,7 @@ SpiderGL.Math.Vec4.sin = function (v) {
  *
  * @param {array} v The input vector.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.sqrt}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.sqrt}(v[i]).
  */
 SpiderGL.Math.Vec4.sqrt = function (v) {
 	return [SpiderGL.Math.sqrt(v[0]), SpiderGL.Math.sqrt(v[1]), SpiderGL.Math.sqrt(v[2]), SpiderGL.Math.sqrt(v[3])];
@@ -2768,7 +2768,7 @@ SpiderGL.Math.Vec4.sqrt = function (v) {
  *
  * @param {array} v The input vector, in radians.
  *
- * @returns {array} A 4-dimensional vector r, where r[i] = {@link SpiderGL.Math.tan}(v[i]).
+ * @returns {array} A new 4-dimensional array r, where r[i] = {@link SpiderGL.Math.tan}(v[i]).
  */
 SpiderGL.Math.Vec4.tan = function (v) {
 	return [SpiderGL.Math.tan(v[0]), SpiderGL.Math.tan(v[1]), SpiderGL.Math.tan(v[2]), SpiderGL.Math.tan(v[3])];
@@ -2998,7 +2998,7 @@ SpiderGL.Math.Mat3 = { };
  *
  * @param {array} n The input matrix.
  *
- * @returns {array} A 9-component array r, where r[i] = m[i] (same as m.slice(0, 9)).
+ * @returns {array} A new 9-component array r, where r[i] = m[i] (same as m.slice(0, 9)).
  */
 SpiderGL.Math.Mat3.dup = function (m) {
 	return m.slice(0, 9);
@@ -3009,7 +3009,7 @@ SpiderGL.Math.Mat3.dup = function (m) {
  *
  * @param {number} s The input scalar.
  *
- * @returns {array} A 9-component array r, where r[i] = s.
+ * @returns {array} A new 9-component array r, where r[i] = s.
  */
 SpiderGL.Math.Mat3.scalar = function (s) {
 	return [
@@ -3022,7 +3022,7 @@ SpiderGL.Math.Mat3.scalar = function (s) {
 /**
  * Creates a 3x3 matrix initialized with zero.
  *
- * @returns {array} A 9-component array r, where r[i] = 0.
+ * @returns {array} A new 9-component array r, where r[i] = 0.
  */
 SpiderGL.Math.Mat3.zero = function () {
 	return [
@@ -3035,7 +3035,7 @@ SpiderGL.Math.Mat3.zero = function () {
 /**
  * Creates a 3x3 matrix initialized with one.
  *
- * @returns {array} A 9-component array r, where r[i] = 1.
+ * @returns {array} A new 9-component array r, where r[i] = 1.
  */
 SpiderGL.Math.Mat3.one = function () {
 	return [
@@ -3050,7 +3050,7 @@ SpiderGL.Math.Mat3.one = function () {
  *
  * @param {array} d A 3-dimensional vector
  *
- * @returns {array} A 9-component array representing a 3x3 matrix with diagonal elements set to d.
+ * @returns {array} A new 9-component array representing a 3x3 matrix with diagonal elements set to d.
  */
 SpiderGL.Math.Mat3.diag = function (d) {
 	return [
@@ -3063,7 +3063,7 @@ SpiderGL.Math.Mat3.diag = function (d) {
 /**
  * Creates an identity 3x3 matrix.
  *
- * @returns {array} A 9-component array representing an identity 3x3 matrix.
+ * @returns {array} A new 9-component array representing an identity 3x3 matrix.
  */
 SpiderGL.Math.Mat3.identity = function () {
 	return [
@@ -3078,7 +3078,7 @@ SpiderGL.Math.Mat3.identity = function () {
  *
  * @param {array} m The input matrix.
  *
- * @returns {array} A 16-component array representing a 4x4 matrix r, with the input 3x3 matrix as tue upper-left 3x3 region with [0, 0, 0, 1] as last row and column.
+ * @returns {array} A new 16-component array representing a 4x4 matrix r, with the input 3x3 matrix as tue upper-left 3x3 region with [0, 0, 0, 1] as last row and column.
  */
 SpiderGL.Math.Mat3.to44 = function (m) {
 	return [
@@ -3096,7 +3096,7 @@ SpiderGL.Math.Mat3.to44 = function (m) {
  * @param {array} v The input 2-dimensional vector.
  * @param {number} [z=0] The 3rd component of the input 2-dimensional vector.
  *
- * @return {array} A 2-dimensional vector r, where r = m * v.
+ * @return {array} A new 2-dimensional vector r, where r = m * v.
  */
 SpiderGL.Math.Mat3.mul2 = function (m, v, z) {
 	z = (z == undefined) ? (0) : (z);
@@ -3113,7 +3113,7 @@ SpiderGL.Math.Mat3.mul2 = function (m, v, z) {
  * @param {array} m The input column-major 3x3 matrix.
  * @param {array} v The input 3-dimensional vector.
  *
- * @return {array} A 3-dimensional vector r, where r = m * v.
+ * @return {array} A new 3-dimensional vector r, where r = m * v.
  */
 SpiderGL.Math.Mat3.mul3 = function (m, v) {
 	return [
@@ -3128,7 +3128,7 @@ SpiderGL.Math.Mat3.mul3 = function (m, v) {
  *
  * @param {array} m The input matrix.
  *
- * @returns {array} A 3x3 matrix representing the transpose of m.
+ * @returns {array} A new 3x3 matrix representing the transpose of m.
  */
 SpiderGL.Math.Mat3.transpose = function (m) {
 	return [
@@ -3158,7 +3158,7 @@ SpiderGL.Math.Mat4 = { };
  *
  * @param {array} n The input matrix.
  *
- * @returns {array} A 16-component array r, where r[i] = m[i] (same as m.slice(0, 16)).
+ * @returns {array} A new 16-component array r, where r[i] = m[i] (same as m.slice(0, 16)).
  */
 SpiderGL.Math.Mat4.dup = function (m) {
 	return m.slice(0, 16);
@@ -3169,7 +3169,7 @@ SpiderGL.Math.Mat4.dup = function (m) {
  *
  * @param {number} s The input scalar.
  *
- * @returns {array} A 16-component array r, where r[i] = s.
+ * @returns {array} A new 16-component array r, where r[i] = s.
  */
 SpiderGL.Math.Mat4.scalar = function (s) {
 	return [
@@ -3183,7 +3183,7 @@ SpiderGL.Math.Mat4.scalar = function (s) {
 /**
  * Creates a 4x4 matrix initialized with zero.
  *
- * @returns {array} A 16-component array r, where r[i] = 0.
+ * @returns {array} A new 16-component array r, where r[i] = 0.
  */
 SpiderGL.Math.Mat4.zero = function () {
 	return [
@@ -3197,7 +3197,7 @@ SpiderGL.Math.Mat4.zero = function () {
 /**
  * Creates a 4x4 matrix initialized with one.
  *
- * @returns {array} A 16-component array r, where r[i] = 1.
+ * @returns {array} A new 16-component array r, where r[i] = 1.
  */
 SpiderGL.Math.Mat4.one = function () {
 	return [
@@ -3213,7 +3213,7 @@ SpiderGL.Math.Mat4.one = function () {
  *
  * @param {array} d A 4-dimensional vector
  *
- * @returns {array} A 16-component array representing a 4x4 matrix with diagonal elements set to d.
+ * @returns {array} A new 16-component array representing a 4x4 matrix with diagonal elements set to d.
  */
 SpiderGL.Math.Mat4.diag = function (d) {
 	return [
@@ -3227,7 +3227,7 @@ SpiderGL.Math.Mat4.diag = function (d) {
 /**
  * Creates an identity 4x4 matrix.
  *
- * @returns {array} A 16-component array representing an identity 4x4 matrix.
+ * @returns {array} A new 16-component array representing an identity 4x4 matrix.
  */
 SpiderGL.Math.Mat4.identity = function () {
 	return [
@@ -3243,7 +3243,7 @@ SpiderGL.Math.Mat4.identity = function () {
  *
  * @param {array} m The input matrix.
  *
- * @returns {array} A 9-component array representing the upper-left 3x3 matrix.
+ * @returns {array} A new 9-component array representing the upper-left 3x3 matrix.
  */
 SpiderGL.Math.Mat4.to33 = function (m) {
 	return [
@@ -3284,7 +3284,7 @@ SpiderGL.Math.Mat4.elem$ = function (m, row, col, value) {
  * @param {array} m The input matrix.
  * @param {number} row The row index.
  *
- * @returns {array} A 4-component array representing the row-th row of m.
+ * @returns {array} A new 4-component array representing the row-th row of m.
  */
 SpiderGL.Math.Mat4.row = function (m, row) {
 	return [m[row+0], m[row+4], m[row+8], m[row+12]];
@@ -3310,7 +3310,7 @@ SpiderGL.Math.Mat4.row$ = function (m, row, v) {
  * @param {array} m The input matrix.
  * @param {number} col The column index.
  *
- * @returns {array} A 4-component array representing the col-th column of m.
+ * @returns {array} A new 4-component array representing the col-th column of m.
  */
 SpiderGL.Math.Mat4.col = function (m, col) {
 	var i = col * 4;
@@ -3351,7 +3351,7 @@ SpiderGL.Math.Mat4.isIdentity = function (m) {
  *
  * @param {array} m The input matrix.
  *
- * @return {array} A 4x4 matrix r, where r[i] = -m[i].
+ * @return {array} A new 4x4 matrix r, where r[i] = -m[i].
  */
 SpiderGL.Math.Mat4.neg = function (m) {
 	return [
@@ -3368,7 +3368,7 @@ SpiderGL.Math.Mat4.neg = function (m) {
  * @param {array} a The first input matrix.
  * @param {array} b The first input matrix.
  *
- * @return {array} A 4x4 matrix r, where r[i] = a[i] + b[i].
+ * @return {array} A new 4x4 matrix r, where r[i] = a[i] + b[i].
  */
 SpiderGL.Math.Mat4.add = function (a, b) {
 	return [
@@ -3385,7 +3385,7 @@ SpiderGL.Math.Mat4.add = function (a, b) {
  * @param {array} a The first input matrix.
  * @param {array} b The first input matrix.
  *
- * @return {array} A 4x4 matrix r, where r[i] = a[i] - b[i].
+ * @return {array} A new 4x4 matrix r, where r[i] = a[i] - b[i].
  */
 SpiderGL.Math.Mat4.sub = function (a, b) {
 	return [
@@ -3402,7 +3402,7 @@ SpiderGL.Math.Mat4.sub = function (a, b) {
  * @param {array} a The first input matrix.
  * @param {array} b The first input matrix.
  *
- * @return {array} A 4x4 matrix r, result of matrix multiplication r = a * b.
+ * @return {array} A new 4x4 matrix r, result of matrix multiplication r = a * b.
  */
 SpiderGL.Math.Mat4.mul = function (a, b) {
 	var a0  = a[ 0], a1  = a[ 1],  a2 = a[ 2], a3  = a[ 3],
@@ -3444,7 +3444,7 @@ SpiderGL.Math.Mat4.mul = function (a, b) {
  * @param {array} m The matrix operand.
  * @param {number} s The scalar operand.
  *
- * @returns {array} A 4x4 matrix r, where r[i] = m[i] * s.
+ * @returns {array} A new 4x4 matrix r, where r[i] = m[i] * s.
  */
 SpiderGL.Math.Mat4.muls = function (m, s) {
 	return [
@@ -3462,7 +3462,7 @@ SpiderGL.Math.Mat4.muls = function (m, s) {
  * @param {array} v The input 3-dimensional vector.
  * @param {number} [w=1] The 4th component of the input 3-dimensional vector.
  *
- * @return {array} A 3-dimensional vector r, where r = m * v.
+ * @return {array} A new 3-dimensional vector r, where r = m * v.
  */
 SpiderGL.Math.Mat4.mul3 = function (m, v, w) {
 	w = (w == undefined) ? (1) : (w);
@@ -3480,7 +3480,7 @@ SpiderGL.Math.Mat4.mul3 = function (m, v, w) {
  * @param {array} m The input column-major 4x4 matrix.
  * @param {array} v The input 4-dimensional vector.
  *
- * @return {array} A 4-dimensional vector r, where r = m * v.
+ * @return {array} A new 4-dimensional vector r, where r = m * v.
  */
 SpiderGL.Math.Mat4.mul4 = function (m, v) {
 	return [
@@ -3496,7 +3496,7 @@ SpiderGL.Math.Mat4.mul4 = function (m, v) {
  *
  * @param {array} m The input matrix.
  *
- * @returns {array} A 4x4 matrix r, where r[i] = 1 / m[i].
+ * @returns {array} A new 4x4 matrix r, where r[i] = 1 / m[i].
  */
 SpiderGL.Math.Mat4.rcp = function (m) {
 	return [
@@ -3513,7 +3513,7 @@ SpiderGL.Math.Mat4.rcp = function (m) {
  * @param {array} a The first matrix.
  * @param {array} b The second matrix.
  *
- * @returns {array} A 4x4 matrix r, where r[i] = a[i] * b[i].
+ * @returns {array} A new 4x4 matrix r, where r[i] = a[i] * b[i].
  */
 SpiderGL.Math.Mat4.compMul = function (a, b) {
 	return [
@@ -3530,7 +3530,7 @@ SpiderGL.Math.Mat4.compMul = function (a, b) {
  * @param {array} a The first matrix.
  * @param {array} b The second matrix.
  *
- * @returns {array} A 4x4 matrix r, where r[i] = a[i] / b[i].
+ * @returns {array} A new 4x4 matrix r, where r[i] = a[i] / b[i].
  */
 SpiderGL.Math.Mat4.compDiv = function (a, b) {
 	return [
@@ -3546,7 +3546,7 @@ SpiderGL.Math.Mat4.compDiv = function (a, b) {
  *
  * @param {array} m The input matrix.
  *
- * @returns {array} A 4x4 matrix representing the transpose of m.
+ * @returns {array} A new 4x4 matrix representing the transpose of m.
  */
 SpiderGL.Math.Mat4.transpose = function (m) {
 	return [
@@ -3583,7 +3583,7 @@ SpiderGL.Math.Mat4.determinant = function (m) {
  *
  * @param {array} m The input matrix.
  *
- * @returns {array} A 4x4 matrix representing the inverse of m.
+ * @returns {array} A new 4x4 matrix representing the inverse of m.
  */
 SpiderGL.Math.Mat4.inverse = function (m) {
 	var m0  = m[ 0], m1  = m[ 1], m2  = m[ 2], m3  = m[ 3],
@@ -3627,7 +3627,7 @@ SpiderGL.Math.Mat4.inverse = function (m) {
  *
  * @param {array} m The input matrix.
  *
- * @returns {array} A 3x3 matrix representing the inverse transpose of the upper-left 3x3 matrix of m.
+ * @returns {array} A new 3x3 matrix representing the inverse transpose of the upper-left 3x3 matrix of m.
  */
 SpiderGL.Math.Mat4.inverseTranspose33 = function (m) {
 	var m11 = m[ 0], m21 = m[ 1], m31 = m[ 2],
@@ -3660,7 +3660,7 @@ SpiderGL.Math.Mat4.trace = function (m) {
  *
  * @param {array} v A 3-dimensional vector with translation offsets.
  *
- * @returns {array} A column-major 4x4 translation matrix.
+ * @returns {array} A new column-major 4x4 translation matrix.
  */
 SpiderGL.Math.Mat4.translation = function (v) {
 	return [
@@ -3679,7 +3679,7 @@ SpiderGL.Math.Mat4.translation = function (v) {
  * @param {number} angle The counter-clockwise rotation angle, in radians.
  * @param {array} axis A 3-dimensional vector representing the rotation axis.
  *
- * @returns {array} A column-major 4x4 rotation matrix.
+ * @returns {array} A new column-major 4x4 rotation matrix.
  */
 SpiderGL.Math.Mat4.rotationAngleAxis = function (angle, axis) {
 	var ax = SpiderGL.Math.Vec3.normalize(axis);
@@ -3716,7 +3716,7 @@ SpiderGL.Math.Mat4.rotationAngleAxis = function (angle, axis) {
  *
  * @param {array} v The scaling amount as a 3-dimensional array.
  *
- * @returns {array} A 4x4 scaling matrix.
+ * @returns {array} A new column-major 4x4 scaling matrix.
  */
 SpiderGL.Math.Mat4.scaling = function (v) {
 	return [
@@ -3734,7 +3734,7 @@ SpiderGL.Math.Mat4.scaling = function (v) {
  * @param {array} target The viewer's look-at point as a 3-dimensional vector.
  * @param {array} position The viewer's up vector as a 3-dimensional vector.
  *
- * @returns {array} A column-major 4x4 look-at matrix.
+ * @returns {array} A new column-major 4x4 look-at matrix.
  */
 SpiderGL.Math.Mat4.lookAt = function (position, target, up) {
 	var v = SpiderGL.Math.Vec3.normalize(SpiderGL.Math.Vec3.sub(target, position));
@@ -3759,7 +3759,7 @@ SpiderGL.Math.Mat4.lookAt = function (position, target, up) {
  * @param {array} min A 3-component array with the minimum coordinates of the parallel viewing volume.
  * @param {array} max A 3-component array with the maximum coordinates of the parallel viewing volume.
  *
- * @returns {array} A column-major 4x4 orthographic projection matrix.
+ * @returns {array} A new column-major 4x4 orthographic projection matrix.
  */
 SpiderGL.Math.Mat4.ortho = function (min, max) {
 	var sum = SpiderGL.Math.Vec3.add(max, min);
@@ -3779,7 +3779,7 @@ SpiderGL.Math.Mat4.ortho = function (min, max) {
  * @param {array} min A 3-component array with the minimum coordinates of the frustum volume.
  * @param {array} max A 3-component array with the maximum coordinates of the frustum volume.
  *
- * @returns {array} A column-major 4x4 frustum matrix.
+ * @returns {array} A new column-major 4x4 frustum matrix.
  */
 SpiderGL.Math.Mat4.frustum = function (min, max) {
 	var sum = SpiderGL.Math.Vec3.add(max, min);
@@ -3802,7 +3802,7 @@ SpiderGL.Math.Mat4.frustum = function (min, max) {
  * @param {number} zNear The distance of the near clipping plane.
  * @param {number} zFar The distance of the far clipping plane.
  *
- * @returns {array} A column-major 4x4 perspective projection matrix.
+ * @returns {array} A new column-major 4x4 perspective projection matrix.
  */
 SpiderGL.Math.Mat4.perspective = function (fovY, aspectRatio, zNear, zFar) {
 	var a = zNear * SpiderGL.Math.tan(fovY / 2);
@@ -4101,6 +4101,7 @@ SpiderGL.Math.Mat4.scale$ = function (m, v) {
 /**
  * The SpiderGL.Math.Quat namespace.
  * The provided functions operate on quaternions, represented as standard JavaScript arrays of length 4.
+ * The identity quaternion is represented as the vector [0, 0, 0, 1].
  *
  * @namespace The SpiderGL.Math.Quat namespace defines operations on quaternions.
  */
@@ -4109,22 +4110,43 @@ SpiderGL.Math.Quat = { };
 /**
  * Duplicates the input quaternion.
  *
- * @param {array} n The input quaternion.
+ * @param {array} q The input quaternion.
  *
- * @returns {array} A 4-component array r, where r[i] = q[i] (same as q.slice(0, 4)).
+ * @returns {array} A new 4-component array r, where r[i] = q[i] (same as q.slice(0, 4)).
  */
 SpiderGL.Math.Quat.dup = function (q) {
 	return q.slice(0, 4);
 }
 
-SpiderGL.Math.Quat.identity = function (q) {
+/**
+ * Creates an identity quaternion.
+ * The identity quaternion is represented as the vector [0, 0, 0, 1].
+ *
+ * @returns {array} A new 4-component array r, where r = [0, 0, 0, 1].
+ */
+SpiderGL.Math.Quat.identity = function () {
 	return [0, 0, 0, 1];
 }
 
+/**
+ * Inverts a quaternion.
+ *
+ * @param {array} q The input quaternion.
+ *
+ * @returns {array} A new 4-component array r, where r = [-q[0], -q[1], -q[2], q[3]].
+ */
 SpiderGL.Math.Quat.inverse = function (q) {
 	return [-q[0], -q[1], -q[2], q[3]];
 }
 
+/**
+ * Multiplies two quaternions.
+ *
+ * @param {array} p The first quaternion multiplication operand.
+ * @param {array} q The second quaternion multiplication quaternion.
+ *
+ * @returns {array} A new 4-component array r, where r = [-q[0], -q[1], -q[2], q[3]].
+ */
 SpiderGL.Math.Quat.mul = function (p, q) {
 	var px = p[0],
 	    py = p[1],
@@ -4144,6 +4166,14 @@ SpiderGL.Math.Quat.mul = function (p, q) {
 	];
 }
 
+/**
+ * Multiplies a quaternion by a scalar.
+ *
+ * @param {array} q The first quaternion multiplication operand.
+ * @param {number} s The second scalar multiplication operand.
+ *
+ * @returns {array} A new 4-component array r, where r[i] = q[i]*s.
+ */
 SpiderGL.Math.Quat.muls = function (q, s) {
 	return [q[0]*s, q[1]*s, q[2]*s, q[3]*s];
 }
