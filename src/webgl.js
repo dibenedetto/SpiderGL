@@ -3565,6 +3565,24 @@ SpiderGL.WebGL.Program.prototype = {
 				location : loc,
 				setValue : SpiderGL.WebGL.Program._uniformSetFunctions[nfo.type]
 			};
+			if (nfo.size > 1) {
+				var subs = name.lastIndexOf("[0]");
+				if (subs == (name.length - 3)) {
+					var arrayName = name.slice(0, subs);
+					for (var j=1; j<nfo.size; ++j) {
+						var subName = arrayName + "[" + j + "]";
+						loc = gl.getUniformLocation(h, subName);
+						uniforms[subName] = {
+							index    : i,
+							name     : subName,
+							size     : nfo.size,
+							type     : nfo.type,
+							location : loc,
+							setValue : SpiderGL.WebGL.Program._uniformSetFunctions[nfo.type]
+						};
+					}
+				}
+			}
 		}
 
 		this._attributes = attributes;
