@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>SpiderGL Obj</title>
+<script type="text/javascript" src="./spidergl.js"></script>
+<script type="text/javascript" src="./obj_importer.js"></script>
+<script type="text/javascript">
+function log(msg) {
+	var textarea = document.getElementById("log-area");
+	textarea.innerHTML += (msg + "\n");
+	textarea.scrollTop = textarea.scrollHeight;
+}
+
+SpiderGL.openNamespace();
+
+function CanvasHandler() {
+}
+
+CanvasHandler.prototype = {
+	onInitialize : function () {
+		var gl = this.ui.gl;
+
+		this.technique = new SglTechnique(gl, {
+			vertexShader : "\
+				precision highp float;                                                \n\
+																					  \n\
+				uniform   mat4 uWorldViewProjectionMatrix;                            \n\
+				uniform   mat3 uViewSpaceNormalMatrix;                                \n\
+																					  \n\
+				attribute vec3 aPosition;                                             \n\
+				attribute vec3 aNormal;                                               \n\
+																					  \n\
+				varying   vec3 vNormal;                                               \n\
+				varying   vec3 vColor;                                                \n\
+																					  \n\
+				void main(void)                                                       \n\
+				{                                                                     \n\
+					vNormal     = uViewSpaceNormalMatrix * aNormal;                   \n\
+					vColor      = vec3(0.4,0.4,0.8); \n\
+																					  \n\
+					gl_Position = uWorldViewProjectionMatrix * vec4(aPosition, 3.0);  \n\
+				}                                                                     \n\
+			",
+			fragmentShader : "\
+				precision highp float;                                                \n\
+																					  \n\
+				uniform   vec3      uViewSpaceLightDirection;                         \n\
+																					  \n\
+				varying   vec3 vNormal;                                               \n\
+				varying   vec3 vColor;                                                \n\
+																					  \n\
+				void main(void)                                                       \n\
+				{                                                                     \n\
+					vec3  normal    = normalize(vNormal);                             \n\
+					float nDotL     = dot(normal, -uViewSpaceLightDirection);         \n\
+					float lambert   = max(0.0, nDotL);                                \n\
+																					  \n\
+					vec3  baseColor = vec3(1.0);                                      \n\
+					vec3  diffuse   = vColor * baseColor * lambert;                   \n\
+																					  \n\
+					gl_FragColor    = vec4(diffuse, 1.0);                             \n\
+				}                                                                     \n\
+			",
+			vertexStreams : {
+				"aNormal" : [ 0.0, 0.0, 1.0, 0.0 ],
+				"aColor"  : [ 0.4, 0.4, 0.8, 1.0 ],
+			},
+			globals : {
+				"uWorldViewProjectionMatrix" : { semantic : "WORLD_VIEW_PROJECTION_MATRIX", value : SglMat4.identity() },
+				"uViewSpaceNormalMatrix"     : { semantic : "VIEW_SPACE_NORMAL_MATRIX",     value : SglMat3.identity() },
+				"uViewSpaceLightDirection"   : { semantic : "VIEW_SPACE_LIGHT_DIRECTION",   value : [ 0.0, 0.0, -1.0 ] }
+			}
+		});
+		log(this.technique.program.log);
+
+		this.model = null;
+		var that = this;
+		//sglRequestText("test.obj", {
+		//sglRequestText("teapot.obj", {
+		sglRequestText("ipad.obj", {
+      onSuccess:function (req) {
+        var cb = function(modelDescriptor) {
+		      that.model = new SglModel(that.ui.gl, modelDescriptor);
+		      that.ui.postDrawEvent();
+        };
+        var importer = new objImporter({endParsing:cb});
+        var stream = { getData:function() { return req.text; },completed:function() {return true; }};
+        importer.streamData(stream);
+		  }
+    });
+
+		this.renderer = new SglModelRenderer(gl);
+		this.xform    = new SglTransformationStack();
+		this.angle    = 0.0;
+
+		this.ui.animateRate = 60;
+
+		var that = this;
+		setInterval(function() {
+			document.getElementById("fps-div").innerHTML = "FPS: " + that.ui.framesPerSecond;
+		}, 1000);
+	},
+
+	onAnimate : function (dt) {
+		this.angle += 90.0 * dt;
+		this.ui.postDrawEvent();
+	},
+
+	onDraw : function () {
+		var gl       = this.ui.gl;
+		var width    = this.ui.width;
+		var height   = this.ui.height;
+		var xform    = this.xform;
+		var renderer = this.renderer;
+
+		gl.clearColor(0.4, 0.4, 0.4, 1.0);
+		gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
+
+		if (!this.model) return;
+
+		gl.viewport(0, 0, width, height);
+
+		xform.projection.loadIdentity();
+		xform.projection.perspective(sglDegToRad(50.0), width/height, 2.0, 10000.0);
+
+		xform.view.loadIdentity();
+		xform.view.lookAt([0.0, 0.0, 2000.0], [0.0, 0.0, 0.0], [0.0, 1.0, 0.0]);
+
+		xform.model.loadIdentity();
+		xform.model.rotate(sglDegToRad(this.angle), [0.0, 1.0, 0.0]);
+
+		var globals = {
+			"WORLD_VIEW_PROJECTION_MATRIX" : xform.modelViewProjectionMatrix,
+			"VIEW_SPACE_NORMAL_MATRIX"     : xform.viewSpaceNormalMatrix
+		};
+
+		gl.enable(gl.DEPTH_TEST);
+
+		renderer.begin();
+			renderer.setTechnique(this.technique);
+			renderer.setDefaultGlobals();
+			renderer.setPrimitiveMode("FILL");
+			renderer.setGlobals(globals);
+			renderer.setModel(this.model);
+			renderer.renderModel();
+		renderer.end();
+
+		gl.disable(gl.DEPTH_TEST);
+	}
+};
+
+sglHandleCanvasOnLoad("draw-canvas", new CanvasHandler());
+</script>
+</head>
+<body style="background-color:#aaa;">
+	<center>
+		<h2><font color="#880000">SpiderGL Ply</font></h2>
+		<br/>
+		<canvas id="draw-canvas" width="512" height="512" style="border:2px solid black;"></canvas>
+		<br/>
+		<div id="fps-div">FPS : 0</div>
+		<br/>
+		<textarea id="log-area" rows="10" cols="80"></textarea>
+		<br/>
+	</center>
+</body>
+</html>

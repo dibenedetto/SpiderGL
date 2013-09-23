@@ -72,7 +72,7 @@ objImporter.prototype = {
           buffer: g + "_pos_vb",
           size: 3,
           type: SpiderGL.Type.FLOAT32,
-          stride: 3 * currentGroup.positionsStride,
+          stride: 4 * currentGroup.positionsStride,
           offset: 0,
           normalized: false
 		    };
@@ -82,9 +82,9 @@ objImporter.prototype = {
         modelDescriptor.data.vertexBuffers[g + "_txt_vb"] = { typedArray: new Float32Array(currentGroup.txtcoordsArray) };
         modelDescriptor.access.vertexStreams[g +"_txt_attr"] = { //see glVertexAttribPointer
           buffer: g + "_txt_vb",
-          size: 2, //todo: support 3d txt coordinates
+          size: this.vertexData.txtCoord3d?3:2, //todo: support 3d txt coordinates
           type: SpiderGL.Type.FLOAT32,
-          stride: 3 * currentGroup.txtcoordsStride,
+          stride: 4 * currentGroup.txtcoordsStride,
           offset: 0,
           normalized: false
         }; 
@@ -97,7 +97,7 @@ objImporter.prototype = {
           buffer: g + "_nrm_vb",
           size: 3,
           type: SpiderGL.Type.FLOAT32,
-          stride: 3 * currentGroup.normalsStride,
+          stride: 4 * currentGroup.normalsStride,
           offset: 0,
           normalized: false
         }; 
@@ -107,7 +107,7 @@ objImporter.prototype = {
       modelDescriptor.access.primitiveStreams[g + "_ps"] = { //see glDrawElements
 		        buffer: g + "_idx_b",
 		        mode: SpiderGL.Type.TRIANGLES,
-		        count: 3,
+		        count: currentGroup.indicesArray.length,
 		        type: SpiderGL.Type.UINT16,
 		        offset: 0
 		    };
@@ -141,8 +141,8 @@ objImporter.prototype = {
       },
       getVertex:function(v,vt,vn){
         v = v | 0;
-        vt = vt | 0;
-        vn = vn | 0;
+        //vt = vt | 0;
+        //vn = vn | 0;
 
         if ( undefined === this.map[v]) this.map[v] = {}; 
         if ( undefined === this.map[v][vt]) this.map[v][vt] = {}; 
@@ -164,9 +164,9 @@ objImporter.prototype = {
           } else throw "no!";
 
           if (vt >=0 && (vt * 3 + 2) < txtcoords.length) {
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = txtcoords[v*3+0];
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = txtcoords[v*3+1];
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = txtcoords[v*3+2];
+            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = txtcoords[vt*3+0];
+            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = txtcoords[vt*3+1];
+            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = txtcoords[vt*3+2];
             this.usingTextureCoordinates = true;
           } else {
             this.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = 0.0;
@@ -176,10 +176,10 @@ objImporter.prototype = {
 
 
           if (vn >=0 && (vn * 3 + 2) < normals.length) {
-            this.normalsArray[nrmIdx * this.normalsStride + 0] = normals[v*3+0];
-            this.normalsArray[nrmIdx * this.normalsStride + 1] = normals[v*3+1];
-            this.normalsArray[nrmIdx * this.normalsStride + 2] = normals[v*3+2];
-            this.usingTextureCoordinates = true;
+            this.normalsArray[nrmIdx * this.normalsStride + 0] = normals[vn*3+0];
+            this.normalsArray[nrmIdx * this.normalsStride + 1] = normals[vn*3+1];
+            this.normalsArray[nrmIdx * this.normalsStride + 2] = normals[vn*3+2];
+            this.usingNormals = true;
           } else {
             this.normalsArray[nrmIdx * this.normalsStride + 0] = 0.0;
             this.normalsArray[nrmIdx * this.normalsStride + 1] = 0.0;
@@ -216,15 +216,15 @@ objImporter.prototype = {
       var z = parseFloat(_z);
       if (isNaN (z))
         z = 0.0;
+      else
+        this.vertexData.txtCoord3d = true;
       this.vertexData.txtcoords.push(x,y,z);
-      this.vertexData.usesTxtCoords = true;
     }
     var parseNormals = function(_x,_y,_z) {
       var x = parseFloat(_x);
       var y = parseFloat(_y);
       var z = parseFloat(_z);
-      this.vertexData.positions.push(x,y,z);
-      this.vertexData.usesNormals = true;
+      this.vertexData.normals.push(x,y,z);
     }
     var parseFace = function(_v1,_v2,_v3) {
       var mapper = function (txt) {return parseInt(txt) - 1; }
