@@ -15,6 +15,7 @@ var objImporter = function (callbacks) {
   }
   this.groups = {};
   this.activeGroups = { "default":this.getGroup("default") }
+  this.mtlname = "";
 }
 
 objImporter.prototype = {
@@ -62,7 +63,7 @@ objImporter.prototype = {
        }
     };
     //create a VertexStream and PrimitiveStream
-    for (g in this.groups)
+    for (var g in this.groups)
     {
       var currentGroup = this.groups[g];
       //add vertex data
@@ -103,19 +104,25 @@ objImporter.prototype = {
         }; 
         modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["NORMAL"] = [g+"_nrm_attr"];
       }
-      modelDescriptor.data.indexBuffers[g + "_idx_b"] = { typedArray: new Uint16Array(currentGroup.indicesArray) };
-      modelDescriptor.access.primitiveStreams[g + "_ps"] = { //see glDrawElements
-		        buffer: g + "_idx_b",
+
+      modelDescriptor.logic.parts[g+"_part"] = {chunks:[]};
+      for(var m in currentGroup.materials)
+      {
+        modelDescriptor.data.indexBuffers[g + "_m" + m +"_idx_b"] = { typedArray: new Uint16Array(currentGroup.materials[m].indicesArray) };
+        modelDescriptor.access.primitiveStreams[g + "_m" + m + "_ps"] = { //see glDrawElements
+		        buffer: g + "_m"+m+ "_idx_b",
 		        mode: SpiderGL.Type.TRIANGLES,
 		        count: currentGroup.indicesArray.length,
 		        type: SpiderGL.Type.UINT16,
 		        offset: 0
 		    };
-      modelDescriptor.semantic.bindings[g + "_binding"].primitiveStreams["FILL"] = [g+"_ps"];
-      modelDescriptor.semantic.chunks[g+"_chunks"] = {techniques:{common:{binding:g+"_binding"}}};
-      modelDescriptor.logic.parts[g+"_part"] = {chunks:[g+"_chunks"]};
+
+        modelDescriptor.semantic.bindings[g + "_m" + m + "_binding"].primitiveStreams["FILL"] = [g+"_m" + m +"_ps"];
+        modelDescriptor.semantic.chunks[g+ "_m" + m +"_chunk"] = {techniques:{common:{binding:g+"_binding"}}};
+        modelDescriptor.logic.parts[g+"_part"].chunks.push(g+"_m"+m+"_chunk");
+      }
     }
-    this.callbacks.endParsing(modelDescriptor);
+    this.callbacks.onEndParsing(modelDescriptor);
   }
   ,
   getGroup: function(groupName) {
@@ -126,15 +133,15 @@ objImporter.prototype = {
         this.positionsArray=[];
         this.txtcoordsArray=[];
         this.normalsArray=[];
-        this.indicesArray=[];
+        this.materials = {"":{indicesArray:[]}};
         this.map = [];
-        this.vertexData = parserObj.vertexData;
+        this.parserObj = parserObj;
         this.usingTextureCoordinates = false;
         this.usingNormals = false;
     }
     Group.prototype  = {
       addFace:function(v1,v2,v3){
-        this.indicesArray.push(
+        this.getCurrentMaterial().indicesArray.push(
           this.getVertex.apply(this,v1),
           this.getVertex.apply(this,v2),
           this.getVertex.apply(this,v3));
@@ -147,9 +154,9 @@ objImporter.prototype = {
         if ( undefined === this.map[v]) this.map[v] = {}; 
         if ( undefined === this.map[v][vt]) this.map[v][vt] = {}; 
         if ( undefined === this.map[v][vt][vn]) {
-          var positions = this.vertexData.positions;
-          var txtcoords = this.vertexData.txtcoords;
-          var normals = this.vertexData.normals;
+          var positions = this.parserObj.vertexData.positions;
+          var txtcoords = this.parserObj.vertexData.txtcoords;
+          var normals = this.parserObj.vertexData.normals;
           var idx = ( (this.positionsArray.length + this.positionsStride - 1) / this.positionsStride ) | 0; 
           var posIdx = idx;
           var txtIdx = idx;
@@ -189,6 +196,11 @@ objImporter.prototype = {
           this.map[v][vt][vn] = idx;
         }
         return this.map[v][vt][vn] | 0;
+      },
+      getCurrentMaterial:function() {
+        if (this.materials[this.parserObj.mtname] === undefined)
+          this.materials[this.parserObj.mtname] = {indicesArray:[]};
+        return this.materials[this.parserObj.mtname];
       }
     }
     var g = this.groups[groupName];
@@ -269,7 +281,11 @@ objImporter.prototype = {
         parseGroup.apply(this,tokens); 
         break;
       case "mtllib": // name of material library file
+        this.callbacks.requireMaterialFile(tokens[0]);
+        break;
       case "usemtl":
+        this.mtlname = tokens[0]||"";
+        break;
       case "s":
     }
   }
