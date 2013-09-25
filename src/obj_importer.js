@@ -112,7 +112,7 @@ objImporter.prototype = {
         modelDescriptor.access.primitiveStreams[g + "_m" + m + "_ps"] = { //see glDrawElements
 		        buffer: g + "_m"+m+ "_idx_b",
 		        mode: SpiderGL.Type.TRIANGLES,
-		        count: currentGroup.indicesArray.length,
+		        count: currentGroup.materials[m].indicesArray.length,
 		        type: SpiderGL.Type.UINT16,
 		        offset: 0
 		    };

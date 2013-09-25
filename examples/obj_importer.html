@@ -1,8 +1,7 @@
 <html>
 <head>
-<title>SpiderGL Obj</title>
-<script type="text/javascript" src="./spidergl.js"></script>
-<script type="text/javascript" src="./obj_importer.js"></script>
+<title>SpiderGL Obj Importer</title>
+<script type="text/javascript" src="../lib/spidergl.js"></script>
 <script type="text/javascript">
 function log(msg) {
 	var textarea = document.getElementById("log-area");
@@ -75,8 +74,8 @@ CanvasHandler.prototype = {
 		this.model = null;
 		var that = this;
 		//sglRequestText("test.obj", {
-		//sglRequestText("teapot.obj", {
-		sglRequestText("ipad.obj", {
+		//sglRequestText("ipad.obj", {
+		sglRequestText("data/teapot.obj", {
       onSuccess:function (req) {
         var cb = function(modelDescriptor) {
 		      that.model = new SglModel(that.ui.gl, modelDescriptor);
@@ -153,7 +152,7 @@ sglHandleCanvasOnLoad("draw-canvas", new CanvasHandler());
 </head>
 <body style="background-color:#aaa;">
 	<center>
-		<h2><font color="#880000">SpiderGL Ply</font></h2>
+		<h2><font color="#880000">SpiderGL Obj Importer</font></h2>
 		<br/>
 		<canvas id="draw-canvas" width="512" height="512" style="border:2px solid black;"></canvas>
 		<br/>

@@ -4,8 +4,9 @@
 #     Merge all .js files in one with shell commands
 # ----------------------------------------------------
 
-rm ../lib/spidergl.js
+#rm ../lib/spidergl.js
 
+:>../lib/spidergl.js
 cat ../src/namespace.js  >> ../lib/spidergl.js
 cat ../src/version.js    >> ../lib/spidergl.js
 cat ../src/core.js       >> ../lib/spidergl.js
@@ -18,5 +19,5 @@ cat ../src/space.js      >> ../lib/spidergl.js
 cat ../src/webgl.js      >> ../lib/spidergl.js
 cat ../src/model.js      >> ../lib/spidergl.js
 cat ../src/ui.js         >> ../lib/spidergl.js
-
+cat ../src/obj_importer.js >> ../lib/spidergl.js
 
