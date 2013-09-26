@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # ----------------------------------------------------
 #     Merge all .js files in one with shell commands
@@ -6,18 +6,19 @@
 
 #rm ../lib/spidergl.js
 
-:>../lib/spidergl.js
-cat ../src/namespace.js  >> ../lib/spidergl.js
-cat ../src/version.js    >> ../lib/spidergl.js
-cat ../src/core.js       >> ../lib/spidergl.js
-cat ../src/type.js       >> ../lib/spidergl.js
-cat ../src/utility.js    >> ../lib/spidergl.js
-cat ../src/dom.js        >> ../lib/spidergl.js
-cat ../src/io.js         >> ../lib/spidergl.js
-cat ../src/math.js       >> ../lib/spidergl.js
-cat ../src/space.js      >> ../lib/spidergl.js
-cat ../src/webgl.js      >> ../lib/spidergl.js
-cat ../src/model.js      >> ../lib/spidergl.js
-cat ../src/ui.js         >> ../lib/spidergl.js
-cat ../src/obj_importer.js >> ../lib/spidergl.js
+BUILDDIR=`dirname $0`
+:> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/namespace.js  >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/version.js    >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/core.js       >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/type.js       >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/utility.js    >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/dom.js        >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/io.js         >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/math.js       >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/space.js      >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/webgl.js      >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/model.js      >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/ui.js         >> $BUILDDIR/../lib/spidergl.js
+cat $BUILDDIR/../src/obj_importer.js >> $BUILDDIR/../lib/spidergl.js
 
