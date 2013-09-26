@@ -13,6 +13,8 @@ var objImporter = function (callbacks) {
     txtcoords:[],
     normals:[]
   }
+  //this.prefs = {interleavedArrays:false};
+  this.prefs = {interleavedArrays:true};
   this.groups = {};
   this.activeGroups = { "default":this.getGroup("default") }
   this.mtlname = "";
@@ -73,37 +75,39 @@ objImporter.prototype = {
         var cId = gId + "_c" + c;
         var currentChunk = currentGroup.chunks[c];
         //add vertex data
-        modelDescriptor.data.vertexBuffers[cId+"_pos_vb"] = { typedArray: new Float32Array(currentChunk.positionsArray) };
+        modelDescriptor.data.vertexBuffers[cId+(currentChunk.interleaved?"_vertex_vb":"_pos_vb")] = { typedArray: new Float32Array(currentChunk.positionsArray) };
         modelDescriptor.access.vertexStreams[cId +"_pos_attr"] = { //see glVertexAttribPointer
-            buffer: cId + "_pos_vb",
+            buffer: cId + (currentChunk.interleaved?"_vertex_vb":"_pos_vb"),
             size: 3,
             type: SpiderGL.Type.FLOAT32,
-            stride: 4 * currentGroup.positionsStride,
-            offset: 0,
+            stride: 4 * currentChunk.positionsStride,
+            offset: 4 * currentChunk.positionsOffset,
             normalized: false
           };
         if(currentGroup.usingTextureCoordinates)
         {
-          modelDescriptor.data.vertexBuffers[cId + "_txt_vb"] = { typedArray: new Float32Array(currentChunk.txtcoordsArray) };
+          if(!currentChunk.interleaved)
+            modelDescriptor.data.vertexBuffers[cId + "_txt_vb"] = { typedArray: new Float32Array(currentChunk.txtcoordsArray) };
           modelDescriptor.access.vertexStreams[cId +"_txt_attr"] = { //see glVertexAttribPointer
-            buffer: cId + "_txt_vb",
+            buffer: cId + (currentChunk.interleaved?"_vertex_vb":"_txt_vb"),
             size: this.vertexData.txtCoord3d?3:2, 
             type: SpiderGL.Type.FLOAT32,
-            stride: 4 * currentGroup.txtcoordsStride,
-            offset: 0,
+            stride: 4 * currentChunk.txtcoordsStride,
+            offset: 4 * currentChunk.txtcoordsOffset,
             normalized: false
           }; 
           //modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["TXTCOORD"] = [g+"_txt_attr"];
         }
         if(currentGroup.usingNormals)
         {
-          modelDescriptor.data.vertexBuffers[cId + "_nrm_vb"] = { typedArray: new Float32Array(currentChunk.normalsArray) };
+          if(!currentChunk.interleaved)
+            modelDescriptor.data.vertexBuffers[cId + "_nrm_vb"] = { typedArray: new Float32Array(currentChunk.normalsArray) };
           modelDescriptor.access.vertexStreams[cId +"_nrm_attr"] = { //see glVertexAttribPointer
-            buffer: cId + "_nrm_vb",
+            buffer: cId + (currentChunk.interleaved?"_vertex_vb":"_nrm_vb"),
             size: 3,
             type: SpiderGL.Type.FLOAT32,
-            stride: 4 * currentGroup.normalsStride,
-            offset: 0,
+            stride: 4 * currentChunk.normalsStride,
+            offset: 4 * currentChunk.normalsOffset,
             normalized: false
           }; 
           //modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["NORMAL"] = [g+"_nrm_attr"];
@@ -144,17 +148,36 @@ objImporter.prototype = {
   ,
   getGroup: function(groupName) {
     var Group = function(parserObj) {
-        this.positionsStride = 3;
-        this.txtcoordsStride = 3;
-        this.normalsStride = 3;
         this.chunks = [];
         this.usingTextureCoordinates = false;
         this.usingNormals = false;
         this.parserObj = parserObj;
     }
     Group.prototype  = {
-      newChunk:function() {
-        this.chunks.push({positionsArray:[],txtcoordsArray:[],normalsArray:[],materials:{},map:[]});
+      newChunk:function(interleaved) {
+        var nc = {
+          "interleaved":false,
+          positionsArray:[],
+          txtcoordsArray:[],
+          normalsArray:[],
+          positionsStride:3,
+          positionsOffset:0,
+          txtcoordsStride:3,
+          txtcoordsOffset:0,
+          normalsStride:3,
+          normalsOffset:0,
+          materials:{},
+          map:[]
+          }
+        if(interleaved)
+        {
+          nc.txtcoordsArray = nc.normalsArray = nc.positionsArray;
+          nc.normalsStride = nc.txtcoordsStride = nc.positionsStride = 9;
+          nc.txtcoordsOffset = 3;
+          nc.normalsOffset = 6;
+          nc.interleaved = true;
+        }
+        this.chunks.push(nc);
         return this.chunks.length - 1;
       },
       addFace:function(v1,v2,v3){
@@ -162,8 +185,9 @@ objImporter.prototype = {
         var i = 0;
         for (i = 0; i <this.chunks.length; i++)
         {
+          var currentChunk = this.chunks[i];
           var positionsArray = this.chunks[i].positionsArray;
-          var firstFreeIdx = ( (positionsArray.length + this.positionsStride - 1) / this.positionsStride ) | 0; 
+          var firstFreeIdx = ( (positionsArray.length + currentChunk.positionsStride - 1) / currentChunk.positionsStride ) | 0; 
           var haveToInsert = 0;
           if(this.hasVertex.apply(this,[i].concat(v1))) haveToInsert++;
           if(this.hasVertex.apply(this,[i].concat(v2))) haveToInsert++;
@@ -171,7 +195,7 @@ objImporter.prototype = {
           if (haveToInsert + firstFreeIdx <= 0x10000) 
             break;
         }
-        if(i == this.chunks.length) this.newChunk();
+        if(i == this.chunks.length) this.newChunk(this.parserObj.prefs.interleavedArrays);
         this.getCurrentMaterial(i).indicesArray.push(
               this.getVertex.apply(this,[i].concat(v1)),
               this.getVertex.apply(this,[i].concat(v2)),
@@ -195,41 +219,38 @@ objImporter.prototype = {
           var positions = this.parserObj.vertexData.positions;
           var txtcoords = this.parserObj.vertexData.txtcoords;
           var normals = this.parserObj.vertexData.normals;
-          var idx = ( (chunk.positionsArray.length + this.positionsStride - 1) / this.positionsStride ) | 0; 
+          var idx = ( (chunk.positionsArray.length + chunk.positionsStride - 1) / chunk.positionsStride ) | 0; 
           if (idx > 0xffff) return undefined;
-          var posIdx = idx;
-          var txtIdx = idx;
-          var nrmIdx = idx;
-          //var posIdx = ( (positionsArray.length() + this.positionsStride - 1) / this.positionsStride ) | 0  + 1;
-          //var txtIdx = ( (txtcoordsArray.length() + this.txtcoordsStride - 1) / this.txtcoordsStride ) | 0  + 1;
-          //var nrmIdx = ( (normalsArray.length() + this.normalsStride - 1) / this.normalsStride ) | 0  + 1;
+          var posIdx = idx * chunk.positionsStride + chunk.positionsOffset;
+          var txtIdx = idx * chunk.txtcoordsStride + chunk.txtcoordsOffset;
+          var nrmIdx = idx * chunk.normalsStride   + chunk.normalsOffset;
           if ((v * 3 + 2) < positions.length) {
-            chunk.positionsArray[posIdx * this.positionsStride + 0] = positions[v*3+0];
-            chunk.positionsArray[posIdx * this.positionsStride + 1] = positions[v*3+1];
-            chunk.positionsArray[posIdx * this.positionsStride + 2] = positions[v*3+2];
+            chunk.positionsArray[posIdx + 0] = positions[v*3+0];
+            chunk.positionsArray[posIdx + 1] = positions[v*3+1];
+            chunk.positionsArray[posIdx + 2] = positions[v*3+2];
           } else throw "no!";
 
           if (vt >=0 && (vt * 3 + 2) < txtcoords.length) {
-            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = txtcoords[vt*3+0];
-            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = txtcoords[vt*3+1];
-            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = txtcoords[vt*3+2];
+            chunk.txtcoordsArray[txtIdx + 0] = txtcoords[vt*3+0];
+            chunk.txtcoordsArray[txtIdx + 1] = txtcoords[vt*3+1];
+            chunk.txtcoordsArray[txtIdx + 2] = txtcoords[vt*3+2];
             this.usingTextureCoordinates = true;
           } else {
-            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = 0.0;
-            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = 0.0;
-            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = 0.0;
+            chunk.txtcoordsArray[txtIdx + 0] = 0.0;
+            chunk.txtcoordsArray[txtIdx + 1] = 0.0;
+            chunk.txtcoordsArray[txtIdx + 2] = 0.0;
           }
 
 
           if (vn >=0 && (vn * 3 + 2) < normals.length) {
-            chunk.normalsArray[nrmIdx * this.normalsStride + 0] = normals[vn*3+0];
-            chunk.normalsArray[nrmIdx * this.normalsStride + 1] = normals[vn*3+1];
-            chunk.normalsArray[nrmIdx * this.normalsStride + 2] = normals[vn*3+2];
+            chunk.normalsArray[nrmIdx + 0] = normals[vn*3+0];
+            chunk.normalsArray[nrmIdx + 1] = normals[vn*3+1];
+            chunk.normalsArray[nrmIdx + 2] = normals[vn*3+2];
             this.usingNormals = true;
           } else {
-            chunk.normalsArray[nrmIdx * this.normalsStride + 0] = 0.0;
-            chunk.normalsArray[nrmIdx * this.normalsStride + 1] = 0.0;
-            chunk.normalsArray[nrmIdx * this.normalsStride + 2] = 0.0;
+            chunk.normalsArray[nrmIdx + 0] = 0.0;
+            chunk.normalsArray[nrmIdx + 1] = 0.0;
+            chunk.normalsArray[nrmIdx + 2] = 0.0;
           }
 
           map[v][vt][vn] = idx;
@@ -237,9 +258,9 @@ objImporter.prototype = {
         return map[v][vt][vn] | 0;
       },
       getCurrentMaterial:function(vb) {
-        if (this.chunks[vb].materials[this.parserObj.mtname] === undefined)
-          this.chunks[vb].materials[this.parserObj.mtname] = {indicesArray:[]};
-        return this.chunks[vb].materials[this.parserObj.mtname];
+        if (this.chunks[vb].materials[this.parserObj.mtlname] === undefined)
+          this.chunks[vb].materials[this.parserObj.mtlname] = {indicesArray:[]};
+        return this.chunks[vb].materials[this.parserObj.mtlname];
       }
     }
     var g = this.groups[groupName];
@@ -320,7 +341,8 @@ objImporter.prototype = {
         parseGroup.apply(this,tokens); 
         break;
       case "mtllib": // name of material library file
-        this.callbacks.requireMaterialFile(tokens[0]);
+        if(this.callbacks.requireMaterialfile)
+          this.callbacks.requireMaterialFile(tokens[0]);
         break;
       case "usemtl":
         this.mtlname = tokens[0]||"";
