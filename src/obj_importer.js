@@ -1,7 +1,7 @@
 var md;
 function TestMe() {
   var text = document.getElementById("objsrc").innerHTML;
-  var parser = new objImporter({endParsing:function(modelDescriptor){ md = modelDescriptor; }});
+  var parser = new objImporter({onEndParsing:function(modelDescriptor){ md = modelDescriptor; }});
   parser.streamData({completed:function(){ return true},getData:function() {return text;} });
   return parser;
 }
@@ -66,63 +66,80 @@ objImporter.prototype = {
     for (var g in this.groups)
     {
       var currentGroup = this.groups[g];
-      //add vertex data
-      modelDescriptor.semantic.bindings[g + "_binding"] = {vertexStreams:{},primitiveStreams:{} }
-      modelDescriptor.data.vertexBuffers[g + "_pos_vb"] = { typedArray: new Float32Array(currentGroup.positionsArray) };
-      modelDescriptor.access.vertexStreams[g +"_pos_attr"] = { //see glVertexAttribPointer
-          buffer: g + "_pos_vb",
-          size: 3,
-          type: SpiderGL.Type.FLOAT32,
-          stride: 4 * currentGroup.positionsStride,
-          offset: 0,
-          normalized: false
-		    };
-      modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["POSITION"] = [g+"_pos_attr"];
-      if(currentGroup.usingTextureCoordinates)
+      var gId = "g" + g;
+      modelDescriptor.logic.parts[gId+"_part"] = {chunks:[]};
+      for (var c =0; c < currentGroup.chunks.length; c++)
       {
-        modelDescriptor.data.vertexBuffers[g + "_txt_vb"] = { typedArray: new Float32Array(currentGroup.txtcoordsArray) };
-        modelDescriptor.access.vertexStreams[g +"_txt_attr"] = { //see glVertexAttribPointer
-          buffer: g + "_txt_vb",
-          size: this.vertexData.txtCoord3d?3:2, //todo: support 3d txt coordinates
-          type: SpiderGL.Type.FLOAT32,
-          stride: 4 * currentGroup.txtcoordsStride,
-          offset: 0,
-          normalized: false
-        }; 
-        modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["TXTCOORD"] = [g+"_txt_attr"];
-      }
-      if(currentGroup.usingNormals)
-      {
-        modelDescriptor.data.vertexBuffers[g + "_nrm_vb"] = { typedArray: new Float32Array(currentGroup.normalsArray) };
-        modelDescriptor.access.vertexStreams[g +"_nrm_attr"] = { //see glVertexAttribPointer
-          buffer: g + "_nrm_vb",
-          size: 3,
-          type: SpiderGL.Type.FLOAT32,
-          stride: 4 * currentGroup.normalsStride,
-          offset: 0,
-          normalized: false
-        }; 
-        modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["NORMAL"] = [g+"_nrm_attr"];
-      }
+        var cId = gId + "_c" + c;
+        var currentChunk = currentGroup.chunks[c];
+        //add vertex data
+        modelDescriptor.data.vertexBuffers[cId+"_pos_vb"] = { typedArray: new Float32Array(currentChunk.positionsArray) };
+        modelDescriptor.access.vertexStreams[cId +"_pos_attr"] = { //see glVertexAttribPointer
+            buffer: cId + "_pos_vb",
+            size: 3,
+            type: SpiderGL.Type.FLOAT32,
+            stride: 4 * currentGroup.positionsStride,
+            offset: 0,
+            normalized: false
+          };
+        if(currentGroup.usingTextureCoordinates)
+        {
+          modelDescriptor.data.vertexBuffers[cId + "_txt_vb"] = { typedArray: new Float32Array(currentChunk.txtcoordsArray) };
+          modelDescriptor.access.vertexStreams[cId +"_txt_attr"] = { //see glVertexAttribPointer
+            buffer: cId + "_txt_vb",
+            size: this.vertexData.txtCoord3d?3:2, 
+            type: SpiderGL.Type.FLOAT32,
+            stride: 4 * currentGroup.txtcoordsStride,
+            offset: 0,
+            normalized: false
+          }; 
+          //modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["TXTCOORD"] = [g+"_txt_attr"];
+        }
+        if(currentGroup.usingNormals)
+        {
+          modelDescriptor.data.vertexBuffers[cId + "_nrm_vb"] = { typedArray: new Float32Array(currentChunk.normalsArray) };
+          modelDescriptor.access.vertexStreams[cId +"_nrm_attr"] = { //see glVertexAttribPointer
+            buffer: cId + "_nrm_vb",
+            size: 3,
+            type: SpiderGL.Type.FLOAT32,
+            stride: 4 * currentGroup.normalsStride,
+            offset: 0,
+            normalized: false
+          }; 
+          //modelDescriptor.semantic.bindings[g + "_binding"].vertexStreams["NORMAL"] = [g+"_nrm_attr"];
+        }
 
-      modelDescriptor.logic.parts[g+"_part"] = {chunks:[]};
-      for(var m in currentGroup.materials)
-      {
-        modelDescriptor.data.indexBuffers[g + "_m" + m +"_idx_b"] = { typedArray: new Uint16Array(currentGroup.materials[m].indicesArray) };
-        modelDescriptor.access.primitiveStreams[g + "_m" + m + "_ps"] = { //see glDrawElements
-		        buffer: g + "_m"+m+ "_idx_b",
-		        mode: SpiderGL.Type.TRIANGLES,
-		        count: currentGroup.materials[m].indicesArray.length,
-		        type: SpiderGL.Type.UINT16,
-		        offset: 0
-		    };
+        for(var m in currentChunk.materials)
+        {
+          var mId = cId + "_m" + m;
+          var currentMaterial = currentChunk.materials[m];
+          if (0 == currentMaterial.indicesArray.length)
+            continue;
 
-        modelDescriptor.semantic.bindings[g + "_m" + m + "_binding"].primitiveStreams["FILL"] = [g+"_m" + m +"_ps"];
-        modelDescriptor.semantic.chunks[g+ "_m" + m +"_chunk"] = {techniques:{common:{binding:g+"_binding"}}};
-        modelDescriptor.logic.parts[g+"_part"].chunks.push(g+"_m"+m+"_chunk");
+          modelDescriptor.data.indexBuffers[mId +"_idx_b"] = { typedArray: new Uint16Array(currentMaterial.indicesArray) };
+          modelDescriptor.access.primitiveStreams[mId + "_ps"] = { //see glDrawElements
+              buffer: mId + "_idx_b",
+              mode: SpiderGL.Type.TRIANGLES,
+              count: currentMaterial.indicesArray.length,
+              type: SpiderGL.Type.UINT16,
+              offset: 0
+          };
+
+          var currentBinding = (modelDescriptor.semantic.bindings[mId + "_binding"] = { primitiveStreams:{}, vertexStreams:{}});
+          currentBinding.vertexStreams["POSITION"] = [cId + "_pos_attr"];
+          if(currentGroup.usingTextureCoordinates)
+            currentBinding.vertexStreams["TXTCOORD"] = [cId + "_txt_attr"];
+          if(currentGroup.usingNormals)
+            currentBinding.vertexStreams["NORMAL"] = [cId +"_nrm_attr"];
+
+          currentBinding.primitiveStreams["FILL"]= [mId +"_ps"];
+
+          modelDescriptor.semantic.chunks[mId+"_chunk"] = {techniques:{common:{binding:mId + "_binding"}}};
+          modelDescriptor.logic.parts[gId+"_part"].chunks.push(mId+"_chunk");
+        }
       }
     }
-    this.callbacks.onEndParsing(modelDescriptor);
+    if(this.callbacks.onEndParsing) this.callbacks.onEndParsing(modelDescriptor);
   }
   ,
   getGroup: function(groupName) {
@@ -130,34 +147,56 @@ objImporter.prototype = {
         this.positionsStride = 3;
         this.txtcoordsStride = 3;
         this.normalsStride = 3;
-        this.positionsArray=[];
-        this.txtcoordsArray=[];
-        this.normalsArray=[];
-        this.materials = {"":{indicesArray:[]}};
-        this.map = [];
-        this.parserObj = parserObj;
+        this.chunks = [];
         this.usingTextureCoordinates = false;
         this.usingNormals = false;
+        this.parserObj = parserObj;
     }
     Group.prototype  = {
-      addFace:function(v1,v2,v3){
-        this.getCurrentMaterial().indicesArray.push(
-          this.getVertex.apply(this,v1),
-          this.getVertex.apply(this,v2),
-          this.getVertex.apply(this,v3));
+      newChunk:function() {
+        this.chunks.push({positionsArray:[],txtcoordsArray:[],normalsArray:[],materials:{},map:[]});
+        return this.chunks.length - 1;
       },
-      getVertex:function(v,vt,vn){
+      addFace:function(v1,v2,v3){
+        //put the new vertices in the first available chunk vertex array
+        var i = 0;
+        for (i = 0; i <this.chunks.length; i++)
+        {
+          var positionsArray = this.chunks[i].positionsArray;
+          var firstFreeIdx = ( (positionsArray.length + this.positionsStride - 1) / this.positionsStride ) | 0; 
+          var haveToInsert = 0;
+          if(this.hasVertex.apply(this,[i].concat(v1))) haveToInsert++;
+          if(this.hasVertex.apply(this,[i].concat(v2))) haveToInsert++;
+          if(this.hasVertex.apply(this,[i].concat(v3))) haveToInsert++;
+          if (haveToInsert + firstFreeIdx <= 0x10000) 
+            break;
+        }
+        if(i == this.chunks.length) this.newChunk();
+        this.getCurrentMaterial(i).indicesArray.push(
+              this.getVertex.apply(this,[i].concat(v1)),
+              this.getVertex.apply(this,[i].concat(v2)),
+              this.getVertex.apply(this,[i].concat(v3)));
+      },
+      hasVertex:function(vb,v,vt,vn) {
+        map= this.chunks[vb].map
+        return undefined !== (map[v] && map[v][vt] && map[v][vt][vn]);
+      },
+      getVertex:function(vb,v,vt,vn){
+        var chunk = this.chunks[vb];
+        var map = chunk.map;
         v = v | 0;
         //vt = vt | 0;
         //vn = vn | 0;
 
-        if ( undefined === this.map[v]) this.map[v] = {}; 
-        if ( undefined === this.map[v][vt]) this.map[v][vt] = {}; 
-        if ( undefined === this.map[v][vt][vn]) {
+        if ( undefined === map[v]) map[v] = {}; 
+        if ( undefined === map[v][vt]) map[v][vt] = {}; 
+        if ( undefined === map[v][vt][vn])
+        {
           var positions = this.parserObj.vertexData.positions;
           var txtcoords = this.parserObj.vertexData.txtcoords;
           var normals = this.parserObj.vertexData.normals;
-          var idx = ( (this.positionsArray.length + this.positionsStride - 1) / this.positionsStride ) | 0; 
+          var idx = ( (chunk.positionsArray.length + this.positionsStride - 1) / this.positionsStride ) | 0; 
+          if (idx > 0xffff) return undefined;
           var posIdx = idx;
           var txtIdx = idx;
           var nrmIdx = idx;
@@ -165,42 +204,42 @@ objImporter.prototype = {
           //var txtIdx = ( (txtcoordsArray.length() + this.txtcoordsStride - 1) / this.txtcoordsStride ) | 0  + 1;
           //var nrmIdx = ( (normalsArray.length() + this.normalsStride - 1) / this.normalsStride ) | 0  + 1;
           if ((v * 3 + 2) < positions.length) {
-            this.positionsArray[posIdx * this.positionsStride + 0] = positions[v*3+0];
-            this.positionsArray[posIdx * this.positionsStride + 1] = positions[v*3+1];
-            this.positionsArray[posIdx * this.positionsStride + 2] = positions[v*3+2];
+            chunk.positionsArray[posIdx * this.positionsStride + 0] = positions[v*3+0];
+            chunk.positionsArray[posIdx * this.positionsStride + 1] = positions[v*3+1];
+            chunk.positionsArray[posIdx * this.positionsStride + 2] = positions[v*3+2];
           } else throw "no!";
 
           if (vt >=0 && (vt * 3 + 2) < txtcoords.length) {
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = txtcoords[vt*3+0];
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = txtcoords[vt*3+1];
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = txtcoords[vt*3+2];
+            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = txtcoords[vt*3+0];
+            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = txtcoords[vt*3+1];
+            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = txtcoords[vt*3+2];
             this.usingTextureCoordinates = true;
           } else {
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = 0.0;
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = 0.0;
-            this.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = 0.0;
+            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 0] = 0.0;
+            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 1] = 0.0;
+            chunk.txtcoordsArray[txtIdx * this.txtcoordsStride + 2] = 0.0;
           }
 
 
           if (vn >=0 && (vn * 3 + 2) < normals.length) {
-            this.normalsArray[nrmIdx * this.normalsStride + 0] = normals[vn*3+0];
-            this.normalsArray[nrmIdx * this.normalsStride + 1] = normals[vn*3+1];
-            this.normalsArray[nrmIdx * this.normalsStride + 2] = normals[vn*3+2];
+            chunk.normalsArray[nrmIdx * this.normalsStride + 0] = normals[vn*3+0];
+            chunk.normalsArray[nrmIdx * this.normalsStride + 1] = normals[vn*3+1];
+            chunk.normalsArray[nrmIdx * this.normalsStride + 2] = normals[vn*3+2];
             this.usingNormals = true;
           } else {
-            this.normalsArray[nrmIdx * this.normalsStride + 0] = 0.0;
-            this.normalsArray[nrmIdx * this.normalsStride + 1] = 0.0;
-            this.normalsArray[nrmIdx * this.normalsStride + 2] = 0.0;
+            chunk.normalsArray[nrmIdx * this.normalsStride + 0] = 0.0;
+            chunk.normalsArray[nrmIdx * this.normalsStride + 1] = 0.0;
+            chunk.normalsArray[nrmIdx * this.normalsStride + 2] = 0.0;
           }
 
-          this.map[v][vt][vn] = idx;
+          map[v][vt][vn] = idx;
         }
-        return this.map[v][vt][vn] | 0;
+        return map[v][vt][vn] | 0;
       },
-      getCurrentMaterial:function() {
-        if (this.materials[this.parserObj.mtname] === undefined)
-          this.materials[this.parserObj.mtname] = {indicesArray:[]};
-        return this.materials[this.parserObj.mtname];
+      getCurrentMaterial:function(vb) {
+        if (this.chunks[vb].materials[this.parserObj.mtname] === undefined)
+          this.chunks[vb].materials[this.parserObj.mtname] = {indicesArray:[]};
+        return this.chunks[vb].materials[this.parserObj.mtname];
       }
     }
     var g = this.groups[groupName];
