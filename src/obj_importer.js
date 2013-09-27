@@ -189,9 +189,9 @@ objImporter.prototype = {
           var positionsArray = this.chunks[i].positionsArray;
           var firstFreeIdx = ( (positionsArray.length + currentChunk.positionsStride - 1) / currentChunk.positionsStride ) | 0; 
           var haveToInsert = 0;
-          if(this.hasVertex.apply(this,[i].concat(v1))) haveToInsert++;
-          if(this.hasVertex.apply(this,[i].concat(v2))) haveToInsert++;
-          if(this.hasVertex.apply(this,[i].concat(v3))) haveToInsert++;
+          if(! this.hasVertex.apply(this,[i].concat(v1))) haveToInsert++;
+          if(! this.hasVertex.apply(this,[i].concat(v2))) haveToInsert++;
+          if(! this.hasVertex.apply(this,[i].concat(v3))) haveToInsert++;
           if (haveToInsert + firstFreeIdx <= 0x10000) 
             break;
         }
@@ -299,6 +299,8 @@ objImporter.prototype = {
       this.vertexData.normals.push(x,y,z);
     }
     var parseFace = function(_v1,_v2,_v3) {
+      //skip faces with less than 3 indices
+      if(arguments.length < 3) return;
       var mapper = function (txt) {return parseInt(txt) - 1; }
       var v1 = _v1.split('/').map(mapper)
       var v2 = _v2.split('/').map(mapper)
