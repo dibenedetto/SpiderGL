@@ -1,10 +1,3 @@
-var md;
-function TestMe() {
-  var text = document.getElementById("objsrc").innerHTML;
-  var parser = new objImporter({onEndParsing:function(modelDescriptor){ md = modelDescriptor; }});
-  parser.streamData({completed:function(){ return true},getData:function() {return text;} });
-  return parser;
-}
 var objImporter = function (callbacks) {
   this.callbacks = callbacks;
   this.unprocessedStream = "";
