@@ -5,6 +5,73 @@ function TestMe() {
   parser.streamData({completed:function(){ return true},getData:function() {return text;} });
   return parser;
 }
+
+var mtlParser = function (){
+    this.mtlDescriptor = {};
+}
+
+mtlParser.prototype = {
+    parseAndAddMtlFile: function(mtl_text) {
+    
+        var line = null;
+        var tk = null;
+        
+        var Mtl = function(mtl_name){
+            this.name = mtl_name;
+            this.Ka = [0.2,0.2,0.2]; //defines the ambient color of the material to be (r,g,b). The default is (0.2,0.2,0.2);
+            this.Kd = [0.8,0.8,0.8]; //defines the diffuse color of the material to be (r,g,b). The default is (0.8,0.8,0.8);
+            this.Ks = [1.0,1.0,1.0]; //defines the specular color of the material to be (r,g,b). This color shows up in highlights. The default is (1.0,1.0,1.0);
+            this.d = 1.0; //defines the transparency of the material to be alpha. The default is 1.0 (not transparent at all) Some formats use Tr instead of d;
+            this.Tr = 1.0; //defines the transparency of the material to be alpha. The default is 1.0 (not transparent at all). Some formats use d instead of Tr;
+            this.Ns = 0.0; //defines the shininess of the material to be s. The default is 0.0;
+            this.illum = 0; //denotes the illumination model used by the material. illum = 1 indicates a flat material with no specular highlights, so the value of Ks is not used.
+                           //illum = 2 denotes the presence   of specular highlights, and so a specification for Ks is required.
+            this.Ka = ""; //names a file containing a texture map, which should just be an ASCII dump of RGB values
+        }
+        Mtl.prototype = {
+            
+        }
+        
+        var currentMtl = null;
+        var lines = mtl_text.split("\n");
+        for (var lineIndex in lines) {
+            line = lines[lineIndex].replace(/[ \t]+/g, " ").replace(/\s\s*$/, "");
+            
+            if (line[0] == "#") continue;
+            
+            tk = line.split(" ");
+            if (tk[0] == "newmtl") {
+                currentMtl = new Mtl(tk[1]);
+            }
+            else if (tk[0] == "Ka") {
+                currentMtl.Ka = [parseFloat(tk[1]),parseFloat(tk[2]),parseFloat(tk[3])];
+            }
+            else if (tk[0] == "Kd") {
+                currentMtl.Kd = [parseFloat(tk[1]),parseFloat(tk[2]),parseFloat(tk[3])];
+            }
+            else if (tk[0] == "Ks") {
+                currentMtl.Ks = [parseFloat(tk[1]),parseFloat(tk[2]),parseFloat(tk[3])];
+            }
+            else if (tk[0] == "d") {
+                currentMtl.d = parseFloat(tk[1]);
+            }
+            else if (tk[0] == "Tr") {
+                currentMtl.Tr = parseFloat(tk[1]);
+            }
+            else if (tk[0] == "Ns") {
+                currentMtl.Ns = parseFloat(tk[1]);
+            }
+            else if (tk[0] == "illum") {
+                currentMtl.illum = parseInt(tk[1]);
+            }
+            else if (tk[0] == "map_Ka") {
+                //todo
+            }
+            this.mtlDescriptor[currentMtl.name] = currentMtl;
+        }
+    }
+}
+
 var objImporter = function (callbacks) {
   this.callbacks = callbacks;
   this.unprocessedStream = "";
@@ -17,6 +84,7 @@ var objImporter = function (callbacks) {
   this.prefs = {interleavedArrays:true};
   this.groups = {};
   this.activeGroups = { "default":this.getGroup("default") }
+  this.mtlDescriptor = {};
   this.mtlname = "";
 }
 

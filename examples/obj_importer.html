@@ -82,7 +82,18 @@ CanvasHandler.prototype = {
 		      that.model = new SglModel(that.ui.gl, modelDescriptor);
 		      that.ui.postDrawEvent();
         };
-        var importer = new objImporter({onEndParsing:cb});
+        var mtl_parser = new mtlParser();//aggiunto da Silvia
+        var mtl_cb = function(mtlDescriptor,mtl_file){
+            //use that.ui.gl to add material in mtl_file on this model
+            //parsa il file mtl_file e aggiunge a mtlDescriptor i (dati dei) materiali presenti nel file
+            sglRequestText(mtl_file, {
+                onSuccess:function (mtlreq) {
+                    mtl_parser.parseAndAddMtlFile(mtlreq.text);
+                }
+            });
+            
+        };
+        var importer = new objImporter({onEndParsing:cb, requireMaterialFile:mtl_cb});
         var stream = { getData:function() { return req.text; },completed:function() {return true; }};
         importer.streamData(stream);
 		  }
