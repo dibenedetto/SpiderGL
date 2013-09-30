@@ -1,3 +1,58 @@
+/*
+ *      How to use
+ *
+ * Create an importer object with 'var importer = new objImporter(callbacks)',
+ * then feed him chunks of text with 'importer.streamData(stream)'
+ * stream should be an object with two methods:
+ *  - stream.complete() should return true if this is the last chunk of data
+ *    for the file being parsed
+ *  - stream.getData() should return a string containing the actual chunk data
+ *
+ *  The parsing is done synchronously, and the "stream" object should not
+ *  change while streamData is called. It is otherwise possible to specify
+ *  two methods stream.lock() and stream.unlock() to allow modification of the
+ *  stream object while the parsing is being made.
+ *
+ *  'callbacks' parameter in the constructor allow for the following callbacks
+ *  to be specified:
+ *   - onEndParsing(model_descriptor) is generated when parsing is complete.
+ *     model_descriptor is a valid SpiderGl model descriptor containing the
+ *     model data
+ *   - requireMtlFile(filename) is generated when a material file include
+ *     directive is encountered. Callers who want to use materials can
+ *     implement this callback to download the .mtl file resource and feed it
+ *     to a mtlParser (see below)
+ *  All callbacks are called synchronously from streamData() method
+ *
+ *  The produced model descriptor has one or more chunks named this way:
+ *
+ *  g[groupName]_c[chunkSeq]_m[materialName]_chunk
+ *
+ *  which refer to a binding named
+ *
+ *  g[groupName]_c[chunkSeq]_m[materialName]_binding
+ *
+ * [groupName] is the name of the group in the .obj file
+ * [chunkSeq] is an integer number to specify multiple chunks originated from
+ *   the same group. This is done to overcome the limit of 16bit vertex indexes
+ *   of OpenGLES specification
+ * [materialName] is the name of the material used for the chunk, as specified
+ *   in the .mtl file(s). Depending on the shaders implementation, different
+ *   bindings can be added to implement different materials.
+ *
+ *
+ *   Material parser
+ * To parse materials files, a class named mtlParser is given. The only method
+ * "parseAndAddMtlFile(mtl_text)" simply parses given text as if it were the
+ * content of a .mtl file, and adds any material described there in its member
+ * dictionary "mtlDescriptor". Materials properties names are the almost always
+ * the sames as the .mtl file specification, except for textures whose name is
+ * consistently being named map_* even when the specification uses names without
+ * the "map_" prefix, e.g. "map_disp". Textures are objects where all texture
+ * options are specified as properties (undefined if not specified on .mtl file)
+ * and texture filename is stored in the "filename" property
+ */
+
 var mtlParser = function (){
     this.mtlDescriptor = {};
 }
@@ -14,11 +69,9 @@ mtlParser.prototype = {
             this.Kd = [0.8,0.8,0.8]; //defines the diffuse color of the material to be (r,g,b). The default is (0.8,0.8,0.8);
             this.Ks = [1.0,1.0,1.0]; //defines the specular color of the material to be (r,g,b). This color shows up in highlights. The default is (1.0,1.0,1.0);
             this.d = 1.0; //defines the transparency of the material to be alpha. The default is 1.0 (not transparent at all) Some formats use Tr instead of d;
-            this.Tr = 1.0; //defines the transparency of the material to be alpha. The default is 1.0 (not transparent at all). Some formats use d instead of Tr;
             this.Ns = 0.0; //defines the shininess of the material to be s. The default is 0.0;
             this.illum = 0; //denotes the illumination model used by the material. illum = 1 indicates a flat material with no specular highlights, so the value of Ks is not used.
                            //illum = 2 denotes the presence   of specular highlights, and so a specification for Ks is required.
-            //this.Ka = ""; //names a file containing a texture map, which should just be an ASCII dump of RGB values
         }
         Mtl.prototype = {
             
@@ -109,11 +162,8 @@ mtlParser.prototype = {
             else if (tk[0] == "Ks") {
                 currentMtl.Ks = [parseFloat(tk[1]),parseFloat(tk[2]),parseFloat(tk[3])];
             }
-            else if (tk[0] == "d") {
+            else if (tk[0] == "d" || tk[0] == "Tr") {
                 currentMtl.d = parseFloat(tk[1]);
-            }
-            else if (tk[0] == "Tr") {
-                currentMtl.Tr = parseFloat(tk[1]);
             }
             else if (tk[0] == "Ns") {
                 currentMtl.Ns = parseFloat(tk[1]);
@@ -122,28 +172,28 @@ mtlParser.prototype = {
                 currentMtl.illum = parseInt(tk[1]);
             }
             else if (tk[0] == "map_Ka") {
-		currentMtl.map_Ka = parse_texture(tk);
+                currentMtl.map_Ka = parse_texture(tk);
             }
             else if (tk[0] == "map_Kd") {
-		currentMtl.map_Kd = parse_texture(tk);
+                currentMtl.map_Kd = parse_texture(tk);
             }
             else if (tk[0] == "map_Ks") {
-		currentMtl.map_Ks = parse_texture(tk);
+                currentMtl.map_Ks = parse_texture(tk);
             }
             else if (tk[0] == "map_Ns") {
-		currentMtl.map_Ns = parse_texture(tk);
+                currentMtl.map_Ns = parse_texture(tk);
             }
             else if (tk[0] == "map_d") {
-		currentMtl.map_d = parse_texture(tk);
+                currentMtl.map_d = parse_texture(tk);
             }
             else if (tk[0] == "map_bump"|| tk[0] = "bump") {
-		currentMtl.bump = parse_texture(tk);
+                currentMtl.map_bump = parse_texture(tk);
             }
             else if (tk[0] == "disp") {
-		currentMtl.disp = parse_texture(tk);
+                currentMtl.map_disp = parse_texture(tk);
             }
             else if (tk[0] == "decal") {
-		currentMtl.decal = parse_texture(tk);
+                currentMtl.map_decal = parse_texture(tk);
             }
         }
     }
@@ -167,8 +217,11 @@ var objImporter = function (callbacks) {
 
 objImporter.prototype = {
   streamData: function(stream) {
+    if (stream.lock) stream.lock();
     var completed = stream.completed();
-    var lines = (this.unprocessedStream + stream.getData() ).split('\n');
+    this.unprocessedStream += stream.getData();
+    if (stream.unlock) stream.unlock();
+    var lines = ( this.unprocessedStream ).split('\n');
     if (!completed)
       this.unprocessedStream = lines.pop();
     for (var i = 0; i < lines.length; i++)
