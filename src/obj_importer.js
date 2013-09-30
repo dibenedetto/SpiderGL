@@ -18,7 +18,7 @@ mtlParser.prototype = {
             this.Ns = 0.0; //defines the shininess of the material to be s. The default is 0.0;
             this.illum = 0; //denotes the illumination model used by the material. illum = 1 indicates a flat material with no specular highlights, so the value of Ks is not used.
                            //illum = 2 denotes the presence   of specular highlights, and so a specification for Ks is required.
-            this.Ka = ""; //names a file containing a texture map, which should just be an ASCII dump of RGB values
+            //this.Ka = ""; //names a file containing a texture map, which should just be an ASCII dump of RGB values
         }
         Mtl.prototype = {
             
@@ -26,6 +26,70 @@ mtlParser.prototype = {
         
         var currentMtl = null;
         var lines = mtl_text.split("\n");
+        var parse_texture = function(tokens,texture) {
+            if (!texture) {
+			          texture = { type:tokens.shift() }
+            }
+            if (tokens.length === 1) {
+                texture.filename = tokens[0];
+                return texture;
+            }
+            switch (tokens[0][0]) {
+                case "-":
+                    switch (tokens.shift()) {
+                        case "-blendu":
+                            texture.blendU = (tokens.shift() === "on");
+                            return parse_texture(tokens,texture);
+                        case "-blendv":
+                            texture.blendV = (tokens.shift() === "on");
+                            return parse_texture(tokens,texture);
+                        case "-boost":
+                            texture.boost = parseFloat(tokens.shift());
+                            return parse_texture(tokens,texture);
+                        case "-mm":
+                            texture.brightness = parseFloat(tokens.shift());
+                            texture.contrast = parseFloat(tokens.shift());
+                            return parse_texture(tokens,texture);
+                        case "-o":
+                            var x = parseFloat(tokens.shift());
+                            var y = (tokens[0][0] !== "-" && tokens.length !==1)?parseFloat(tokens.shift()):0;
+                            var z = (tokens[0][0] !== "-" && tokens.length !==1)?parseFloat(tokens.shift()):0;
+                            texture.coordOffset = [x,y,z];
+                            return parse_texture(tokens,texture);
+                        case "-s":
+                            var x = parseFloat(tokens.shift());
+                            var y = (tokens[0][0] !== "-" && tokens.length !==1)?parseFloat(tokens.shift()):0;
+                            var z = (tokens[0][0] !== "-" && tokens.length !==1)?parseFloat(tokens.shift()):0;
+                            texture.coordScale = [x,y,z];
+                            return parse_texture(tokens,texture);
+                        case "-t":
+                            var x = parseFloat(tokens.shift());
+                            var y = (tokens[0][0] !== "-" && tokens.length !==1)?parseFloat(tokens.shift()):0;
+                            var z = (tokens[0][0] !== "-" && tokens.length !==1)?parseFloat(tokens.shift()):0;
+                            texture.turbulence = [x,y,z];
+                            return parse_texture(tokens,texture);
+                        case "-texres":
+                            texture.forceSize = parseInt(tokens.shift());
+                            return parse_texture(tokens,texture);
+                        case "-clamp":
+                            texture.clamp = (tokens.shift() === "on");
+                            return parse_texture(tokens,texture);
+                        case "-bm":
+                            texture.bumpMultiplier = parseFloat(tokens.shift());
+                            return parse_texture(tokens,texture);
+                        case "-imfchan":
+                            texture.imfchan = tokens.shift()[0];
+                            return parse_texture(tokens,texture);
+                        case "-type":
+                            texture.reflType = tokens.shift();
+                            return parse_texture(tokens,texture);
+                    }
+                    break;
+                default:
+                    //unexpected, probably ill-formed mtl file
+                    break;
+            }
+	      }
         for (var lineIndex in lines) {
             line = lines[lineIndex].replace(/[ \t]+/g, " ").replace(/\s\s*$/, "");
             
@@ -33,7 +97,8 @@ mtlParser.prototype = {
             
             tk = line.split(" ");
             if (tk[0] == "newmtl") {
-                currentMtl = new Mtl(tk[1]);
+		currentMtl = new Mtl(tk[1]);
+                this.mtlDescriptor[currentMtl.name] = currentMtl;
             }
             else if (tk[0] == "Ka") {
                 currentMtl.Ka = [parseFloat(tk[1]),parseFloat(tk[2]),parseFloat(tk[3])];
@@ -57,9 +122,29 @@ mtlParser.prototype = {
                 currentMtl.illum = parseInt(tk[1]);
             }
             else if (tk[0] == "map_Ka") {
-                //todo
+		currentMtl.map_Ka = parse_texture(tk);
             }
-            this.mtlDescriptor[currentMtl.name] = currentMtl;
+            else if (tk[0] == "map_Kd") {
+		currentMtl.map_Kd = parse_texture(tk);
+            }
+            else if (tk[0] == "map_Ks") {
+		currentMtl.map_Ks = parse_texture(tk);
+            }
+            else if (tk[0] == "map_Ns") {
+		currentMtl.map_Ns = parse_texture(tk);
+            }
+            else if (tk[0] == "map_d") {
+		currentMtl.map_d = parse_texture(tk);
+            }
+            else if (tk[0] == "map_bump"|| tk[0] = "bump") {
+		currentMtl.bump = parse_texture(tk);
+            }
+            else if (tk[0] == "disp") {
+		currentMtl.disp = parse_texture(tk);
+            }
+            else if (tk[0] == "decal") {
+		currentMtl.decal = parse_texture(tk);
+            }
         }
     }
 }
