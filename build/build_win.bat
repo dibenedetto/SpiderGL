@@ -18,5 +18,6 @@ type ..\src\space.js      >> ..\lib\spidergl.js
 type ..\src\webgl.js      >> ..\lib\spidergl.js
 type ..\src\model.js      >> ..\lib\spidergl.js
 type ..\src\ui.js         >> ..\lib\spidergl.js
+type ..\src\obj_importer.js         >> ..\lib\spidergl.js
 
 REM pause
